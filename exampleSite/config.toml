@@ -1,2 +1,3 @@
+baseURL = "http://localhost"
 theme = "hugo-gruvbox"
 themesDir = "../.."
