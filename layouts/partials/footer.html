@@ -1,1 +1,6 @@
 <footer></footer>
+
+{{ $prism := resources.Get "js/prism.js" }}
+{{ $main := resources.Get "js/main.js" }}
+{{ $js := slice $prism $main | resources.Concat "main.js" | resources.Minify | resources.Fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
