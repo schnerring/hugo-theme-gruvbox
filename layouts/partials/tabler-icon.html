@@ -1,0 +1,3 @@
+{{ $path := printf "svg/tabler-icons/icons/%s.svg" (. | lower) }}
+{{ $svg := resources.Get $path | resources.Minify | resources.Fingerprint }}
+<img src="{{ $svg.Permalink }}" alt="{{ . }}" />

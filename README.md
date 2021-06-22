@@ -6,3 +6,4 @@ A retro-looking Hugo theme inspired by [gruvbox](https://github.com/morhetz/gruv
 
 - [Prism](https://prismjs.com/) for code highlighting
 - [Sass Boilerplate](https://github.com/KittyGiraudel/sass-boilerplate) to structure Sass code
+- [Tabler Icons](https://tabler-icons.io/)
