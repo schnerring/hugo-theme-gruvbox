@@ -1,3 +1,9 @@
 baseURL = "http://localhost"
 theme = "hugo-gruvbox"
 themesDir = "../.."
+
+[languages]
+  [languages.en]
+    title = "hugo-gruvbox"
+    subtitle = "Theme Demo"
+    description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
