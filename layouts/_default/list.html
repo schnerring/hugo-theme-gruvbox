@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <div></div>
+    {{ range .Pages }}
+      <a href="{{ .Permalink }}">
+        <h1>{{ .Title | markdownify }}</h1>
+      </a>
+
+      <div class="post-meta">
+        {{ with .Date }}
+          <span>{{ partial "tabler-icon" "calendar" }}{{ .Format "2006-01-02" }}</span>
+        {{ end }}
+        {{ with .Lastmod }}
+          <span>{{ partial "tabler-icon" "edit" }} {{ .Format "2006-01-02" }}</span>
+        {{ end }}
+        {{ with .Params.Author }}
+          <span>{{ partial "tabler-icon" "user" }}{{ . }}</span>
+        {{ end }}
+      </div>
+
+      <div class="post-tags">
+        {{ range .Params.tags }}
+          <a href="{{ urlize (printf "tags/%s" . ) | absURL }}">{{ partial "tabler-icon" "tag" }}{{ . }}</a>
+        {{ end }}
+      </div>
+
+      <div class="post-content">
+        <span>
+          {{ with .Description }}
+            {{ . }}
+          {{ else }}
+            {{ .Summary }}
+            {{ if .Truncated }}
+              <a href="{{ .Permalink }}">Read more &rarr;</a>
+            {{ end }}
+          {{ end }}
+        </span>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
