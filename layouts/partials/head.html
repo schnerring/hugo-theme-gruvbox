@@ -1,4 +1,4 @@
-<head>
+<head></head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
@@ -12,6 +12,9 @@
   <link rel="canonical" href="{{ .Permalink }}" />
 
   {{ $options := (dict "inlineImports" true) }}
-  {{ $style := resources.Get "css/main.css" | resources.PostCSS $options }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" />
+  {{ $css := resources.Get "css/main.css" | resources.PostCSS $options }}
+  {{ if hugo.IsProduction }}
+  {{ $css = $css | minify | fingerprint }}
+  {{ end }}
+  <link rel="stylesheet" href="{{ $css.Permalink }}" />
 </head>

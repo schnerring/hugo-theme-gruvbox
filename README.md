@@ -10,7 +10,12 @@ A retro-looking Hugo theme inspired by [gruvbox](https://github.com/morhetz/gruv
 
 ## PostCSS
 
-See [https://gohugo.io/hugo-pipes/postcss/](https://gohugo.io/hugo-pipes/postcss/):
+```shell
+npm i -g postcss postcss-cli
+npm i
+```
+
+[See also ](https://gohugo.io/hugo-pipes/postcss/):
 
 > Hugo Pipe's PostCSS requires the `postcss-cli` JavaScript package to be installed in the environment (`npm install -g postcss postcss-cli`) along with any PostCSS plugin(s) used (e.g., `npm install -g` autoprefixer).
 >
