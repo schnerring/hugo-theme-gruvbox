@@ -7,3 +7,11 @@ A retro-looking Hugo theme inspired by [gruvbox](https://github.com/morhetz/gruv
 - [Prism](https://prismjs.com/) for code highlighting
 - [Tabler Icons](https://tabler-icons.io/)
 - [Simple Icons](https://simpleicons.org/)
+
+## PostCSS
+
+See [https://gohugo.io/hugo-pipes/postcss/](https://gohugo.io/hugo-pipes/postcss/):
+
+> Hugo Pipe's PostCSS requires the `postcss-cli` JavaScript package to be installed in the environment (`npm install -g postcss postcss-cli`) along with any PostCSS plugin(s) used (e.g., `npm install -g` autoprefixer).
+>
+> If you are using the Hugo Snap package, PostCSS and plugin(s) need to be installed locally within your Hugo site directory, e.g., `npm install postcss-cli` without the `-g` flag.
