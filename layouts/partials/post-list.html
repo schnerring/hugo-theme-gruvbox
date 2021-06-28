@@ -1,0 +1,17 @@
+{{- range . -}}
+<div class="post">
+  {{- partial "post-header.html" . -}}
+  <div class="post-content">
+    <span>
+      {{ with .Description }}
+        {{ . }}
+      {{ else }}
+        {{ .Summary }}
+        {{ if .Truncated }}
+          <a href="{{ .Permalink }}">Read more &rarr;</a>
+        {{ end }}
+      {{ end }}
+    </span>
+  </div>
+</div>
+{{ end }}
