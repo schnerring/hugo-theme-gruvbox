@@ -1,6 +1,7 @@
 <footer></footer>
 
-{{ $prism := resources.Get "js/prism.js" }}
-{{ $main := resources.Get "js/main.js" }}
-{{ $js := slice $prism $main | resources.Concat "main.js" | resources.Minify | resources.Fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+{{ $main := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}"></script>
+
+{{ $vendor := resources.Get "js/vendor.js" | resources.ExecuteAsTemplate "vendor.js" . | js.Build "vendor.js" | minify | fingerprint "sha512" }}
+<script type="text/javascript" src="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>

@@ -1,0 +1,19 @@
+/* Pure */
+@import "purecss/build/base-min";
+@import "purecss/build/grids-min";
+@import "purecss/build/grids-responsive-min";
+
+/* Prism */
+{{ if or (not $.Site.Params.prism.theme) (eq $.Site.Params.prism.theme "prism") -}}
+@import "prismjs/themes/prism.css";
+{{- else -}}
+@import "prismjs/themes/prism-{{ $.Site.Params.prism.theme }}.css";
+{{- end }}
+
+{{ range .Site.Params.prism.plugins -}}
+  {{- $path := printf "prismjs/plugins/%s/prism-%s.css" . . -}}
+  {{- $resource := resources.Get $path -}}
+  {{- if $resource -}}
+    @import "{{ $resource }}";
+  {{- end -}}
+{{- end -}}

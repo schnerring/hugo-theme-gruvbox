@@ -1,9 +1,29 @@
 baseURL = "http://localhost"
-theme = "hugo-gruvbox"
-themesDir = "../.."
 
 [languages]
   [languages.en]
     title = "hugo-gruvbox"
     subtitle = "Theme Demo"
     description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
+
+[Params.prism]
+  languages = [
+    "markup",
+    "css",
+    "clike",
+    "javascript"
+  ]
+  plugins = [
+    "normalize-whitespace",
+    "toolbar",
+    "copy-to-clipboard"
+  ]
+  theme = "solarizedlight"
+
+[module]
+  replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
+  [[module.imports]]
+    path = "github.com/schnerring/hugo-gruvbox"
+  [[module.mounts]]
+    source = "node_modules/prismjs"
+    target = "assets/prismjs"
