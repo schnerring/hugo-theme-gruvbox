@@ -30,6 +30,9 @@
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.2",
-    "postcss-url": "^10.1.3"
+    "postcss-url": "^10.1.3",
+    "prism-themes": "^1.7.0",
+    "prismjs": "^1.24.0",
+    "purecss": "^2.0.6"
   }
 }
