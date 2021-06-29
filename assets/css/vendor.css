@@ -1,3 +1,7 @@
+/* Typefaces */
+@import "typeface-ubuntu";
+@import "typeface-ubuntu-mono";
+
 /* Pure */
 @import "purecss/build/base-min";
 @import "purecss/build/grids-min";
