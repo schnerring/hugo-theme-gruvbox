@@ -27,3 +27,9 @@ baseURL = "http://localhost"
   [[module.mounts]]
     source = "node_modules/prismjs"
     target = "assets/prismjs"
+  [[module.mounts]]
+    source = "node_modules/@tabler/icons/icons"
+    target = "assets/tabler-icons"
+  [[module.mounts]]
+    source = "node_modules/simple-icons/icons"
+    target = "assets/simple-icons"

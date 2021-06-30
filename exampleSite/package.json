@@ -2,6 +2,7 @@
   "comments": {
     "dependencies": {},
     "devDependencies": {
+      "@tabler/icons": "../..",
       "cssnano": "../..",
       "postcss": "../..",
       "postcss-cli": "../..",
@@ -11,12 +12,14 @@
       "prism-themes": "../..",
       "prismjs": "../..",
       "purecss": "../..",
+      "simple-icons": "../..",
       "typeface-ubuntu": "../..",
       "typeface-ubuntu-mono": "../.."
     }
   },
   "dependencies": {},
   "devDependencies": {
+    "@tabler/icons": "^1.41.2",
     "cssnano": "^5.0.6",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
@@ -26,6 +29,7 @@
     "prism-themes": "^1.7.0",
     "prismjs": "^1.24.0",
     "purecss": "^2.0.6",
+    "simple-icons": "^5.4.0",
     "typeface-ubuntu": "^1.1.13",
     "typeface-ubuntu-mono": "^1.1.13"
   },
