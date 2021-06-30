@@ -2,6 +2,7 @@
   "comments": {
     "dependencies": {},
     "devDependencies": {
+      "cssnano": "../..",
       "postcss": "../..",
       "postcss-cli": "../..",
       "postcss-import": "../..",
@@ -16,6 +17,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "cssnano": "^5.0.6",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
     "postcss-import": "^14.0.2",

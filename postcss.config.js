@@ -5,5 +5,8 @@ module.exports = () => ({
       url: "inline",
     }),
     require("postcss-nested"),
+    require("cssnano")({
+      preset: "default",
+    }),
   ],
 });
