@@ -1,4 +1,52 @@
+:root {
+  --font-monospace: "Ubuntu Mono";
+  --font-sans-serif: "Ubuntu";
+}
+
+html,
+button,
+input,
+select,
+textarea,
+.pure-g [class*="pure-u"] {
+  font-family: var(--font-sans-serif), Georgia, Times, "Times New Roman", serif;
+}
+
 body {
-  background-color: var(--bg);
+  background: var(--bg0);
   color: var(--fg);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  margin: auto;
+  max-width: 600px;
+}
+
+main {
+  grid-area: main;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main,
+footer {
+  margin: 0.5em 1em;
 }

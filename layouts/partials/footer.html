@@ -1,4 +1,6 @@
-<footer></footer>
+<footer>
+  <span>Copyright © 2021</span>
+</footer>
 
 {{ $main := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}"></script>
