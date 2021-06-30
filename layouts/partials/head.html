@@ -14,19 +14,19 @@
   <!-- Styles -->
   {{- $options := (dict "inlineImports" true) -}}
 
-  {{ $style := resources.Get "css/main.css" | resources.PostCSS $options -}}
-  {{- if hugo.IsProduction -}}
-    {{- $style = $style | minify | fingerprint "sha512" -}}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
-  {{- else -}}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-  {{- end }}
-
   {{ $vendor := resources.Get "css/vendor.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS $options -}}
   {{- if hugo.IsProduction -}}
     {{- $vendor = $vendor | minify | fingerprint "sha512" -}}
     <link rel="stylesheet" href="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}" />
   {{- else -}}
     <link rel="stylesheet" href="{{ $vendor.RelPermalink }}" />
+  {{- end }}
+
+  {{ $style := resources.Get "css/main.css" | resources.PostCSS $options -}}
+  {{- if hugo.IsProduction -}}
+    {{- $style = $style | minify | fingerprint "sha512" -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
+  {{- else -}}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{- end }}
 </head>

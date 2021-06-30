@@ -1,0 +1,47 @@
+.post {
+  padding: 2rem 0;
+  border-bottom: var(--bg1) 2px dotted;
+
+  &-header {
+    font-family: var(--font-monospace);
+
+    & h1 {
+      font-weight: normal;
+    }
+  }
+
+  &-meta {
+    color: var(--gray2);
+
+    &__author {
+      font-weight: bold;
+    }
+  }
+
+  &-content {
+    margin: 1.3rem 0;
+
+    &__read-more {
+      color: var(--blue1);
+      font-family: var(--font-monospace);
+      margin-top: 1.3rem;
+    }
+  }
+
+  &-header,
+  &-content {
+    & a {
+      color: var(--blue1);
+      text-decoration: none;
+    }
+
+    & a:hover {
+      color: var(--blue2);
+    }
+  }
+
+  &-tag::before {
+    color: var(--blue2);
+    content: "#";
+  }
+}
