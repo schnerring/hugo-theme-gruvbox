@@ -1,23 +1,23 @@
 header {
   display: grid;
-  grid-template-columns: [nav] 1fr [theme-toggle] auto;
+  grid-template-columns: [nav] 1fr [toggle-theme] auto;
 
   & .nav {
     grid-column: nav-start / nav-end;
     grid-row: 1;
   }
 
-  & .theme-toggle {
+  & .toggle-theme {
     align-items: center;
     color: var(--gray2);
     cursor: pointer;
     display: flex;
-    grid-column: theme-toggle-start / theme-toggle-end;
+    grid-column: toggle-theme-start / toggle-theme-end;
     grid-row: 1;
     margin: 0 1rem;
   }
 
-  & .theme-toggle:hover {
+  & .toggle-theme:hover {
     color: var(--gray1);
   }
 }
