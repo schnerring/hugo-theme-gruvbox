@@ -14,7 +14,7 @@ header {
     display: flex;
     grid-column: theme-toggle-start / theme-toggle-end;
     grid-row: 1;
-    margin-left: 1rem;
+    margin: 0 1rem;
   }
 
   & .theme-toggle:hover {
