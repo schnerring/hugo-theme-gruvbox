@@ -1,0 +1,43 @@
+.home-menu {
+  font-family: var(--font-monospace);
+
+  &__heading {
+    color: var(--blue1) !important;
+    font-size: 1.1rem;
+    text-transform: none;
+  }
+
+  &__heading:hover {
+    color: var(--blue2) !important;
+  }
+
+  &__heading::after {
+    color: var(--blue2);
+    content: " █";
+    animation: 1s blink infinite;
+  }
+
+  & a {
+    color: var(--gray2);
+  }
+
+  & a:hover,
+  & a:focus {
+    background: none;
+    color: var(--gray1);
+  }
+
+  & ul {
+    float: right;
+  }
+}
+
+/* Source: https://stackoverflow.com/a/36118384/1154965 */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
