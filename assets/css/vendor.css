@@ -6,14 +6,17 @@
 @import "purecss/build/base-min";
 @import "purecss/build/grids-min";
 @import "purecss/build/grids-responsive-min";
+@import "purecss/build/menus-core-min";
+@import "purecss/build/menus-min";
 
-/* Prism */
+/* Prism Theme */
 {{ if or (not $.Site.Params.prism.theme) (eq $.Site.Params.prism.theme "prism") -}}
 @import "prismjs/themes/prism.css";
 {{- else -}}
 @import "prismjs/themes/prism-{{ $.Site.Params.prism.theme }}.css";
 {{- end }}
 
+/* Prism Plugins */
 {{ range .Site.Params.prism.plugins -}}
   {{- $path := printf "prismjs/plugins/%s/prism-%s.css" . . -}}
   {{- $resource := resources.Get $path -}}
@@ -21,3 +24,11 @@
     @import "{{ $resource }}";
   {{- end -}}
 {{- end -}}
+
+/* Prism Font */
+code,
+kbd,
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: var(--font-monospace), monospace; /* TODO configure fallbacks */
+}

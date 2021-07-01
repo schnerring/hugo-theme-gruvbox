@@ -13,7 +13,7 @@ textarea,
 }
 
 body {
-  background: var(--bg0);
+  background: var(--bg);
   color: var(--fg);
   line-height: 1.7;
 }

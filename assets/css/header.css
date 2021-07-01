@@ -1,0 +1,23 @@
+header {
+  display: grid;
+  grid-template-columns: [nav] 1fr [theme-toggle] auto;
+
+  & .nav {
+    grid-column: nav-start / nav-end;
+    grid-row: 1;
+  }
+
+  & .theme-toggle {
+    align-items: center;
+    color: var(--gray2);
+    cursor: pointer;
+    display: flex;
+    grid-column: theme-toggle-start / theme-toggle-end;
+    grid-row: 1;
+    margin-left: 1rem;
+  }
+
+  & .theme-toggle:hover {
+    color: var(--gray1);
+  }
+}
