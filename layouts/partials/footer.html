@@ -1,5 +1,9 @@
 <footer>
-  <span>Copyright © 2021</span>
+  <div class="copyright">
+    {{- with $.Site.Copyright -}}
+      {{ . | safeHTML }}
+    {{- end -}}
+  </div>
 </footer>
 
 {{ $main := resources.Get "js/main.js" | js.Build "main.js" | minify | fingerprint "sha512" }}

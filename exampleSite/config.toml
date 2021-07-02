@@ -1,4 +1,5 @@
 baseURL = "http://localhost"
+copyright = "Copyright © 2021"
 
 [languages]
   [languages.en]
