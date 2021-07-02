@@ -6,19 +6,23 @@ baseURL = "http://localhost"
     subtitle = "Theme Demo"
     description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
 
-[Params.prism]
-  languages = [
-    "markup",
-    "css",
-    "clike",
-    "javascript"
-  ]
-  plugins = [
-    "normalize-whitespace",
-    "toolbar",
-    "copy-to-clipboard"
-  ]
-  theme = "solarizedlight"
+[params]
+  # dark or light, defaults to light
+  #defaultTheme = "light"
+
+  [params.prism]
+    languages = [
+      "markup",
+      "css",
+      "clike",
+      "javascript"
+    ]
+    plugins = [
+      "normalize-whitespace",
+      "toolbar",
+      "copy-to-clipboard"
+    ]
+    theme = "solarizedlight"
 
 [module]
   replacements = "github.com/schnerring/hugo-gruvbox -> ../.."

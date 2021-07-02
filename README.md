@@ -20,3 +20,27 @@ npm i
 > Hugo Pipe's PostCSS requires the `postcss-cli` JavaScript package to be installed in the environment (`npm install -g postcss postcss-cli`) along with any PostCSS plugin(s) used (e.g., `npm install -g` autoprefixer).
 >
 > If you are using the Hugo Snap package, PostCSS and plugin(s) need to be installed locally within your Hugo site directory, e.g., `npm install postcss-cli` without the `-g` flag.
+
+## Installation
+
+This theme uses `npm` for dependency management. `npm install` must be run before `hugo`.
+
+## Explore Available Prism Features
+
+### Languages
+
+```shell
+ls node_modules/prismjs/components
+```
+
+### Plugins
+
+```shell
+ls node_modules/prismjs/plugins
+```
+
+### Themes
+
+```shell
+ls node_modules/prismjs/themes node_modules/prism-themes/themes
+```

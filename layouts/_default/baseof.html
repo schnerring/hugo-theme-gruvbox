@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html theme="{{- .Param "defaultTheme" | default "light" -}}">
   {{- partial "head.html" . -}}
   <body>
     <div class="layout">
