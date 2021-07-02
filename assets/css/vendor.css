@@ -23,7 +23,7 @@
   {{- if $resource -}}
     @import "{{ $resource }}";
   {{- end -}}
-{{- end -}}
+{{- end }}
 
 /* Prism Font */
 code,
