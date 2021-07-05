@@ -9,7 +9,7 @@ copyright = "Copyright © 2021"
 
 [params]
   # dark or light, defaults to light
-  #defaultTheme = "light"
+  #defaultTheme = "dark"
 
   [params.prism]
     languages = [

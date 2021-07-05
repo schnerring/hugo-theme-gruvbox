@@ -1,6 +1,11 @@
 <header>
   {{- partial "nav.html" . -}}
   <div class="toggle-theme">
-    {{ partial "tabler-icon" "brightness" }}
+    <div class="light--hidden" aria-label="Toggle light mode">
+      {{ partial "tabler-icon" "sun" }}
+    </div>
+    <div class="dark--hidden" aria-label="Toggle dark mode">
+      {{ partial "tabler-icon" "moon" }}
+    </div>
   </div>
 </header>
