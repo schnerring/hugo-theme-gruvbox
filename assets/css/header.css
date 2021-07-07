@@ -1,23 +1,23 @@
 header {
   display: grid;
-  grid-template-columns: [nav] 1fr [toggle-theme] auto;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "nav theme-btns";
 
-  & .nav {
-    grid-column: nav-start / nav-end;
-    grid-row: 1;
+  & nav {
+    grid-area: nav;
   }
 
-  & .toggle-theme {
+  & .theme__btn {
     align-items: center;
-    color: var(--gray2);
+    background: none;
+    border: none;
+    color: var(--yellow1);
     cursor: pointer;
-    display: flex;
-    grid-column: toggle-theme-start / toggle-theme-end;
-    grid-row: 1;
+    grid-area: theme-btns;
     margin: 0 1rem;
   }
 
-  & .toggle-theme:hover {
-    color: var(--gray1);
+  & .theme__btn:hover {
+    color: var(--yellow2);
   }
 }
