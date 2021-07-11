@@ -1,7 +1,15 @@
 <nav>
   <div class="home-menu pure-menu-horizontal">
-    <a href="/" class="home-menu__heading pure-menu-heading pure-menu-link">schnerring.net &gt;</a>
+    <a href="{{ with $.Site.Params.Logo.URL }}{{ . }}{{ else }}{{ $.Site.BaseURL }}{{ end }}" class="home-menu__heading pure-menu-heading pure-menu-link">
+      <span>{{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}</span>
+      <span>&gt;</span>
+    </a>
     <ul class="pure-menu-list">
+      {{ range $.Site.Menus.main -}}
+        <li class="pure-menu-item">
+          <a href="{{ .URL }}" class="pure-menu-link">{{ .Name }}</a>
+        </li>
+      {{ end -}}
     </ul>
   </div>
 </nav>

@@ -1,7 +1,7 @@
 header {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas: "nav theme-btns";
+  grid-template-areas: "nav theme-btn";
 
   & nav {
     grid-area: nav;
@@ -13,7 +13,7 @@ header {
     border: none;
     color: var(--yellow1);
     cursor: pointer;
-    grid-area: theme-btns;
+    grid-area: theme-btn;
     margin: 0 1rem;
   }
 

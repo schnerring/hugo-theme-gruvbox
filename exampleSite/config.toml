@@ -7,6 +7,16 @@ copyright = "Copyright © 2021"
     subtitle = "Theme Demo"
     description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
 
+    [languages.en.params.logo]
+      text = "hugo-gruvbox"
+      url = "/"
+
+    [languages.en.menu]
+      [[languages.en.menu.main]]
+        identifier = "about"
+        name = "About"
+        url = "/about"
+
 [params]
   # dark or light, defaults to light
   #defaultTheme = "dark"
