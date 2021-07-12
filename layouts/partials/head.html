@@ -29,4 +29,8 @@
   {{- else -}}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
   {{- end }}
+
+  <!-- Internal Hugo Templates -->
+  {{ template "_internal/twitter_cards.html" . }}
+  {{ template "_internal/opengraph.html" . }}
 </head>
