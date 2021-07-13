@@ -4,5 +4,9 @@
     <div class="post-content">
       {{ .Content }}
     </div>
+
+    {{ if .Params.Comments }}
+      {{ partial "comments.html" . }}
+    {{ end }}
   </div>
 {{ end }}

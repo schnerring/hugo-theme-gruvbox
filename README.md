@@ -57,12 +57,14 @@ ls node_modules/prismjs/themes node_modules/prism-themes/themes
 
 You can extend the theme by overriding the following partials in the `layouts/partials` directory which by default are empty placeholder files:
 
-- `head_start.html`  
+- [`head_start.html`](./layouts/partials/head_start.html)  
   Custom HTML at the start of `<head>`
-- `head_end.html`  
+- [`head_end.html`](./layouts/partials/head_end.html)  
   Custom HTML at the end of `<head>`
-- `footer_end.html`  
+- [`footer_end.html`](./layouts/partials/footer_end.html)  
   Custom HTML at the end of `<body>`
+- [`comments.html`](./layouts/partials/comments.html)  
+  Comments at the end of posts
 
 ## PostCSS
 
