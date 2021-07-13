@@ -11,6 +11,8 @@
   />
   <link rel="canonical" href="{{ .Permalink }}" />
 
+  {{ partial "head_start.html" . }}
+
   <!-- Styles -->
   {{- $options := (dict "inlineImports" true) -}}
 
@@ -33,4 +35,6 @@
   <!-- Internal Hugo Templates -->
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/opengraph.html" . }}
+
+  {{ partial "head_end.html" . }}
 </head>

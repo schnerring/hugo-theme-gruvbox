@@ -12,3 +12,5 @@
 
 {{- $vendor := resources.Get "js/vendor.js" | resources.ExecuteAsTemplate "vendor.js" . | js.Build "vendor.js" | minify | fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
+
+{{ partial "footer_end.html" . }}

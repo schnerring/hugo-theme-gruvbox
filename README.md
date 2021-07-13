@@ -36,7 +36,7 @@ The theme allows customization of Prism via `config.toml` parameters:
     theme = "solarizedlight"
 ```
 
-In my opinion, that's the coolest feature of the theme. Other Hugo themes usually include a pre-configured version of Prism, which complicates updates and change tracking, and clutters the theme's code base with third-party JavaScript.
+In my opinion, this is the coolest feature of the theme. Other Hugo themes usually include a pre-configured version of Prism, which complicates updates and change tracking, and clutters the theme's code base with third-party JavaScript.
 
 ### Explore Prism Features
 
@@ -52,6 +52,17 @@ ls node_modules/prismjs/plugins
 # Themes
 ls node_modules/prismjs/themes node_modules/prism-themes/themes
 ```
+
+## Extensibility
+
+You can extend the theme by overriding the following partials in the `layouts/partials` directory which by default are empty placeholder files:
+
+- `head_start.html`  
+  Custom HTML at the start of `<head>`
+- `head_end.html`  
+  Custom HTML at the end of `<head>`
+- `footer_end.html`  
+  Custom HTML at the end of `<body>`
 
 ## PostCSS
 
