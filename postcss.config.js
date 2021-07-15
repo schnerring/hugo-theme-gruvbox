@@ -4,7 +4,7 @@ module.exports = () => ({
     require("postcss-url")({
       url: "inline",
     }),
-    require("postcss-nested"),
+    require("postcss-nesting"),
     require("postcss-preset-env")({
       stage: 1,
     }),

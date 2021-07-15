@@ -1,22 +1,6 @@
 .home-menu {
   font-family: var(--font-monospace);
 
-  &__heading {
-    color: var(--blue1) !important;
-    font-size: 1.1rem;
-    text-transform: none;
-  }
-
-  &__heading:hover {
-    color: var(--blue2) !important;
-  }
-
-  &__heading::after {
-    color: var(--blue2);
-    content: " █";
-    animation: 1s blink infinite;
-  }
-
   & a {
     color: var(--gray2);
   }
@@ -32,7 +16,23 @@
   }
 }
 
-/* Source: https://stackoverflow.com/a/36118384/1154965 */
+.home-menu__heading {
+  color: var(--blue1) !important;
+  font-size: 1.1rem;
+  text-transform: none;
+}
+
+.home-menu__heading:hover {
+  color: var(--blue2) !important;
+}
+
+.home-menu__heading::after {
+  color: var(--blue2);
+  content: " █";
+  animation: 1s blink infinite;
+}
+
+/*! Source: https://stackoverflow.com/a/36118384/1154965 */
 @keyframes blink {
   50% {
     opacity: 0;
