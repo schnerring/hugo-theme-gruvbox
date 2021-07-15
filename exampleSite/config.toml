@@ -1,6 +1,9 @@
 baseURL = "http://localhost"
 copyright = "Copyright © 2021"
 
+[build]
+  writeStats = true
+
 [languages]
   [languages.en]
     title = "hugo-gruvbox"

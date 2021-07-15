@@ -23,6 +23,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
     "@tabler/icons": "^1.41.2",
     "cssnano": "^5.0.6",
     "postcss": "^8.3.5",
