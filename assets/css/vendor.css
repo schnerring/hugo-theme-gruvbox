@@ -9,6 +9,8 @@
 @import "purecss/build/menus-core-min";
 @import "purecss/build/menus-min";
 
+/*! purgecss start ignore */
+
 /* Prism Theme */
 {{ if or (not $.Site.Params.prism.theme) (eq $.Site.Params.prism.theme "prism") -}}
 @import "prismjs/themes/prism.css";
@@ -32,3 +34,5 @@ code[class*="language-"],
 pre[class*="language-"] {
   font-family: var(--font-monospace), monospace; /* TODO configure fallbacks */
 }
+
+/*! purgecss end ignore */

@@ -51,3 +51,9 @@ copyright = "Copyright © 2021"
   [[module.mounts]]
     source = "node_modules/simple-icons/icons"
     target = "assets/simple-icons"
+  [[module.mounts]]
+    source = "node_modules/typeface-ubuntu/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/typeface-ubuntu-mono/files"
+    target = "static/fonts"

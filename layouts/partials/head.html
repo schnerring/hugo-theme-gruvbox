@@ -2,36 +2,40 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
-    {{- if not .IsHome }}{{ with .Title }}{{ . }} :: {{ end }}{{ end }}
-    {{- .Site.Title }}{{ with .Site.Params.Subtitle }} — {{ . }}{{ end }}
+    {{- if not .IsHome -}}
+      {{- with .Title }}{{ . }} :: {{ end -}}
+    {{- end -}}
+    {{- .Site.Title -}}
+    {{- with .Site.Params.Subtitle }} — {{ . }}{{ end -}}
   </title>
   <meta
     name="description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ with .Summary | plainify }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}{{ end }}"
-  />
+    content="
+      {{- with .Description -}}
+        {{- . -}}
+      {{- else -}}
+        {{- with .Summary | plainify -}}
+          {{- . -}}
+        {{- else -}}
+          {{- .Site.Params.description -}}
+        {{- end -}}
+      {{- end -}}"
+    />
   <link rel="canonical" href="{{ .Permalink }}" />
 
   <!-- Extensibility -->
   {{ partial "head_start.html" . }}
 
   <!-- Styles -->
-  {{- $options := (dict "inlineImports" true) -}}
-
-  {{ $vendor := resources.Get "css/vendor.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS $options -}}
-  {{- if hugo.IsProduction -}}
-    {{- $vendor = $vendor | minify | fingerprint "sha512" -}}
-    <link rel="stylesheet" href="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}" />
-  {{- else -}}
-    <link rel="stylesheet" href="{{ $vendor.RelPermalink }}" />
-  {{- end }}
-
-  {{ $style := resources.Get "css/main.css" | resources.PostCSS $options -}}
-  {{- if hugo.IsProduction -}}
-    {{- $style = $style | minify | fingerprint "sha512" -}}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" />
-  {{- else -}}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-  {{- end }}
+  {{ $vendor := resources.Get "css/vendor.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS }}
+  {{ $main := resources.Get "css/main.css" | resources.PostCSS }}
+  {{ $bundle := slice $vendor $main | resources.Concat "bundle.css" }}
+  {{ if hugo.IsProduction }}
+    {{ $bundle = $bundle | minify | fingerprint "sha512" | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" />
+  {{ else }}
+    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" />
+  {{ end }}
 
   <!-- Internal Hugo Templates -->
   {{ template "_internal/twitter_cards.html" . }}
