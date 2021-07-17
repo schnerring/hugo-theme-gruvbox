@@ -1,17 +1,22 @@
 <footer>
   <div class="copyright">
     {{- with $.Site.Copyright -}}
-      {{ . | safeHTML }}
+      {{- . | safeHTML -}}
     {{- end -}}
   </div>
 </footer>
 
-{{ $theme := resources.Get "js/theme.js" -}}
-{{- $main := slice $theme | resources.Concat "js/main.js" | js.Build "main.js" | minify | fingerprint "sha512" -}}
-<script type="text/javascript" src="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}"></script>
-
-{{- $vendor := resources.Get "js/vendor.js" | resources.ExecuteAsTemplate "vendor.js" . | js.Build "vendor.js" | minify | fingerprint "sha512" }}
-<script type="text/javascript" src="{{ $vendor.RelPermalink }}" integrity="{{ $vendor.Data.Integrity }}"></script>
+{{ $theme := resources.Get "js/theme.js" }}
+{{ $vendor := resources.Get "js/vendor.js" | resources.ExecuteAsTemplate "js/vendor.js" . }}
+{{ $bundle := slice $theme $vendor | resources.Concat "js/bundle.js" | js.Build }}
+<script
+  type="text/javascript"
+  {{ if hugo.IsProduction }}
+    {{ $bundle = $bundle | minify | fingerprint "sha512" }}
+    integrity="{{ $bundle.Data.Integrity }}"
+  {{ end }}
+  src="{{ $bundle.RelPermalink }}"
+  ></script>
 
 <!-- Extensibility -->
 {{ partial "footer_end.html" . }}

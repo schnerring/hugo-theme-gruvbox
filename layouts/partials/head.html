@@ -54,12 +54,13 @@
   {{ $vendor := resources.Get "css/vendor.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS }}
   {{ $main := resources.Get "css/main.css" | resources.PostCSS }}
   {{ $bundle := slice $vendor $main | resources.Concat "css/bundle.css" }}
-  {{ if hugo.IsProduction }}
-    {{ $bundle = $bundle | minify | fingerprint "sha512" | resources.PostProcess }}
-    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" />
-  {{ else }}
-    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" />
-  {{ end }}
+  <link rel="stylesheet"
+    {{ if hugo.IsProduction }}
+      {{ $bundle = $bundle | minify | fingerprint "sha512" | resources.PostProcess }}
+      integrity="{{ $bundle.Data.Integrity }}"
+    {{ end }}
+    href="{{ $bundle.RelPermalink }}"
+    />
 
   <!-- Internal Hugo Templates -->
   {{ template "_internal/twitter_cards.html" . }}
