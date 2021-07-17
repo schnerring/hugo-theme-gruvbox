@@ -1,6 +1,9 @@
+// Extensibility
+function themeChanged(theme) {}
+
 function getTheme() {
   if (localStorage && localStorage.getItem("theme")) {
-    // user preference
+    // User preference
     return localStorage.getItem("theme");
   }
   if (window.matchMedia) {
@@ -9,12 +12,24 @@ function getTheme() {
       ? "light"
       : "dark";
   }
-  // undefined
+  // Undefined
 }
 
 function setTheme(theme) {
+  // Hugo theme
   document.documentElement.setAttribute("theme", theme);
+
+  // Prism theme
+  const prismDark = document.getElementById("prism-dark");
+  const prismLight = document.getElementById("prism-light");
+  prismDark.toggleAttribute("disabled", theme === "light");
+  prismLight.toggleAttribute("disabled", theme === "dark");
+
+  // Store user preference
   localStorage.setItem("theme", theme);
+
+  // Extensibility
+  themeChanged(theme);
 }
 
 function toggleTheme(e) {

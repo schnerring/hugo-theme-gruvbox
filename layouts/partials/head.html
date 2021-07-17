@@ -27,9 +27,33 @@
   {{ partial "head_start.html" . }}
 
   <!-- Styles -->
+  {{ $defaultTheme := .Param "defaultTheme" | default "light" }}
+  {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
+  <link
+    rel="stylesheet"
+    id="prism-dark"
+    {{ if hugo.IsProduction }}
+      {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
+      integrity="{{ $prismDark.Data.Integrity }}"
+    {{ end }}
+    href="{{ $prismDark.RelPermalink }}"
+    {{ if eq $defaultTheme "light"}}disabled{{ end }}
+    />
+  {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
+  <link
+    rel="stylesheet"
+    id="prism-light"
+    {{ if hugo.IsProduction }}
+      {{ $prismLight = $prismLight | minify | fingerprint "sha512" }}
+      integrity="{{ $prismLight.Data.Integrity }}"
+    {{ end }}
+    href="{{ $prismLight.RelPermalink }}"
+    {{ if eq $defaultTheme "dark"}}disabled{{ end }}
+    />
+
   {{ $vendor := resources.Get "css/vendor.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS }}
   {{ $main := resources.Get "css/main.css" | resources.PostCSS }}
-  {{ $bundle := slice $vendor $main | resources.Concat "bundle.css" }}
+  {{ $bundle := slice $vendor $main | resources.Concat "css/bundle.css" }}
   {{ if hugo.IsProduction }}
     {{ $bundle = $bundle | minify | fingerprint "sha512" | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" />

@@ -4,10 +4,11 @@ A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://g
 
 ## Features
 
-- [Prism](https://prismjs.com/) for code highlighting
+- Code highlighting with [Prism](https://prismjs.com/)
 - [Tabler Icons](https://tabler-icons.io/) for generic icons
 - [Simple Icons](https://simpleicons.org/) for social icons
 - All third-party dependencies are managed with [npm](https://www.npmjs.com/) to make updating a breeze and reduce code clutter
+- Dark mode that also changes Prism themes
 
 Big thanks to the creators of [Hugo](https://gohugo.io/) and the software mentioned above. Also, thanks to everyone participating in open-source. I couldn't have created this theme without you. ❤️
 
@@ -33,10 +34,11 @@ The theme allows customization of Prism via `config.toml` parameters:
       "toolbar",
       "copy-to-clipboard"
     ]
-    theme = "solarizedlight"
 ```
 
 In my opinion, this is the coolest feature of the theme. Other Hugo themes usually include a pre-configured version of Prism, which complicates updates and change tracking, and clutters the theme's code base with third-party JavaScript.
+
+The Prism theme is not configurable because of the integration with the dark mode functionality. Toggling between color modes swaps the Prism theme between [`gruvbox-dark`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css) and [`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css) from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
 
 ### Explore Prism Features
 
@@ -48,9 +50,6 @@ ls node_modules/prismjs/components
 
 # Plugins
 ls node_modules/prismjs/plugins
-
-# Themes
-ls node_modules/prismjs/themes node_modules/prism-themes/themes
 ```
 
 ## Extensibility

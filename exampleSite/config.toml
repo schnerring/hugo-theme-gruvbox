@@ -29,14 +29,14 @@ copyright = "Copyright © 2021"
       "markup",
       "css",
       "clike",
-      "javascript"
+      "javascript",
+      "csharp"
     ]
     plugins = [
       "normalize-whitespace",
       "toolbar",
       "copy-to-clipboard"
     ]
-    theme = "solarizedlight"
 
 [module]
   replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
@@ -46,14 +46,17 @@ copyright = "Copyright © 2021"
     source = "node_modules/prismjs"
     target = "assets/prismjs"
   [[module.mounts]]
-    source = "node_modules/@tabler/icons/icons"
-    target = "assets/tabler-icons"
-  [[module.mounts]]
-    source = "node_modules/simple-icons/icons"
-    target = "assets/simple-icons"
+    source = "node_modules/prism-themes/themes"
+    target = "assets/prism-themes"
   [[module.mounts]]
     source = "node_modules/typeface-ubuntu/files"
     target = "static/fonts"
   [[module.mounts]]
     source = "node_modules/typeface-ubuntu-mono/files"
     target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/@tabler/icons/icons"
+    target = "assets/tabler-icons"
+  [[module.mounts]]
+    source = "node_modules/simple-icons/icons"
+    target = "assets/simple-icons"

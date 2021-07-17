@@ -1,3 +1,5 @@
+/*! purgecss start ignore */
+
 /* Typefaces */
 @import "typeface-ubuntu";
 @import "typeface-ubuntu-mono";
@@ -9,23 +11,14 @@
 @import "purecss/build/menus-core-min";
 @import "purecss/build/menus-min";
 
-/*! purgecss start ignore */
-
-/* Prism Theme */
-{{ if or (not $.Site.Params.prism.theme) (eq $.Site.Params.prism.theme "prism") -}}
-@import "prismjs/themes/prism.css";
-{{- else -}}
-@import "prismjs/themes/prism-{{ $.Site.Params.prism.theme }}.css";
-{{- end }}
-
 /* Prism Plugins */
-{{ range .Site.Params.prism.plugins -}}
-  {{- $path := printf "prismjs/plugins/%s/prism-%s.css" . . -}}
-  {{- $resource := resources.Get $path -}}
-  {{- if $resource -}}
-    @import "{{ $resource }}";
-  {{- end -}}
-{{- end }}
+{{ range .Site.Params.prism.plugins }}
+  {{ $path := printf "prismjs/plugins/%s/prism-%s.css" . . }}
+  {{ $plugin := resources.Get $path }}
+  {{ if $plugin }}
+    @import "{{ $plugin }}";
+  {{ end }}
+{{ end }}
 
 /* Prism Font */
 code,
