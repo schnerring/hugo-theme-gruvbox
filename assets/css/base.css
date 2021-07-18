@@ -92,6 +92,20 @@ footer {
   margin: 0.5em 1em;
 }
 
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2rem 0;
+}
+
+table,
+th,
+td {
+  border: var(--bg2) 1px solid;
+  padding: 0.5rem;
+}
+
 hr {
   border: none;
   background: var(--bg4);
