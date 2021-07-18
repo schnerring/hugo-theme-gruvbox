@@ -1,8 +1,9 @@
 {
   "recommendations": [
+    "csstools.postcss",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "davidanson.vscode-markdownlint",
-    "csstools.postcss"
+    "webben.browserslist"
   ]
 }
