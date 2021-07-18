@@ -3,6 +3,7 @@ footer {
   color: var(--fg4);
   display: flex;
   font-family: var(--font-monospace);
+  font-size: 0.9rem;
   justify-content: center;
   padding-top: 4rem;
 }

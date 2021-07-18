@@ -3,8 +3,10 @@
   border-bottom: var(--bg1) 2px dotted;
 }
 
-.post-header {
+.post-header,
+.post-content__read-more {
   font-family: var(--font-monospace);
+  font-size: 0.9rem;
 }
 
 .post-meta {
@@ -21,7 +23,6 @@
 
 .post-content__read-more {
   color: var(--aqua2);
-  font-family: var(--font-monospace);
   margin-top: 1.3rem;
 }
 

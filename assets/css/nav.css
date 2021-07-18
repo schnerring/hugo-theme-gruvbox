@@ -1,5 +1,6 @@
 .home-menu {
   font-family: var(--font-monospace);
+  font-size: 0.9rem;
 
   & a {
     color: var(--gray2);
@@ -19,6 +20,7 @@
 .home-menu__heading {
   color: var(--fg0) !important;
   font-weight: 700;
+  font-size: 1rem;
   text-transform: none;
 }
 
