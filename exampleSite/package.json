@@ -15,8 +15,8 @@
       "prismjs": "../..",
       "purecss": "../..",
       "simple-icons": "../..",
-      "typeface-ubuntu": "../..",
-      "typeface-ubuntu-mono": "../.."
+      "typeface-fira-code": "../..",
+      "typeface-roboto-slab": "../.."
     }
   },
   "dependencies": {},
@@ -34,8 +34,8 @@
     "prismjs": "^1.24.0",
     "purecss": "^2.0.6",
     "simple-icons": "^5.4.0",
-    "typeface-ubuntu": "^1.1.13",
-    "typeface-ubuntu-mono": "^1.1.13"
+    "typeface-fira-code": "^1.1.13",
+    "typeface-roboto-slab": "^1.1.13"
   },
   "name": "exampleSite",
   "version": "0.1.0"

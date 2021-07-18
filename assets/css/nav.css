@@ -1,5 +1,5 @@
 .home-menu {
-  font-family: var(--font-serif);
+  font-family: var(--font-monospace);
 
   & a {
     color: var(--gray2);
@@ -17,17 +17,12 @@
 }
 
 .home-menu__heading {
-  color: var(--blue1) !important;
-  font-size: 1.1rem;
+  color: var(--fg0) !important;
+  font-weight: 700;
   text-transform: none;
 }
 
-.home-menu__heading:hover {
-  color: var(--blue2) !important;
-}
-
-.home-menu__heading::after {
-  color: var(--blue2);
+.home-menu__heading:hover::after {
   content: " █";
   animation: 1s blink infinite;
 }

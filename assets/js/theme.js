@@ -1,6 +1,3 @@
-// Extensibility
-function themeChanged(theme) {}
-
 function getTheme() {
   if (localStorage && localStorage.getItem("theme")) {
     // User preference
@@ -27,9 +24,6 @@ function setTheme(theme) {
 
   // Store user preference
   localStorage.setItem("theme", theme);
-
-  // Extensibility
-  themeChanged(theme);
 }
 
 function toggleTheme(e) {

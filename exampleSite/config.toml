@@ -49,10 +49,10 @@ copyright = "Copyright © 2021"
     source = "node_modules/prism-themes/themes"
     target = "assets/prism-themes"
   [[module.mounts]]
-    source = "node_modules/typeface-ubuntu/files"
+    source = "node_modules/typeface-fira-code/files"
     target = "static/fonts"
   [[module.mounts]]
-    source = "node_modules/typeface-ubuntu-mono/files"
+    source = "node_modules/typeface-roboto-slab/files"
     target = "static/fonts"
   [[module.mounts]]
     source = "node_modules/@tabler/icons/icons"

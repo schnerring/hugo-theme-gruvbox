@@ -1,7 +1,7 @@
 :root {
-  --font-monospace: "Ubuntu Mono";
-  --font-sans-serif: "Ubuntu";
-  --font-serif: var(--font-monospace);
+  --font-monospace: "Fira Code", "Lucida Console", Monaco, monospace;
+  --font-sans-serif: Verdana, Helvetica, sans-serif;
+  --font-serif: "Roboto Slab", Georgia, serif;
 }
 
 html,
@@ -10,14 +10,14 @@ input,
 select,
 textarea,
 .pure-g [class*="pure-u"] {
-  font-family: var(--font-sans-serif), Georgia, Times, "Times New Roman", serif;
-  font-size: 1.05rem;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 a {
@@ -30,7 +30,34 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-serif);
+  font-family: var(--font-monospace);
+  line-height: 1.4;
+  font-weight: 300;
+  color: var(--fg0);
+}
+
+h1 {
+  font-size: 2.375rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.375rem;
+}
+
+h6 {
+  font-size: 1.25rem;
 }
 
 .layout {

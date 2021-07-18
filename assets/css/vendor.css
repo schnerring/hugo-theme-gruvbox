@@ -1,8 +1,8 @@
 /*! purgecss start ignore */
 
 /* Typefaces */
-@import "typeface-ubuntu";
-@import "typeface-ubuntu-mono";
+@import "typeface-roboto-slab";
+@import "typeface-fira-code";
 
 /* Pure */
 @import "purecss/build/base-min";
