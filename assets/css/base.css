@@ -34,6 +34,10 @@ h6 {
   line-height: 1.4;
   font-weight: 300;
   color: var(--fg0);
+
+  & code {
+    font-size: 1em;
+  }
 }
 
 h1 {
@@ -63,13 +67,12 @@ h6 {
 .layout {
   display: grid;
   grid-template-areas:
-    "header"
-    "main"
-    "footer";
+    "bio header toc"
+    "bio main toc"
+    "footer footer footer";
+  grid-template-columns: 1fr minmax(auto, 768px) 2fr;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
-  margin: auto;
-  max-width: 768px;
 }
 
 main {
