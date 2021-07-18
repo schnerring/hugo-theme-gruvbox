@@ -64,34 +64,6 @@ h6 {
   font-size: 1.25rem;
 }
 
-.layout {
-  display: grid;
-  grid-template-areas:
-    "bio header toc"
-    "bio main toc"
-    "footer footer footer";
-  grid-template-columns: 1fr minmax(auto, 768px) 2fr;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
-}
-
-main {
-  grid-area: main;
-}
-
-header {
-  grid-area: header;
-}
-
-footer {
-  grid-area: footer;
-}
-
-main,
-footer {
-  margin: 0.5em 1em;
-}
-
 table {
   table-layout: fixed;
   border-collapse: collapse;
