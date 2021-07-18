@@ -1,5 +1,5 @@
 .home-menu {
-  font-family: var(--font-monospace);
+  font-family: var(--font-serif);
 
   & a {
     color: var(--gray2);

@@ -1,6 +1,7 @@
 :root {
   --font-monospace: "Ubuntu Mono";
   --font-sans-serif: "Ubuntu";
+  --font-serif: var(--font-monospace);
 }
 
 html,
@@ -10,6 +11,7 @@ select,
 textarea,
 .pure-g [class*="pure-u"] {
   font-family: var(--font-sans-serif), Georgia, Times, "Times New Roman", serif;
+  font-size: 1.05rem;
 }
 
 body {
@@ -22,6 +24,15 @@ a {
   color: inherit;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
 .layout {
   display: grid;
   grid-template-areas:
@@ -31,7 +42,7 @@ a {
   grid-template-rows: auto 1fr auto;
   height: 100vh;
   margin: auto;
-  max-width: 600px;
+  max-width: 768px;
 }
 
 main {

@@ -4,7 +4,7 @@
 }
 
 .post-header {
-  font-family: var(--font-monospace);
+  font-family: var(--font-serif);
 
   & h1 {
     font-weight: normal;
@@ -25,7 +25,7 @@
 
 .post-content__read-more {
   color: var(--blue1);
-  font-family: var(--font-monospace);
+  font-family: var(--font-serif);
   margin-top: 1.3rem;
 }
 

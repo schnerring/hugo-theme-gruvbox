@@ -2,7 +2,7 @@ footer {
   align-items: center;
   color: var(--fg4);
   display: flex;
-  font-family: var(--font-monospace);
+  font-family: var(--font-serif);
   justify-content: center;
   padding-top: 4rem;
 }
