@@ -140,10 +140,26 @@ kbd {
 pre {
   background: var(--bg1) !important; /* TODO is this really needed? */
   padding: 1rem !important;
+  overflow: auto;
 
   & code {
     background: none;
   }
+}
+
+pre::-webkit-scrollbar {
+  width: auto;
+  scrollbar-width: auto;
+}
+
+pre::-webkit-scrollbar-track {
+  background: var(--bg2);
+  border-radius: 0.2rem;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: var(--bg4);
+  border-radius: 0.2rem;
 }
 
 blockquote {
