@@ -38,6 +38,11 @@ copyright = "Copyright © 2021"
       "copy-to-clipboard"
     ]
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 [module]
   replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
   [[module.imports]]
