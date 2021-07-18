@@ -91,3 +91,18 @@ main,
 footer {
   margin: 0.5em 1em;
 }
+
+hr {
+  border: none;
+  background: var(--bg4);
+  height: 1px;
+}
+
+mark {
+  background: var(--yellow1);
+  color: var(--bg);
+}
+
+abbr {
+  text-underline-offset: 0.2rem;
+}
