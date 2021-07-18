@@ -8,11 +8,11 @@
 
 {{ $theme := resources.Get "js/theme.js" }}
 {{ $vendor := resources.Get "js/vendor.js" | resources.ExecuteAsTemplate "js/vendor.js" . }}
-{{ $bundle := slice $theme $vendor | resources.Concat "js/bundle.js" | js.Build }}
+{{ $bundle := slice $theme $vendor | resources.Concat "js/bundle.js" | js.Build (dict "target" "es6" "minify" true) }}
 <script
   type="text/javascript"
   {{ if hugo.IsProduction }}
-    {{ $bundle = $bundle | minify | fingerprint "sha512" }}
+    {{ $bundle = $bundle | fingerprint "sha512" }}
     integrity="{{ $bundle.Data.Integrity }}"
   {{ end }}
   src="{{ $bundle.RelPermalink }}"

@@ -56,7 +56,7 @@
   {{ $bundle := slice $vendor $main | resources.Concat "css/bundle.css" }}
   <link rel="stylesheet"
     {{ if hugo.IsProduction }}
-      {{ $bundle = $bundle | minify | fingerprint "sha512" | resources.PostProcess }}
+      {{ $bundle = $bundle | fingerprint "sha512" | resources.PostProcess }}
       integrity="{{ $bundle.Data.Integrity }}"
     {{ end }}
     href="{{ $bundle.RelPermalink }}"

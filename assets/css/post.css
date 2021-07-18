@@ -42,6 +42,5 @@
 }
 
 .post-tag::before {
-  color: var(--blue2);
   content: "#";
 }

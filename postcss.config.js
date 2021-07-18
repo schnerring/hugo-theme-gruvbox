@@ -22,12 +22,8 @@ module.exports = () => ({
     require("postcss-nesting"),
     ...(process.env.HUGO_ENVIRONMENT === "production"
       ? [
-          require("postcss-preset-env")({
-            stage: 1,
-          }),
-          require("cssnano")({
-            preset: "default",
-          }),
+          require("postcss-preset-env"),
+          require("cssnano"),
           require("@fullhuman/postcss-purgecss")({
             content: ["./hugo_stats.json"],
             defaultExtractor: (content) => {
@@ -36,7 +32,7 @@ module.exports = () => ({
             },
             safelist: [":root", "theme"],
             //fontFace: true, TODO
-            //variables: true, TODO
+            variables: true,
           }),
         ]
       : []),
