@@ -4,12 +4,8 @@
 @import "typeface-roboto-slab";
 @import "typeface-fira-code";
 
-/* Pure */
-@import "purecss/build/base-min";
-@import "purecss/build/grids-min";
-@import "purecss/build/grids-responsive-min";
-@import "purecss/build/menus-core-min";
-@import "purecss/build/menus-min";
+/* Normalize */
+@import "normalize.css/normalize.css";
 
 /* Prism Plugins */
 {{ range .Site.Params.prism.plugins }}
