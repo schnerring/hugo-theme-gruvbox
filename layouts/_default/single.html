@@ -1,12 +1,15 @@
 {{ define "main" }}
-  <div class="post">
+  <article class="post">
     {{ partial "post-header.html" . -}}
     <div class="post-content">
-      {{ .Content }}
+      {{ .Content
+        | replaceRE `(<h[1-6] id="(.+)".*?>)(.*)(</h[1-6]>)` `${1}${3}<a href="#${2}" class="post-heading__anchor">&nbsp;#</a>${4}`
+        | safeHTML
+      }}
     </div>
 
     {{ if .Params.Comments }}
       {{ partial "comments.html" . }}
     {{ end }}
-  </div>
+  </article>
 {{ end }}
