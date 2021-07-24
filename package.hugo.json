@@ -28,6 +28,7 @@
     "cssnano": "^5.0.6",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
+    "postcss-custom-media": "^8.0.0",
     "postcss-import": "^14.0.2",
     "postcss-nesting": "^8.0.1",
     "postcss-preset-env": "^6.7.0",

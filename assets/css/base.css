@@ -4,6 +4,16 @@
   --font-serif: "Roboto Slab", Georgia, serif;
 }
 
+/*
+  Bootstrap 5 breakpoints
+  See: https://getbootstrap.com/docs/5.0/layout/breakpoints/#available-breakpoints
+*/
+@custom-media --sm (min-width: 576px);
+@custom-media --md (min-width: 768px);
+@custom-media --lg (min-width: 992px);
+@custom-media --xl (min-width: 1200px);
+@custom-media --xxl (min-width: 1400px);
+
 html,
 button,
 input,
@@ -41,15 +51,29 @@ h6 {
 }
 
 h1 {
-  font-size: 2.375rem;
+  font-size: 1.875rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.75rem;
+  font-size: 1.625rem;
+}
+
+@media(--md) {
+  h1 {
+    font-size: 2.375rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
 }
 
 h4 {

@@ -20,6 +20,7 @@ module.exports = () => ({
       },
     ]),
     require("postcss-nesting"),
+    require("postcss-custom-media"),
     ...(process.env.HUGO_ENVIRONMENT === "production"
       ? [
           require("postcss-preset-env"),
