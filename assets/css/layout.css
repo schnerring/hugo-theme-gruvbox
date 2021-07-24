@@ -1,9 +1,9 @@
 .layout {
   display: grid;
   grid-template-areas:
-    "bio header toc"
+    "header header header"
     "bio main toc"
-    "footer footer footer";
+    "bio footer toc";
   grid-template-columns: 1fr minmax(auto, 768px) 2fr;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
@@ -14,6 +14,7 @@ main {
 }
 
 header {
+  background: var(--bg1);
   grid-area: header;
 }
 
