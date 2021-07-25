@@ -33,7 +33,7 @@ function toggleTheme(e) {
   setTheme(theme);
 }
 
-const toggleButtons = document.querySelectorAll(".theme__btn");
+const toggleButtons = document.querySelectorAll(".theme__toggle");
 toggleButtons.forEach((btn) => {
   btn.addEventListener("click", toggleTheme);
 });

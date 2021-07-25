@@ -1,9 +1,22 @@
-.home-menu {
+nav {
+  display: flex;
   font-family: var(--font-monospace);
   font-size: 0.9rem;
 
+  & ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    & li {
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+  }
+
   & a {
     color: var(--gray2);
+    text-decoration: none;
   }
 
   & a:hover,
@@ -11,22 +24,19 @@
     background: none;
     color: var(--gray1);
   }
-
-  & ul {
-    float: right;
-  }
 }
 
-.home-menu__heading {
+.nav__heading {
   color: var(--fg0) !important;
+  flex-grow: 1;
   font-weight: 700;
   font-size: 1rem;
   text-transform: none;
 }
 
-.home-menu__heading:hover::after {
-  content: " █";
+.nav__heading:hover::after {
   animation: 1s blink infinite;
+  content: " █";
 }
 
 /*! Source: https://stackoverflow.com/a/36118384/1154965 */

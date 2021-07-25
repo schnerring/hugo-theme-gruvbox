@@ -14,14 +14,9 @@
 @custom-media --xl (min-width: 1200px);
 @custom-media --xxl (min-width: 1400px);
 
-html,
-button,
-input,
-select,
-textarea,
-.pure-g [class*="pure-u"] {
+html {
   font-family: var(--font-serif);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 
 body {

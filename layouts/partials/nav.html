@@ -1,15 +1,21 @@
 <nav>
-  <div class="home-menu">
-    <a href="{{ with $.Site.Params.Logo.URL }}{{ . }}{{ else }}{{ $.Site.BaseURL }}{{ end }}" class="home-menu__heading">
-      <span>{{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}</span>
-      <span>&gt;</span>
-    </a>
-    <ul>
-      {{ range $.Site.Menus.main -}}
-        <li>
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
-      {{ end -}}
-    </ul>
-  </div>
+  <a
+    href="
+    {{- with $.Site.Params.Logo.URL -}}
+      {{- . -}}
+    {{- else -}}
+      {{- $.Site.BaseURL -}}
+    {{- end -}}"
+    class="nav__heading"
+  >
+    <span>{{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}</span>
+    <span>&gt;</span>
+  </a>
+  <ul>
+    {{ range $.Site.Menus.main -}}
+      <li>
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
+    {{ end -}}
+  </ul>
 </nav>

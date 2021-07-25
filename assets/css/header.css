@@ -1,23 +1,24 @@
 header {
   display: grid;
   grid-template-columns: 1fr auto;
-  grid-template-areas: "nav theme-btn";
+  grid-template-areas: "nav theme-toggle";
+  padding: 0.75rem;
 
   & nav {
     grid-area: nav;
   }
 
-  & .theme__btn {
+  & .theme__toggle {
     align-items: center;
     background: none;
     border: none;
     color: var(--yellow1);
     cursor: pointer;
-    grid-area: theme-btn;
+    grid-area: theme-toggle;
     margin: 0 1rem;
   }
 
-  & .theme__btn:hover {
+  & .theme__toggle:hover {
     color: var(--yellow2);
   }
 }
