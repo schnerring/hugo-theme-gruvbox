@@ -1,9 +1,9 @@
 {{ define "main" }}
   <article class="post">
-    {{ partial "post-header.html" . -}}
+    {{ partial "post-header.html" . }}
     <div class="post-content">
       {{ .Content
-        | replaceRE `(<h[1-6] id="(.+)".*?>)(.*)(</h[1-6]>)` `${1}${3}<a href="#${2}" class="post-heading__anchor">&nbsp;#</a>${4}`
+        | replaceRE `(<h[1-6] id="(.*)".*?>)(.*)(</h[1-6]>)` `${1}${3}&nbsp;<a href="#${2}" class="post-heading__anchor">#</a>${4}`
         | safeHTML
       }}
     </div>
