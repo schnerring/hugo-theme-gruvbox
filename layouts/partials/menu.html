@@ -1,4 +1,4 @@
-<nav>
+<nav id="menu">
   <a
     href="
     {{- with $.Site.Params.Logo.URL -}}
@@ -6,7 +6,7 @@
     {{- else -}}
       {{- $.Site.BaseURL -}}
     {{- end -}}"
-    class="nav__heading"
+    class="menu__heading"
   >
     <span>{{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}</span>
     <span>&gt;</span>

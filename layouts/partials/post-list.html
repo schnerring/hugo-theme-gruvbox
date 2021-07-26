@@ -1,6 +1,6 @@
 
 {{- range . -}}
-  <div class="post">
+  <article class="post">
     {{ partial "post-header.html" . -}}
     <div class="post-content">
       <span>
@@ -16,5 +16,5 @@
         {{ end }}
       </span>
     </div>
-  </div>
+  </article>
 {{- end -}}

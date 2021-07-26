@@ -158,8 +158,8 @@ kbd {
 
 pre {
   background: var(--bg1) !important; /* TODO is this really needed? */
-  padding: 1rem !important;
   overflow: auto;
+  padding: 1em;
 
   & code {
     background: none;
@@ -167,7 +167,7 @@ pre {
 }
 
 pre::-webkit-scrollbar {
-  width: auto;
+  height: 0.5rem;
   scrollbar-width: auto;
 }
 

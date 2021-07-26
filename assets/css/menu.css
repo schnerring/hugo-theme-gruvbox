@@ -1,4 +1,4 @@
-nav {
+nav#menu {
   display: flex;
   font-family: var(--font-monospace);
   font-size: 0.9rem;
@@ -26,7 +26,7 @@ nav {
   }
 }
 
-.nav__heading {
+.menu__heading {
   color: var(--fg0) !important;
   flex-grow: 1;
   font-weight: 700;
@@ -34,7 +34,7 @@ nav {
   text-transform: none;
 }
 
-.nav__heading:hover::after {
+.menu__heading:hover::after {
   animation: 1s blink infinite;
   content: " █";
 }

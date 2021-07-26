@@ -1,6 +1,6 @@
 .post {
-  padding: 2rem 0;
   border-bottom: var(--bg1) 2px dotted;
+  padding: 2rem 0;
 }
 
 .post-header,
