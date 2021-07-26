@@ -29,6 +29,11 @@ a {
   color: inherit;
 }
 
+*::selection {
+	color: var(--fg0);
+	background: var(--bg4);
+}
+
 h1,
 h2,
 h3,
