@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html theme="{{ .Param "defaultTheme" | default "light" }}">
-  {{- partial "head.html" . -}}
+  {{ partial "head.html" . }}
   <body>
     <div class="layout">
-      {{- partial "header.html" . -}}
+      {{ partial "header.html" . }}
       <main>
-        {{- block "main" . }}{{- end }}
+        <div class="content">
+          {{ block "main" . }}{{- end }}
+        </div>
+        {{ partial "sidebar.html" . }}
       </main>
-      {{- partial "footer.html" . -}}
+      {{ partial "footer.html" . }}
     </div>
   </body>
 </html>

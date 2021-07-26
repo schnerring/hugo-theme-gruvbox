@@ -1,16 +1,19 @@
 .layout {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "bio main toc"
-    "bio footer toc";
-  grid-template-columns: 1fr minmax(auto, 768px) 2fr;
+    "header"
+    "main"
+    "footer";
   grid-template-rows: auto 1fr auto;
   height: 100vh;
 }
 
 main {
+  align-items: start;
+  display: grid;
   grid-area: main;
+  grid-template-areas: "empty content sidebar";
+  grid-template-columns: 1fr minmax(0, 768px) 3fr;
 }
 
 header {
@@ -25,4 +28,21 @@ footer {
 main,
 footer {
   margin: 0.5em 1em;
+}
+
+.content {
+  grid-area: content;
+}
+
+aside.sidebar {
+  display: none;
+
+  @media(--xl) {
+    display: block;
+    grid-area: sidebar;
+    margin-left: 5rem;
+    margin-top: 8rem;
+    position: sticky;
+    top: 2rem;
+  }
 }

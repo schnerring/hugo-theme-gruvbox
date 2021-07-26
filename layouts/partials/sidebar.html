@@ -1,0 +1,21 @@
+<aside class="sidebar">
+  {{ with .TableOfContents }}
+    <nav id="toc">
+      <h6>Table Of Contents</h6>
+      {{ . }}
+    </nav>
+    <hr>
+  {{ end }}
+  <div class="bio">
+    <div class="bio__avatar"></div>
+    <h6 class="bio__name">{{ $.Site.Params.Author }}</h6>
+    <div class="bio__socials">
+      <a href="localhost">{{ partial "simple-icon" "facebook" }}</a>
+      <a href="localhost">{{ partial "simple-icon" "linkedin" }}</a>
+      <a href="localhost">{{ partial "simple-icon" "stackoverflow" }}</a>
+      <a href="localhost">{{ partial "simple-icon" "matrix" }}</a>
+      <a href="localhost">{{ partial "simple-icon" "twitter" }}</a>
+      <a href="localhost">{{ partial "simple-icon" "github" }}</a>
+    </div>
+  </div>
+</aside>
