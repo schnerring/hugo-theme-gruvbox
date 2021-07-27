@@ -38,6 +38,11 @@ copyright = "Copyright © 2021"
       "copy-to-clipboard"
     ]
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
