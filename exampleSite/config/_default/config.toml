@@ -1,8 +1,29 @@
 baseURL = "http://localhost"
 copyright = "Copyright © 2021"
 
-[build]
-  writeStats = true
+[goldmark]
+  [goldmark.renderer]
+    unsafe = true
+
+[params]
+# dark or light, defaults to light
+#defaultTheme = "dark"
+author = "Michael Schnerring"
+
+  [params.prism]
+    languages = [
+      "markup",
+      "css",
+      "clike",
+      "javascript",
+      "csharp"
+    ]
+    plugins = [
+      "normalize-whitespace",
+      "toolbar",
+      "copy-to-clipboard"
+    ]
+
 
 [languages]
   [languages.en]
@@ -19,54 +40,3 @@ copyright = "Copyright © 2021"
         identifier = "about"
         name = "About"
         url = "/about"
-
-[params]
-  # dark or light, defaults to light
-  #defaultTheme = "dark"
-
-  [params.prism]
-    languages = [
-      "markup",
-      "css",
-      "clike",
-      "javascript",
-      "csharp"
-    ]
-    plugins = [
-      "normalize-whitespace",
-      "toolbar",
-      "copy-to-clipboard"
-    ]
-
-[taxonomies]
-  category = "categories"
-  tag = "tags"
-  series = "series"
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-
-[module]
-  replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
-  [[module.imports]]
-    path = "github.com/schnerring/hugo-gruvbox"
-  [[module.mounts]]
-    source = "node_modules/prismjs"
-    target = "assets/prismjs"
-  [[module.mounts]]
-    source = "node_modules/prism-themes/themes"
-    target = "assets/prism-themes"
-  [[module.mounts]]
-    source = "node_modules/typeface-fira-code/files"
-    target = "static/fonts"
-  [[module.mounts]]
-    source = "node_modules/typeface-roboto-slab/files"
-    target = "static/fonts"
-  [[module.mounts]]
-    source = "node_modules/@tabler/icons/icons"
-    target = "assets/tabler-icons"
-  [[module.mounts]]
-    source = "node_modules/simple-icons/icons"
-    target = "assets/simple-icons"

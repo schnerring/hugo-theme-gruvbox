@@ -1,0 +1,21 @@
+replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
+[[imports]]
+  path = "github.com/schnerring/hugo-gruvbox"
+[[mounts]]
+  source = "node_modules/prismjs"
+  target = "assets/prismjs"
+[[mounts]]
+  source = "node_modules/prism-themes/themes"
+  target = "assets/prism-themes"
+[[mounts]]
+  source = "node_modules/typeface-fira-code/files"
+  target = "static/fonts"
+[[mounts]]
+  source = "node_modules/typeface-roboto-slab/files"
+  target = "static/fonts"
+[[mounts]]
+  source = "node_modules/@tabler/icons/icons"
+  target = "assets/tabler-icons"
+[[mounts]]
+  source = "node_modules/simple-icons/icons"
+  target = "assets/simple-icons"
