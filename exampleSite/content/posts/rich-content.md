@@ -6,7 +6,7 @@ description = "A brief description of Hugo Shortcodes"
 tags = [
     "shortcodes",
     "privacy",
-    "hugoBasicExample",
+    "hugo-basic-example",
 ]
 +++
 

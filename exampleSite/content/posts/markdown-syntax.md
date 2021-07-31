@@ -7,7 +7,7 @@ tags = [
     "markdown",
     "css",
     "html",
-    "hugoBasicExample",
+    "hugo-basic-example",
 ]
 categories = [
     "themes",

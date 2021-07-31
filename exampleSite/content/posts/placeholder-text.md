@@ -6,7 +6,7 @@ description = "Lorem Ipsum Dolor Si Amet"
 tags = [
     "markdown",
     "text",
-    "hugoBasicExample",
+    "hugo-basic-example",
 ]
 +++
 

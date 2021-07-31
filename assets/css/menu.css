@@ -1,4 +1,5 @@
 nav#menu {
+  align-items: center;
   display: flex;
   font-family: var(--font-monospace);
   font-size: 0.9rem;
@@ -30,7 +31,7 @@ nav#menu {
   color: var(--fg0) !important;
   flex-grow: 1;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.3rem;
   text-transform: none;
 }
 
