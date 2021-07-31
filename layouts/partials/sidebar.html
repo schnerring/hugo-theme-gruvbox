@@ -1,14 +1,19 @@
-<aside class="sidebar">
+<div class="sidebar">
   {{ with .TableOfContents }}
-    <nav id="toc">
-      <h6>Table Of Contents</h6>
-      {{ . }}
-    </nav>
+    <aside class="toc">
+      <nav>
+        <p class="sidebar__heading">Table Of Contents</p>
+        {{ . }}
+      </nav>
+    </aside>
     <hr>
   {{ end }}
-  <div class="bio">
+
+  <aside class="bio">
     <div class="bio__avatar"></div>
-    <h6 class="bio__name">{{ $.Site.Params.Author }}</h6>
+    <p class="sidebar__heading">{{ $.Site.Params.Author }}</p>
+    <p class="bio__description">Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+    <hr>
     <div class="bio__socials">
       <a href="localhost">{{ partial "simple-icon" "facebook" }}</a>
       <a href="localhost">{{ partial "simple-icon" "linkedin" }}</a>
@@ -17,5 +22,5 @@
       <a href="localhost">{{ partial "simple-icon" "twitter" }}</a>
       <a href="localhost">{{ partial "simple-icon" "github" }}</a>
     </div>
-  </div>
-</aside>
+  </aside>
+</div>

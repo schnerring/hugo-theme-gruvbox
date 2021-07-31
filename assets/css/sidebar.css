@@ -1,19 +1,26 @@
-#toc {
-  & h6 {
-    margin: 0.5rem 0;
+.sidebar {
+  font-family: var(--font-monospace);
+  font-size: 0.9rem;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5rem;
+
+  & a {
+    color: var(--aqua2);
+    text-decoration: none;
+  }
+
+  & a:hover {
+    color: var(--aqua1);
+  }
+
+  & .sidebar__heading {
+    font-size: 1.25rem;
   }
 }
 
-aside.sidebar {
-  padding: 0 1rem;
-  text-align: right;
-  font-family: var(--font-monospace);
-  font-size: 0.85rem;
-
-  & hr {
-    margin: 4rem 0;
-  }
-
+aside.toc {
   & ul {
     list-style: none;
     margin: 0;
@@ -28,34 +35,33 @@ aside.sidebar {
       }
     }
   }
-
-  & a {
-    color: var(--aqua2);
-    text-decoration: none;
-  }
-
-  & a:hover {
-    color: var(--aqua1);
-  }
 }
 
-.bio {
+aside.bio {
   text-align: center;
+
+  & .bio__description {
+    color: var(--fg4);
+    font-style: italic;
+  }
 
   & .bio__avatar {
     background: var(--bg1);
     border: 2px solid var(--bg2);
     border-radius: 50%;
     margin: auto;
-    height: 250px;
-    width: 250px;
+    height: 200px;
+    width: 200px;
   }
 
   & .bio__socials {
+    display: flex;
+    justify-content: space-around;
+
     & svg {
-      height: 24px;
-      width: 24px;
-      fill: var(--fg3);
+      height: 20px;
+      width: 20px;
+      fill: var(--fg4);
     }
 
     & svg:hover {

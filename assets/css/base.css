@@ -16,7 +16,7 @@
 
 html {
   font-family: var(--font-serif);
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 
 body {
@@ -106,6 +106,8 @@ hr {
   border: none;
   background: var(--bg4);
   height: 1px;
+  margin: 3rem auto;
+  width: 80%;
 }
 
 mark {
@@ -123,7 +125,7 @@ kbd,
 mark,
 pre {
   border-radius: 0.2rem;
-  padding: 0 0.2em;
+  padding: 0 0.25em;
 }
 
 blockquote,
@@ -162,7 +164,7 @@ kbd {
 }
 
 pre {
-  background: var(--bg1) !important; /* TODO is this really needed? */
+  background: var(--bg1) !important; /* TODO is !important really needed? */
   overflow: auto;
   padding: 1em;
 
