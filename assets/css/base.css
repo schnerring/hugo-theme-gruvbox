@@ -104,7 +104,7 @@ td {
 
 hr {
   border: none;
-  background: var(--bg4);
+  background: var(--bg1);
   height: 1px;
   margin: 3rem auto;
   width: 80%;
@@ -112,7 +112,7 @@ hr {
 
 mark {
   background: var(--yellow1);
-  color: var(--bg);
+  color: var(--bg0);
 }
 
 abbr {
@@ -126,6 +126,10 @@ mark,
 pre {
   border-radius: 0.2rem;
   padding: 0 0.25em;
+}
+
+pre code {
+  padding: 0;
 }
 
 blockquote,
@@ -163,13 +167,52 @@ kbd {
   }
 }
 
+blockquote,
+pre {
+  padding: 1rem;
+}
+
 pre {
   background: var(--bg1) !important; /* TODO is !important really needed? */
   overflow: auto;
-  padding: 1em;
 
   & code {
     background: none;
+  }
+}
+
+blockquote,
+blockquote.twitter-tweet {
+  border-left: var(--aqua2) 5px solid;
+  margin: 0.5rem 0;
+
+  & code {
+    background: var(--bg2);
+  }
+
+  & p:first-of-type {
+    margin-top: 0;
+  }
+
+  & p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+blockquote.twitter-tweet {
+  border-color: var(--blue2);
+  color: inherit;
+  font: inherit;
+  font-size: inherit;
+  line-height: inherit;
+
+  & a {
+    color: var(--blue2);
+  }
+
+  & a:hover {
+    color: var(--blue1);
+    text-decoration: none !important;
   }
 }
 
@@ -186,10 +229,4 @@ pre::-webkit-scrollbar-track {
 pre::-webkit-scrollbar-thumb {
   background: var(--bg4);
   border-radius: 0.2rem;
-}
-
-blockquote {
-  border-left: var(--aqua2) 5px solid;
-  padding: 0.5rem 1rem;
-  margin: 0;
 }
