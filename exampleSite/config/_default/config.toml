@@ -1,9 +1,10 @@
 baseURL = "http://localhost"
 copyright = "Copyright © 2021"
 
-[goldmark]
-  [goldmark.renderer]
-    unsafe = true
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [params]
 # dark or light, defaults to light
@@ -16,12 +17,17 @@ author = "Michael Schnerring"
       "css",
       "clike",
       "javascript",
-      "csharp"
+      "bash",
+      "diff",
+      "toml"
     ]
     plugins = [
       "normalize-whitespace",
       "toolbar",
-      "copy-to-clipboard"
+      "copy-to-clipboard",
+      "line-numbers",
+      "command-line",
+      "diff-highlight"
     ]
 
 
