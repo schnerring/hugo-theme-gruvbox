@@ -31,7 +31,7 @@ copyright = "Copyright © 2021"
     ]
 
   [params.bio]
-    avatarURL = "a"
+    avatarURL = "/avatar.jpg"
     description = "I love coding. I'm passionate about open-source and digital privacy. I like video games and CrossFit. I'm also terrible at blogging."
 
     [[params.bio.social]]

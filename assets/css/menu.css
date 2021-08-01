@@ -24,19 +24,23 @@ nav#menu {
     background: none;
     color: var(--gray1);
   }
-}
 
-.menu__heading {
-  color: var(--fg0) !important;
-  flex-grow: 1;
-  font-weight: 700;
-  font-size: 1.3rem;
-  text-transform: none;
-}
+  & .menu__heading {
+    flex-grow: 1;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: none;
+  }
 
-.menu__heading:hover::after {
-  animation: 1s blink infinite;
-  content: " █";
+  & .menu__heading,
+  & .menu__heading:hover {
+    color: var(--fg0);
+  }
+
+  & .menu__heading:hover::after {
+    animation: 1s blink infinite;
+    content: " █";
+  }
 }
 
 /*! Source: https://stackoverflow.com/a/36118384/1154965 */
