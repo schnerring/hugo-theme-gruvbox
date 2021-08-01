@@ -1,26 +1,29 @@
 .sidebar {
   font-family: var(--font-monospace);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 2.5rem;
 
+  & .sidebar__heading {
+    font-size: 1.3rem;
+  }
+
+  & svg {
+    fill: var(--fg);
+  }
+}
+
+aside.toc {
   & a {
     color: var(--aqua2);
-    text-decoration: none;
   }
 
   & a:hover {
     color: var(--aqua1);
   }
 
-  & .sidebar__heading {
-    font-size: 1.25rem;
-  }
-}
-
-aside.toc {
   & ul {
     list-style: none;
     margin: 0;
@@ -38,11 +41,26 @@ aside.toc {
 }
 
 aside.bio {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   text-align: center;
 
-  & .bio__description {
-    color: var(--fg4);
-    font-style: italic;
+  & a:hover {
+    color: var(--gray1);
+
+    & svg {
+      fill: var(--gray1);
+    }
+  }
+
+  & hr {
+    margin: 1.5rem auto;
+  }
+
+  & svg {
+    height: 22px;
+    width: 22px;
   }
 
   & .bio__avatar {
@@ -54,18 +72,26 @@ aside.bio {
     padding-top: 80%;
   }
 
-  & .bio__socials {
+  & .bio__description {
+    color: var(--gray1);
+    font-style: italic;
+  }
+
+  & .bio__social,
+  & .bio__social__item {
     display: flex;
-    justify-content: space-around;
+  }
 
-    & svg {
-      height: 20px;
-      width: 20px;
-      fill: var(--fg4);
-    }
+  & .bio__social__col {
+    flex-direction: column;
+  }
 
-    & svg:hover {
-      fill: var(--fg);
-    }
+  & .bio__social__row {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  & .bio__social__icon {
+    padding: 0 0.75rem;
   }
 }

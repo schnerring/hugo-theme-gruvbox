@@ -16,8 +16,7 @@ nav#menu {
   }
 
   & a {
-    color: var(--gray2);
-    text-decoration: none;
+    color: var(--fg);
   }
 
   & a:hover,

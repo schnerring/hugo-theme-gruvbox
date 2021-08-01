@@ -30,7 +30,6 @@
 .post-content {
   & a {
     color: var(--aqua2);
-    text-decoration: none;
   }
 
   & a:hover {

@@ -2,6 +2,7 @@
 title: "Prism Code Highlighting Showcase"
 date: "2021-07-28T04:25:37+02:00"
 comments: false
+toc: true
 ---
 
 This theme uses [Prism](https://prismjs.com/) for code highlighting. Other Hugo themes usually include a pre-configured version of Prism, which complicates updates and clutters the source code base with third-party JavaScript.

@@ -14,7 +14,7 @@ This theme depends on the following projects:
 - [Simple Icons](https://simpleicons.org/)
 - Content with the [#hugo-basic-example](/tags/hugo-basic-example) tag originates from [gohugoio/hugoBasicExample](https://github.com/gohugoio/hugoBasicExample)
 
-A big thank you to its creators! ❤️
+A big thanks to the creators! ❤️
 
 ## Legal
 
