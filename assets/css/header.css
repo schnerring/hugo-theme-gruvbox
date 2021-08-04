@@ -12,6 +12,7 @@ header {
     align-items: center;
     background: none;
     border: none;
+    display: flex;
     color: var(--yellow1);
     cursor: pointer;
     grid-area: theme-toggle;
@@ -20,5 +21,78 @@ header {
 
   & .theme__toggle:hover {
     color: var(--yellow2);
+  }
+}
+
+nav#menu {
+  align-items: center;
+  display: flex;
+  font-family: var(--font-monospace);
+  font-size: 0.9rem;
+  justify-content: space-between;
+
+  & .menu__heading {
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-transform: none;
+  }
+
+  & .menu__heading,
+  & .menu__heading:hover {
+    color: var(--fg0);
+  }
+
+  & .menu__heading:hover::after {
+    animation: 1s blink infinite;
+    content: " █";
+  }
+
+  & ul.menu__inline {
+    align-items: center;
+    background: var(--bg1);
+    display: none;
+    list-style: none;
+    margin: 0;
+
+    @media(--sm) {
+      display: flex;
+    }
+
+    & li {
+      display: inline-block;
+      margin: 0 0.5rem;
+    }
+  }
+
+  & .menu__burger {
+    align-items: center;
+    display: flex;
+
+    @media(--sm) {
+      display: none;
+    }
+  }
+
+  & .menu__item {
+    color: var(--fg);
+  }
+
+  & .menu__item:hover {
+    color: var(--gray1);
+    cursor: pointer;
+
+    & svg {
+      fill: var(--gray1);
+    }
+  }
+}
+
+/*! Source: https://stackoverflow.com/a/36118384/1154965 */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

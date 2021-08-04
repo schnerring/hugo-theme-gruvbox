@@ -1,8 +1,34 @@
 <header>
-  {{ partial "menu.html" . }}
+  <nav id="menu">
+    <a
+      href="
+        {{- with $.Site.Params.Logo.URL -}}
+          {{- . -}}
+        {{- else -}}
+          {{- $.Site.BaseURL -}}
+        {{- end -}}"
+      class="menu__heading"
+    >
+      {{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}&nbsp;&gt;
+    </a>
+
+    <ul class="menu__inline">
+      {{ range $.Site.Menus.main }}
+        <li class="menu__item">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+      {{ end }}
+    </ul>
+
+    <div class="menu__burger menu__item">
+      {{ partial "tabler-icon" "menu-2" }}
+    </div>
+  </nav>
+
   <button class="theme__toggle light--hidden" aria-label="Toggle light mode">
     {{ partial "tabler-icon" "sun" }}
   </button>
+
   <button class="theme__toggle dark--hidden" aria-label="Toggle dark mode">
     {{ partial "tabler-icon" "moon" }}
   </button>
