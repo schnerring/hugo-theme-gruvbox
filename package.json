@@ -1,0 +1,36 @@
+{
+  "name": "hugo-gruvbox",
+  "version": "1.0.0",
+  "description": "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes.",
+  "author": {
+    "name": "Michael Schnerring",
+    "email": "3743342+schnerring@users.noreply.github.com",
+    "url": "https://schnerring.net"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "homepage": "https://github.com/schnerring/hugo-gruvbox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schnerring/hugo-gruvbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/schnerring/hugo-gruvbox/issues"
+  },
+  "keywords": [
+    "hugo",
+    "gruvbox",
+    "theme"
+  ],
+  "scripts": {
+    "lint": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "lint-staged": "^11.1.1",
+    "prettier": "^2.3.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.2.0"
+  }
+}

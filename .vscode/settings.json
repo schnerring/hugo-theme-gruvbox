@@ -1,5 +1,9 @@
 {
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.useEditorConfig": true
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": true
+  },
+  "emmet.includeLanguages": {
+    "postcss": "css"
+  }
 }
