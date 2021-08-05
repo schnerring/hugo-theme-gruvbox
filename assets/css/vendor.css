@@ -21,7 +21,7 @@ code,
 kbd,
 code[class*="language-"],
 pre[class*="language-"] {
-  font-family: var(--font-monospace), monospace; /* TODO configure fallbacks */
+  font-family: var(--font-monospace);
 }
 
 /*! purgecss end ignore */

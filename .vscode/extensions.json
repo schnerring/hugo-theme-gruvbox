@@ -3,7 +3,6 @@
     "csstools.postcss",
     "davidanson.vscode-markdownlint",
     "editorconfig.editorconfig",
-    "esbenp.prettier-vscode",
     "stylelint.vscode-stylelint",
     "webben.browserslist"
   ]

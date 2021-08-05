@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "stylelint-prettier/recommended"
+  ],
+  "ignoreFiles": [
+    "assets/css/vendor.css",
+    "exampleSite/public/**/*"
+  ]
+}

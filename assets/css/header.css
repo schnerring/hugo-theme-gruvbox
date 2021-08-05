@@ -54,7 +54,7 @@ nav#menu {
     list-style: none;
     margin: 0;
 
-    @media(--sm) {
+    @media (--sm) {
       display: flex;
     }
 
@@ -68,7 +68,7 @@ nav#menu {
     align-items: center;
     display: flex;
 
-    @media(--sm) {
+    @media (--sm) {
       display: none;
     }
   }

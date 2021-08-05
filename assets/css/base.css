@@ -31,8 +31,8 @@ a {
 }
 
 *::selection {
-	color: var(--fg0);
-	background: var(--bg4);
+  color: var(--fg0);
+  background: var(--bg4);
 }
 
 h1,
@@ -63,7 +63,7 @@ h3 {
   font-size: 1.625rem;
 }
 
-@media(--md) {
+@media (--md) {
   h1 {
     font-size: 2.375rem;
   }

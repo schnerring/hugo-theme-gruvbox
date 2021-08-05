@@ -42,7 +42,7 @@ footer {
   position: sticky;
   top: 2rem;
 
-  @media(--lg) {
+  @media (--lg) {
     display: flex;
   }
 }
