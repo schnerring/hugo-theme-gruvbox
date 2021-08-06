@@ -1,78 +1,78 @@
 <div class="sidebar">
   {{ if .Params.toc }}
-    {{ with .TableOfContents }}
-      <aside class="toc">
-        <nav>
-          <p class="sidebar__heading">Table Of Contents</p>
-          {{ . }}
-        </nav>
-      </aside>
-      <hr>
-    {{ end }}
+  {{ with .TableOfContents }}
+  <aside class="toc">
+    <nav>
+      <p class="sidebar__heading">Table Of Contents</p>
+      {{ . }}
+    </nav>
+  </aside>
+  <hr>
+  {{ end }}
   {{ end }}
 
   {{ with $.Site.Params.bio }}
-    <aside class="bio">
+  <aside class="bio">
 
-      {{ with .avatarURL }}
-        <div class="bio__avatar">
-          <img src="{{ . }}" />
+    {{ with .avatarURL }}
+    <div class="bio__avatar">
+      <img src="{{ . }}" alt="Author profile picture" />
+    </div>
+    {{ end }}
+
+    <p class="sidebar__heading">
+      {{ $.Site.Params.Author }}
+    </p>
+
+    {{ with .description }}
+    <p class="bio__description">{{ . }}</p>
+    {{ end }}
+
+    {{ with where .social "label" "ne" nil }}
+    <hr>
+    <div class="bio__social bio__social__col">
+      {{ range . }}
+
+      {{ if .URL }}<a href="{{ .URL }}">{{ end }}
+
+        <div class="bio__social__item">
+
+          <div class="bio__social__icon">
+            {{ partial "simple-icon" .icon }}
+          </div>
+
+          <div class="bio__social__label">
+            <span>{{ .label }}</span>
+          </div>
+
         </div>
+
+        {{ if .URL }}</a>{{ end }}
+
       {{ end }}
+    </div>
+    {{ end }}
 
-      <p class="sidebar__heading">
-        {{ $.Site.Params.Author }}
-      </p>
+    {{ with where .social "label" "eq" nil }}
+    <hr>
+    <div class="bio__social bio__social__row">
+      {{ range . }}
 
-      {{ with .description }}
-        <p class="bio__description">{{ . }}</p>
-      {{ end }}
+      {{ if .URL }}<a href="{{ .URL }}">{{ end }}
 
-      {{ with where .social "label" "ne" nil }}
-        <hr>
-        <div class="bio__social bio__social__col">
-          {{ range . }}
+        <div class="bio__social__item">
 
-            {{ if .URL }}<a href="{{ .URL }}">{{ end }}
+          <div class="bio__social__icon">
+            {{ partial "simple-icon" .icon }}
+          </div>
 
-            <div class="bio__social__item">
-
-              <div class="bio__social__icon">
-                {{ partial "simple-icon" .icon }}
-              </div>
-
-              <div class="bio__social__label">
-                <span>{{ .label }}</span>
-              </div>
-
-            </div>
-
-            {{ if .URL }}</a>{{ end }}
-
-          {{ end }}
         </div>
+
+        {{ if .URL }}</a>{{ end }}
+
       {{ end }}
-
-      {{ with where .social "label" "eq" nil }}
-        <hr>
-        <div class="bio__social bio__social__row">
-          {{ range . }}
-
-            {{ if .URL }}<a href="{{ .URL }}">{{ end }}
-
-            <div class="bio__social__item">
-
-              <div class="bio__social__icon">
-                {{ partial "simple-icon" .icon }}
-              </div>
-
-            </div>
-
-            {{ if .URL }}</a>{{ end }}
-
-          {{ end }}
-        </div>
-      {{ end }}
-    </aside>
+    </div>
+    {{ end }}
+  </aside>
   {{ end }}
 </div>

@@ -67,12 +67,14 @@ aside.bio {
     background: var(--bg1);
     border: 2px solid var(--bg2);
     border-radius: 50%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    overflow: hidden;
     height: 250px;
+    overflow: hidden;
     width: 250px;
+
+    & img {
+      height: auto;
+      width: 100%;
+    }
   }
 
   & .bio__description {
