@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html theme="{{ .Param "defaultTheme" | default "light" }}">
-  {{ partial "head.html" . }}
-  <body>
-    <div class="layout">
-      {{ partial "header.html" . }}
-      <main>
-        <div class="content">
-          {{ block "main" . }}{{- end }}
-        </div>
-        {{ partial "sidebar.html" . }}
-      </main>
-      {{ partial "footer.html" . }}
-    </div>
-  </body>
+<html lang="{{ .Site.Language.Lang | default " en" }}" theme="{{ .Param " defaultTheme" | default "light" }}">
+{{ partial "head.html" . }}
+
+<body>
+  <div class="layout">
+    {{ partial "header.html" . }}
+    <main>
+      <div class="content">
+        {{ block "main" . }}{{- end }}
+      </div>
+      {{ partial "sidebar.html" . }}
+    </main>
+    {{ partial "footer.html" . }}
+  </div>
+</body>
+
 </html>
