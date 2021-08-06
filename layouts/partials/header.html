@@ -1,27 +1,37 @@
 <header>
   <nav id="menu">
-    <a
-      href="
+    <h1 class="menu__heading">
+      <a href="
         {{- with $.Site.Params.Logo.URL -}}
           {{- . -}}
         {{- else -}}
           {{- $.Site.BaseURL -}}
-        {{- end -}}"
-      class="menu__heading"
-    >
-      {{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}&nbsp;&gt;
-    </a>
+        {{- end -}}">
+        {{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}&nbsp;&gt;
+      </a>
+    </h1>
 
-    <ul class="menu__inline">
+    <ul class="menu--horizontal">
       {{ range $.Site.Menus.main }}
-        <li class="menu__item">
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+      <li class="menu__item">
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      </li>
       {{ end }}
     </ul>
 
-    <div class="menu__burger menu__item">
+    <div class="menu__burger">
+      <!-- Invisible checkbox indicating menu state -->
+      <input class="menu__item" type="checkbox" aria-label="Open main menu" />
+
       {{ partial "tabler-icon" "menu-2" }}
+
+      <ul class="menu--vertical">
+        {{ range $.Site.Menus.main }}
+        <li>
+          <a class="menu__item" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
     </div>
   </nav>
 
