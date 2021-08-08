@@ -23,7 +23,6 @@ header {
     align-items: center;
     display: flex;
     font-family: var(--font-monospace);
-    font-size: 0.9rem;
     grid-area: nav;
     justify-content: space-between;
 
