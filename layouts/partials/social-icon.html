@@ -1,0 +1,18 @@
+<!-- TODO report bug -->
+<!-- prettier-ignore -->
+{{ if .URL }}<a href="{{ .URL }}">{{ end }}
+
+<div class="bio__social__item">
+  <div class="bio__social__icon">
+    {{ partial "simple-icon" .icon }}
+  </div>
+
+  {{ if .label }}
+    <div class="bio__social__label">
+      <span>{{ .label }}</span>
+    </div>
+  {{ end }}
+</div>
+
+<!-- prettier-ignore -->
+{{ if .URL }}</a>{{ end }}
