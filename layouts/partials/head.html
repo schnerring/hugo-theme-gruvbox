@@ -3,70 +3,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>
     {{- if not .IsHome -}}
-      {{- with .Title }}{{ . }} :: {{ end -}}
+      {{- with .Title }}{{ . }}&nbsp;::&nbsp;{{ end -}}
     {{- end -}}
     {{- .Site.Title -}}
-    {{- with .Site.Params.Subtitle }} — {{ . }}{{ end -}}
+    {{- with .Site.Params.Subtitle }}&nbsp;—&nbsp;{{ . }}{{ end -}}
   </title>
   <meta
     name="description"
     content="
-      {{- with .Description -}}
+    {{- with .Description -}}
+      {{- . -}}
+    {{- else -}}
+      {{- with .Summary | plainify -}}
         {{- . -}}
       {{- else -}}
-        {{- with .Summary | plainify -}}
-          {{- . -}}
-        {{- else -}}
-          {{- .Site.Params.description -}}
-        {{- end -}}
-      {{- end -}}"
-    />
+        {{- .Site.Params.description -}}
+      {{- end -}}
+    {{- end -}}"
+  />
   <link rel="canonical" href="{{ .Permalink }}" />
 
   <!-- Extensibility -->
   {{ partial "head_start.html" . }}
 
+
   <!-- Styles -->
   {{ $defaultTheme := .Param "defaultTheme" | default "light" }}
+
   {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
-  <link
-    rel="stylesheet"
-    id="prism-dark"
-    {{ if hugo.IsProduction }}
-      {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
-      integrity="{{ $prismDark.Data.Integrity }}"
-    {{ end }}
-    href="{{ $prismDark.RelPermalink }}"
-    {{ if eq $defaultTheme "light"}}disabled{{ end }}
-    />
   {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
-  <link
-    rel="stylesheet"
-    id="prism-light"
-    {{ if hugo.IsProduction }}
-      {{ $prismLight = $prismLight | minify | fingerprint "sha512" }}
-      integrity="{{ $prismLight.Data.Integrity }}"
-    {{ end }}
-    href="{{ $prismLight.RelPermalink }}"
-    {{ if eq $defaultTheme "dark"}}disabled{{ end }}
-    />
 
   {{ $vendor := resources.Get "css/vendor.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS }}
   {{ $main := resources.Get "css/main.css" | resources.PostCSS }}
   {{ $bundle := slice $vendor $main | resources.Concat "css/bundle.css" }}
-  <link rel="stylesheet"
-    {{ if hugo.IsProduction }}
-      {{ $bundle = $bundle | fingerprint "sha512" | resources.PostProcess }}
-      integrity="{{ $bundle.Data.Integrity }}"
-    {{ end }}
-    href="{{ $bundle.RelPermalink }}"
+
+  {{ if hugo.IsProduction }}
+    {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
+    {{ $prismLight = $prismLight | minify | fingerprint "sha512" }}
+    {{ $bundle = $bundle | fingerprint "sha512" | resources.PostProcess }}
+    <link
+      rel="stylesheet"
+      id="prism-dark"
+      href="{{ $prismDark.RelPermalink }}"
+      integrity="{{ $prismDark.Data.Integrity }}"
+      {{ if eq $defaultTheme "light" }}disabled{{ end }}
     />
+    <link
+      rel="stylesheet"
+      id="prism-light"
+      href="{{ $prismLight.RelPermalink }}"
+      integrity="{{ $prismLight.Data.Integrity }}"
+      {{ if eq $defaultTheme "dark" }}disabled{{ end }}
+    />
+    <link
+      rel="stylesheet"
+      href="{{ $bundle.RelPermalink }}"
+      integrity="{{ $bundle.Data.Integrity }}"
+    />
+  {{ else }}
+    <link
+      rel="stylesheet"
+      id="prism-dark"
+      href="{{ $prismDark.RelPermalink }}"
+      {{ if eq $defaultTheme "light" }}disabled{{ end }}
+    />
+    <link
+      rel="stylesheet"
+      id="prism-light"
+      href="{{ $prismLight.RelPermalink }}"
+      {{ if eq $defaultTheme "dark" }}disabled{{ end }}
+    />
+    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" />
+  {{ end }}
+
 
   <link rel="icon" href="/img/favicon.svg" sizes="any" type="image/svg+xml" />
 
   <!-- Internal Hugo Templates -->
   {{ template "_internal/twitter_cards.html" . }}
   {{ template "_internal/opengraph.html" . }}
+
 
   <!-- Extensibility -->
   {{ partial "head_end.html" . }}

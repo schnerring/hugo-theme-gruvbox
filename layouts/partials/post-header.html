@@ -6,28 +6,31 @@
   </h1>
 
   <div class="post-meta">
-    {{- with .Date }}
+    {{ with .Date }}
       <span>{{ .Format "2006-01-02" }}</span>
-    {{- end -}}
-    {{- with .Params.Author }}
+    {{ end }}
+    {{ with .Params.Author }}
       <span>by</span>
       <span class="post-meta__author">{{ . }}</span>
-    {{- end -}}
+    {{ end }}
     <!-- Only display edit date if (.Lastmod - .Date) greater or equal to $diffDays -->
-    {{- $diffDays := 1 -}}
-    {{- if and .Date .Lastmod (ge (sub .Lastmod.YearDay .Date.YearDay) $diffDays) }}
+    {{ $diffDays := 1 }}
+    {{ if and .Date .Lastmod (ge (sub .Lastmod.YearDay .Date.YearDay) $diffDays) }}
       <span>|</span>
       <span>edit: {{ .Lastmod.Format "2006-01-02" }}</span>
-    {{- end -}}
-    {{- with .Params.tags }}
+    {{ end }}
+    {{ with .Params.tags }}
       <span>|</span>
-      {{- range . }}
-      <span>
-        <a class="post-tag" href="{{ urlize (printf "tags/%s" . ) | absURL }}">
-          {{- . -}}
-        </a>
-      </span>
-      {{- end -}}
-    {{- end }}
+      {{ range . }}
+        <span>
+          <a
+            class="post-tag"
+            href="{{ urlize (printf "tags/%s" . ) | absURL }}"
+          >
+            {{- . -}}
+          </a>
+        </span>
+      {{ end }}
+    {{ end }}
   </div>
 </div>

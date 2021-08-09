@@ -1,7 +1,6 @@
-
-{{- range . -}}
+{{ range . }}
   <article class="post">
-    {{ partial "post-header.html" . -}}
+    {{ partial "post-header.html" . }}
     <div class="post-content">
       <span>
         {{ with .Description }}
@@ -9,12 +8,12 @@
         {{ else }}
           {{ .Summary }}
           {{ if .Truncated }}
-          <div class="post-content__read-more">
-            <a href="{{ .Permalink }}">Read more &gt;</a>
-          </div>
+            <div class="post-content__read-more">
+              <a href="{{ .Permalink }}">Read more &gt;</a>
+            </div>
           {{ end }}
         {{ end }}
       </span>
     </div>
   </article>
-{{- end -}}
+{{ end }}

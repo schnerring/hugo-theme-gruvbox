@@ -1,21 +1,23 @@
 <header>
   <nav id="menu">
     <h1 class="menu__heading">
-      <a href="
+      <a
+        href="
         {{- with $.Site.Params.Logo.URL -}}
           {{- . -}}
         {{- else -}}
           {{- $.Site.BaseURL -}}
-        {{- end -}}">
+        {{- end -}}"
+      >
         {{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}&nbsp;&gt;
       </a>
     </h1>
 
     <ul class="menu--horizontal">
       {{ range $.Site.Menus.main }}
-      <li class="menu__item">
-        <a href="{{ .URL }}">{{ .Name }}</a>
-      </li>
+        <li class="menu__item">
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        </li>
       {{ end }}
     </ul>
 
@@ -25,11 +27,12 @@
 
       {{ partial "tabler-icon" "menu-2" }}
 
+
       <ul class="menu--vertical">
         {{ range $.Site.Menus.main }}
-        <li>
-          <a class="menu__item" href="{{ .URL }}">{{ .Name }}</a>
-        </li>
+          <li>
+            <a class="menu__item" href="{{ .URL }}">{{ .Name }}</a>
+          </li>
         {{ end }}
       </ul>
     </div>
