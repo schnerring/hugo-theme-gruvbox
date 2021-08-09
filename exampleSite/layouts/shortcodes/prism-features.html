@@ -1,15 +1,16 @@
-{{- $type := .Get 0 -}}
-{{- $languages := readDir "node_modules/prismjs/components" -}}
-{{- $plugins := readDir "node_modules/prismjs/plugins" -}}
-{{- if eq $type "languages" -}}
-  {{- range after 1 $languages -}}
-    {{- $lang := .Name | replaceRE ".*\\.min\\.js" "" | replaceRE "prism-([\\w-]*).js" "${1}" -}}
-    {{- if not (eq $lang "") }}
+{{ $type := .Get 0 }}
+{{ $languages := readDir "node_modules/prismjs/components" }}
+{{ $plugins := readDir "node_modules/prismjs/plugins" }}
+
+{{ if eq $type "languages" }}
+  {{ range after 1 $languages -}}
+    {{ $lang := .Name | replaceRE ".*\\.min\\.js" "" | replaceRE "prism-([\\w-]*).js" "${1}" -}}
+    {{ if not (eq $lang "") }}
       {{ $lang -}}
-    {{- end -}}
-  {{- end -}}
-{{- else if eq $type "plugins" -}}
-  {{- range $plugins }}
+    {{ end -}}
+  {{ end }}
+{{ else if eq $type "plugins" }}
+  {{ range $plugins }}
     {{ path.Base .Name -}}
-  {{- end -}}
-{{- end -}}
+  {{ end }}
+{{ end }}
