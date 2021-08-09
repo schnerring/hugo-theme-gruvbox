@@ -82,20 +82,20 @@ aside.bio {
   }
 
   & .bio__social,
-  & .bio__social__item {
+  & .bio__social-item {
     display: flex;
   }
 
-  & .bio__social__col {
+  & .bio__social--col {
     flex-direction: column;
   }
 
-  & .bio__social__row {
+  & .bio__social--row {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
 
-  & .bio__social__icon {
+  & .bio__social-icon {
     padding: 0 0.75rem;
   }
 }
