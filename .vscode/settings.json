@@ -5,6 +5,7 @@
   },
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
   },
   "emmet.includeLanguages": {
