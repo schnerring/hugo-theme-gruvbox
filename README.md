@@ -1,16 +1,21 @@
 # hugo-gruvbox
 
-A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox). The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes.
+A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox).
+The pastel colors are high contrast, easily distinguishable, pleasing to the
+eye, and feature light and dark color palettes.
 
 ## Features
 
 - Code highlighting with [Prism](https://prismjs.com/)
 - [Tabler Icons](https://tabler-icons.io/) for generic icons
 - [Simple Icons](https://simpleicons.org/) for social icons
-- All third-party dependencies are managed with [npm](https://www.npmjs.com/) to make updating a breeze and reduce code clutter
+- All third-party dependencies are managed with [npm](https://www.npmjs.com/)
+  to make updating a breeze and reduce code clutter
 - Dark mode that also changes Prism themes
 
-Big thanks to the creators of [Hugo](https://gohugo.io/) and the software mentioned above. Also, thanks to everyone participating in open-source. I couldn't have created this theme without you. ❤️
+Big thanks to the creators of [Hugo](https://gohugo.io/) and the software
+mentioned above. Also, thanks to everyone participating in open-source. I
+couldn't have created this theme without you. ❤️
 
 ## Installation
 
@@ -36,9 +41,15 @@ The theme allows customization of Prism via `config.toml` parameters:
     ]
 ```
 
-In my opinion, this is the coolest feature of the theme. Other Hugo themes usually include a pre-configured version of Prism, which complicates updates and change tracking, and clutters the theme's code base with third-party JavaScript.
+In my opinion, this is the coolest feature of the theme. Other Hugo themes
+usually include a pre-configured version of Prism, which complicates updates and
+change tracking, and clutters the theme's code base with third-party JavaScript.
 
-The Prism theme is not configurable because of the integration with the dark mode functionality. Toggling between color modes swaps the Prism theme between [`gruvbox-dark`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css) and [`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css) from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
+The Prism theme is not configurable because of the integration with the dark
+mode functionality. Toggling between color modes swaps the Prism theme between
+[`gruvbox-dark`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css)
+and [`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css)
+from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
 
 ### Explore Prism Features
 
@@ -54,7 +65,8 @@ ls node_modules/prismjs/plugins
 
 ## Extensibility
 
-You can extend the theme by overriding the following partials in the `layouts/partials` directory which by default are empty placeholder files:
+You can extend the theme by overriding the following partials in the `layouts/partials`
+directory which by default are empty placeholder files:
 
 - [`head_start.html`](./layouts/partials/head_start.html)  
   Custom HTML at the start of `<head>`
@@ -74,6 +86,10 @@ npm i
 
 [See also](https://gohugo.io/hugo-pipes/postcss/):
 
-> Hugo Pipe's PostCSS requires the `postcss-cli` JavaScript package to be installed in the environment (`npm install -g postcss postcss-cli`) along with any PostCSS plugin(s) used (e.g., `npm install -g` autoprefixer).
+> Hugo Pipe's PostCSS requires the `postcss-cli` JavaScript package to be
+> installed in the environment (`npm install -g postcss postcss-cli`) along with
+> any PostCSS plugin(s) used (e.g., `npm install -g` autoprefixer).
 >
-> If you are using the Hugo Snap package, PostCSS and plugin(s) need to be installed locally within your Hugo site directory, e.g., `npm install postcss-cli` without the `-g` flag.
+> If you are using the Hugo Snap package, PostCSS and plugin(s) need to be
+> installed locally within your Hugo site directory, e.g., `npm install postcss-cli`
+> without the `-g` flag.

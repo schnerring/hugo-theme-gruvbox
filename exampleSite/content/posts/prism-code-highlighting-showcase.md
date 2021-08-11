@@ -5,13 +5,19 @@ comments: false
 toc: true
 ---
 
-This theme uses [Prism](https://prismjs.com/) for code highlighting. Other Hugo themes usually include a pre-configured version of Prism, which complicates updates and clutters the source code base with third-party JavaScript.
+This theme uses [Prism](https://prismjs.com/) for code highlighting. Other Hugo
+themes usually include a pre-configured version of Prism, which complicates
+updates and clutters the source code base with third-party JavaScript.
 
-Only the Prism features you select in the Hugo site configuration are bundled by the build process. This way, Prism can be easily updated with `npm` and the size of the JavaScript and CSS bundles are minimized by only including what you need.
+Only the Prism features you select in the Hugo site configuration are bundled by
+the build process. This way, Prism can be easily updated with `npm` and the
+size of the JavaScript and CSS bundles are minimized by only including what you
+need.
 
 <!--more-->
 
-Here is a an example configuration demonstrating how to configure `languages` and `plugins` in the `config.toml` file of your Hugo site:
+Here is a an example configuration demonstrating how to configure `languages`
+and `plugins` in the `config.toml` file of your Hugo site:
 
 ```toml
 [params]
@@ -43,9 +49,14 @@ The following languages are available:
 
 ## Plugins
 
-Before using a plugin in production, read its documentation and test it thoroughly. E.g., the [`remove-initial-line-feed` plugin](https://prismjs.com/plugins/remove-initial-line-feed/) is still available despite being deprecated in favor of [`normalize-whitespace`](https://prismjs.com/plugins/normalize-whitespace/).
+Before using a plugin in production, read its documentation and test it
+thoroughly. E.g., the [`remove-initial-line-feed` plugin](https://prismjs.com/plugins/remove-initial-line-feed/)
+is still available despite being deprecated in favor of [`normalize-whitespace`](https://prismjs.com/plugins/normalize-whitespace/).
 
-Many Prism plugins require using `<pre>` tags with custom attributes. Hugo uses Goldmark as Markdown handler, which by default doesn't render raw inline HTML, so make sure to enable [`unsafe`](https://gohugo.io/getting-started/configuration-markup#goldmark) rendering if required:
+Many Prism plugins require using `<pre>` tags with custom attributes. Hugo uses
+Goldmark as Markdown handler, which by default doesn't render raw inline HTML,
+so make sure to enable [`unsafe`](https://gohugo.io/getting-started/configuration-markup#goldmark)
+rendering if required:
 
 ```toml
 [markup]
@@ -64,7 +75,8 @@ The following plugins are available:
 
 #### Copy to Clipboard
 
-`copy-to-clipboard` requires the `toolbar` plugin, so make sure to add it **after** adding `toolbar` in the `config.toml` file:
+`copy-to-clipboard` requires the `toolbar` plugin, so make sure to add it
+**after** adding `toolbar` in the `config.toml` file:
 
 Config:
 
@@ -129,11 +141,7 @@ Config:
 Input:
 
 ```html
-<pre 
-  class="command-line language-bash"
-  data-user="root"
-  data-host="localhost"
->
+<pre class="command-line language-bash" data-user="root" data-host="localhost">
   <code>
     cd /usr/local/etc
     cp php.ini php.ini.bak
@@ -141,7 +149,7 @@ Input:
   </code>
 </pre>
 
-<pre 
+<pre
   class="command-line language-bash"
   data-user="chris"
   data-host="remotehost"

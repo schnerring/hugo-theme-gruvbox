@@ -12,7 +12,8 @@ This theme depends on the following projects:
 - Code Highlighting by [Prism](https://prismjs.com/)
 - [Tabler Icons](https://tablericons.com/)
 - [Simple Icons](https://simpleicons.org/)
-- Content with the [#hugo-basic-example](/tags/hugo-basic-example) tag originates from [gohugoio/hugoBasicExample](https://github.com/gohugoio/hugoBasicExample)
+- Content with the [#hugo-basic-example](/tags/hugo-basic-example) tag
+  originates from [gohugoio/hugoBasicExample](https://github.com/gohugoio/hugoBasicExample)
 
 A big thanks to the creators! ❤️
 

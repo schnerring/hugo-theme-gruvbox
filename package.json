@@ -23,9 +23,9 @@
     "theme"
   ],
   "scripts": {
-    "lint:css": "stylelint **/*.css",
-    "lint:js": "eslint --ext js .",
-    "lint:md": "markdownlint",
+    "lint:css": "stylelint --fix **/*.css",
+    "lint:js": "eslint --fix --ext js .",
+    "lint:md": "markdownlint --fix **/*.md",
     "lint": "npm run lint:css && npm run lint:js && npm run lint:md",
     "prepare": "husky install"
   },
