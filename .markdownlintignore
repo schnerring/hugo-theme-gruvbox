@@ -1,0 +1,11 @@
+node_modules
+
+exampleSite/public
+exampleSite/resources
+
+# Leave content from gohugoio/hugoBasicExample as installed
+exampleSite/content/posts/emoji-support.md
+exampleSite/content/posts/markdown-syntax.md
+exampleSite/content/posts/math-typesetting.md
+exampleSite/content/posts/placeholder-text.md
+exampleSite/content/posts/rich-content.md

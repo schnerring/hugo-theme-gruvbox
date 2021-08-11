@@ -25,17 +25,30 @@
   "scripts": {
     "lint:css": "stylelint **/*.css",
     "lint:js": "eslint --ext js .",
-    "lint": "npm run lint:css && npm run lint:js"
+    "lint:md": "markdownlint",
+    "lint": "npm run lint:css && npm run lint:js && npm run lint:md"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^3.4.0",
     "lint-staged": "^11.1.1",
+    "markdownlint-cli": "^0.28.1",
     "prettier": "^2.3.2",
     "prettier-plugin-go-template": "0.0.11",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-prettier": "^1.2.0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.css": [
+      "stylelint --fix"
+    ],
+    "*.md": [
+      "markdownlint --fix"
+    ]
   }
 }
