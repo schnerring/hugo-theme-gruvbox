@@ -3,7 +3,7 @@ node_modules
 exampleSite/public
 exampleSite/resources
 
-# Leave content from gohugoio/hugoBasicExample as installed
+# Leave content from gohugoio/hugoBasicExample as is
 exampleSite/content/posts/emoji-support.md
 exampleSite/content/posts/markdown-syntax.md
 exampleSite/content/posts/math-typesetting.md

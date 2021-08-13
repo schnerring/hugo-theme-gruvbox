@@ -3,7 +3,29 @@ license = "MIT"
 licenselink = "https://github.com/schnerring/hugo-gruvbox/blob/main/LICENSE"
 description = "A retro-looking Hugo theme inspired by the gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
 homepage = "https://github.com/schnerring/hugo-gruvbox"
-tags = ["blog", "clean", "dark", "fast", "gruvbox", "light", "minimal", "minimalist", "minimalistic", "mobile", "modern", "personal", "privacy", "projects", "responsive", "retro", "seo", "simple", "starter", "syntax highlighting", "technical"]
+tags = [
+  "blog",
+  "clean",
+  "dark",
+  "fast",
+  "gruvbox",
+  "light",
+  "minimal",
+  "minimalist",
+  "minimalistic",
+  "mobile",
+  "modern",
+  "personal",
+  "privacy",
+  "projects",
+  "responsive",
+  "retro",
+  "seo",
+  "simple",
+  "starter",
+  "syntax highlighting",
+  "technical"
+]
 features = ["dark mode"]
 min_version = "0.41.0"
 

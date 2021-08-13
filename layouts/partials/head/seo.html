@@ -1,0 +1,27 @@
+<title>
+  {{- if not .IsHome -}}
+    {{- with .Title }}{{ . }}&nbsp;::&nbsp;{{ end -}}
+  {{- end -}}
+  {{- .Site.Title -}}
+  {{- with .Site.Params.Subtitle }}&nbsp;—&nbsp;{{ . }}{{ end -}}
+</title>
+
+<meta
+  name="description"
+  content="
+  {{- with .Description -}}
+    {{- . -}}
+  {{- else -}}
+    {{- with .Summary | plainify -}}
+      {{- . -}}
+    {{- else -}}
+      {{- .Site.Params.description -}}
+    {{- end -}}
+  {{- end -}}"
+/>
+
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Internal Hugo Templates -->
+{{ template "_internal/twitter_cards.html" . }}
+{{ template "_internal/opengraph.html" . }}

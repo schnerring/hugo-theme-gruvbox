@@ -3,7 +3,7 @@
   lang="{{ .Site.Language.Lang | default " en" }}"
   theme="{{ .Param " defaultTheme" | default "light" }}"
 >
-  {{ partial "head.html" . }}
+  {{ partial "head/head.html" . }}
   <body>
     <div class="layout">
       {{ partial "header.html" . }}
