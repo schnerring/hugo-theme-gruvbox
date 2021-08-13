@@ -2,13 +2,13 @@
 <!-- prettier-ignore -->
 {{ if .URL }}<a href="{{ .URL }}">{{ end }}
 
-<div class="bio__social-item">
-  <div class="bio__social-icon">
+<div class="social-item">
+  <div class="social-icon">
     {{ partial "simple-icon" .icon }}
   </div>
 
   {{ if .label }}
-    <div class="bio__social-label">
+    <div class="social-label">
       <span>{{ .label }}</span>
     </div>
   {{ end }}

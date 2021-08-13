@@ -45,21 +45,8 @@ aside.bio {
   flex-direction: column;
   text-align: center;
 
-  & a:hover {
-    color: var(--gray1);
-
-    & svg {
-      fill: var(--gray1);
-    }
-  }
-
   & hr {
     margin: 1.5rem auto;
-  }
-
-  & svg {
-    height: 22px;
-    width: 22px;
   }
 
   & .bio__avatar {
@@ -80,22 +67,37 @@ aside.bio {
     color: var(--gray1);
     font-style: italic;
   }
+}
 
-  & .bio__social,
-  & .bio__social-item {
-    display: flex;
+.social {
+  & a:hover {
+    color: var(--gray1);
+
+    & svg {
+      fill: var(--gray1);
+    }
   }
 
-  & .bio__social--col {
-    flex-direction: column;
+  & svg {
+    height: 22px;
+    width: 22px;
   }
+}
 
-  & .bio__social--row {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
+.social,
+.social-item {
+  display: flex;
+}
 
-  & .bio__social-icon {
-    padding: 0 0.75rem;
-  }
+.social--col {
+  flex-direction: column;
+}
+
+.social--row {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.social-icon {
+  padding: 0 0.75rem;
 }
