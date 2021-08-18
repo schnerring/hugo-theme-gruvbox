@@ -13,3 +13,10 @@
 @import "normalize.css/normalize.css";
 
 /*! purgecss end ignore */
+
+@import "gruvbox.css";
+@import "base.css";
+@import "layout.css";
+@import "header.css";
+@import "sidebar.css";
+@import "post.css";
