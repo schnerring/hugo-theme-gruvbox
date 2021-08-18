@@ -1,0 +1,20 @@
+/*! purgecss start ignore */
+
+/* Prism Plugins */
+{{ range .Site.Params.prism.plugins }}
+  {{ $path := printf "prismjs/plugins/%s/prism-%s.css" . . }}
+  {{ $plugin := resources.Get $path }}
+  {{ if $plugin }}
+    @import "{{ $plugin }}";
+  {{ end }}
+{{ end }}
+
+/* Prism Font */
+code,
+kbd,
+code[class*="language-"],
+pre[class*="language-"] {
+  font-family: var(--font-monospace);
+}
+
+/*! purgecss end ignore */

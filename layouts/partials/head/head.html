@@ -16,9 +16,10 @@
   {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
   {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
 
-  {{ $vendor := resources.Get "css/vendor.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS }}
+  {{ $vendor := resources.Get "css/vendor.css" | resources.PostCSS }}
+  {{ $prism := resources.Get "css/prism.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS }}
   {{ $main := resources.Get "css/main.css" | resources.PostCSS }}
-  {{ $bundle := slice $vendor $main | resources.Concat "css/bundle.css" }}
+  {{ $bundle := slice $vendor $prism $main | resources.Concat "css/bundle.css" }}
 
   {{ if hugo.IsProduction }}
     {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
