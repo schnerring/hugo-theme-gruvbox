@@ -1,3 +1,8 @@
+/*
+  Critical CSS for above-the-fold content, delivered inline to increase first
+  paint performance
+*/
+
 /*! purgecss start ignore */
 
 /* Typefaces */

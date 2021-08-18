@@ -13,18 +13,25 @@
   <!-- Styles -->
   {{ $defaultTheme := .Param "defaultTheme" | default "light" }}
 
+  {{ $critical := resources.Get "css/critical.css" | resources.PostCSS }}
   {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
   {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
-
-  {{ $vendor := resources.Get "css/vendor.css" | resources.PostCSS }}
-  {{ $prism := resources.Get "css/prism.css" | resources.ExecuteAsTemplate "css/vendor.css" . | resources.PostCSS }}
+  {{ $prism := resources.Get "css/prism.css" | resources.ExecuteAsTemplate "css/prism.css" . | resources.PostCSS }}
   {{ $main := resources.Get "css/main.css" | resources.PostCSS }}
-  {{ $bundle := slice $vendor $prism $main | resources.Concat "css/bundle.css" }}
+  {{ $bundle := slice $prism $main | resources.Concat "css/bundle.css" }}
 
   {{ if hugo.IsProduction }}
+    {{ $critical = $critical | resources.PostProcess }}
     {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
     {{ $prismLight = $prismLight | minify | fingerprint "sha512" }}
     {{ $bundle = $bundle | fingerprint "sha512" | resources.PostProcess }}
+
+    <style>
+      /* stylelint-disable */
+      {{ $critical.Content | safeCSS }}
+      /* stylelint-enable */
+    </style>
+
     <link
       rel="stylesheet"
       id="prism-dark"
@@ -45,6 +52,13 @@
       integrity="{{ $bundle.Data.Integrity }}"
     />
   {{ else }}
+
+    <style>
+      /* stylelint-disable */
+      {{ $critical.Content | safeCSS }}
+      /* stylelint-enable */
+    </style>
+
     <link
       rel="stylesheet"
       id="prism-dark"
