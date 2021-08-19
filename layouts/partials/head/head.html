@@ -13,12 +13,12 @@
   <!-- Styles -->
   {{ $defaultTheme := .Param "defaultTheme" | default "light" }}
 
-  {{ $critical := resources.Get "css/critical.css" | resources.PostCSS }}
+  {{ $critical := resources.Get "css/_critical.css" | resources.PostCSS }}
   {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
   {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
   {{ $prism := resources.Get "css/prism.css" | resources.ExecuteAsTemplate "css/prism.css" . | resources.PostCSS }}
-  {{ $main := resources.Get "css/main.css" | resources.PostCSS }}
-  {{ $bundle := slice $prism $main | resources.Concat "css/bundle.css" }}
+  {{ $nonCritical := resources.Get "css/_non-critical.css" | resources.PostCSS }}
+  {{ $bundle := slice $prism $nonCritical | resources.Concat "css/bundle.css" }}
 
   {{ if hugo.IsProduction }}
     {{ $critical = $critical | resources.PostProcess }}
