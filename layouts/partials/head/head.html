@@ -33,24 +33,51 @@
     </style>
 
     <link
-      rel="stylesheet"
       id="prism-dark"
+      rel="preload"
       href="{{ $prismDark.RelPermalink }}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       integrity="{{ $prismDark.Data.Integrity }}"
       {{ if eq $defaultTheme "light" }}disabled{{ end }}
     />
     <link
-      rel="stylesheet"
       id="prism-light"
+      rel="preload"
       href="{{ $prismLight.RelPermalink }}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       integrity="{{ $prismLight.Data.Integrity }}"
       {{ if eq $defaultTheme "dark" }}disabled{{ end }}
     />
     <link
-      rel="stylesheet"
+      rel="preload"
       href="{{ $bundle.RelPermalink }}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       integrity="{{ $bundle.Data.Integrity }}"
     />
+
+    <noscript>
+      {{ if eq $defaultTheme "light" }}
+        <link
+          rel="stylesheet"
+          href="{{ $prismLight.RelPermalink }}"
+          integrity="{{ $prismLight.Data.Integrity }}"
+        />
+      {{ else }}
+        <link
+          rel="stylesheet"
+          href="{{ $prismDark.RelPermalink }}"
+          integrity="{{ $prismDark.Data.Integrity }}"
+        />
+      {{ end }}
+      <link
+        rel="stylesheet"
+        href="{{ $bundle.RelPermalink }}"
+        integrity="{{ $bundle.Data.Integrity }}"
+      />
+    </noscript>
   {{ else }}
 
     <style>
@@ -60,18 +87,45 @@
     </style>
 
     <link
-      rel="stylesheet"
       id="prism-dark"
+      rel="preload"
       href="{{ $prismDark.RelPermalink }}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       {{ if eq $defaultTheme "light" }}disabled{{ end }}
     />
     <link
-      rel="stylesheet"
       id="prism-light"
+      rel="preload"
       href="{{ $prismLight.RelPermalink }}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       {{ if eq $defaultTheme "dark" }}disabled{{ end }}
     />
-    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" />
+    <link
+      rel="preload"
+      href="{{ $bundle.RelPermalink }}"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <noscript>
+      {{ if eq $defaultTheme "light" }}
+        <link
+          rel="stylesheet"
+          href="{{ $prismLight.RelPermalink }}"
+        />
+      {{ else }}
+        <link
+          rel="stylesheet"
+          href="{{ $prismDark.RelPermalink }}"
+        />
+      {{ end }}
+      <link
+        rel="stylesheet"
+        href="{{ $bundle.RelPermalink }}"
+      />
+    </noscript>
   {{ end }}
 
 
