@@ -1,3 +1,5 @@
 {{ define "main" }}
-  {{ partial "post-list.html" .Site.RegularPages }}
+  {{/* See https://gohugo.io/functions/where/#mainsections */}}
+  {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+  {{ partial "post-list.html" $pages }}
 {{ end }}
