@@ -105,7 +105,7 @@ header {
 
         & line {
           transition-duration: 0.5s;
-          transition-property: color, opacity, transform;
+          transition-property: stroke, opacity, transform;
           transition-timing-function: cubic-bezier(0.9, 0, 0.1, 1);
         }
 
@@ -134,7 +134,7 @@ header {
           }
 
           & ~ svg {
-            color: var(--bg1);
+            stroke: var(--bg1);
 
             & line:nth-of-type(1) {
               transform: translate(0, 6px) rotate(45deg);
