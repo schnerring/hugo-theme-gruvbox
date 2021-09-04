@@ -9,6 +9,8 @@ copyright = "Copyright © 2021"
 [params]
   # dark or light, defaults to light
   #defaultTheme = "dark"
+  # gray red green yellow blue purple aqua orange, defaults to aqua
+  #defaultColor = "aqua"
   author = "Michael Schnerring"
 
   [params.prism]
