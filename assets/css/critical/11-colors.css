@@ -71,3 +71,9 @@
     display: none;
   }
 }
+
+:root {
+  {{ $defaultColor := .Param "defaultColor" | default "aqua" }}
+  --primary: var(--{{ $defaultColor }}1);
+  --primary-alt: var(--{{ $defaultColor }}2);
+}
