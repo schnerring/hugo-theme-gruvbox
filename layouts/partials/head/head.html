@@ -13,13 +13,15 @@
   <!-- Styles -->
   {{ $defaultTheme := .Param "defaultTheme" | default "light" }}
 
-  {{ $critical := resources.Get "css/_critical.css" | resources.PostCSS }}
+  {{ $critical := (resources.Match "css/critical/*.css") | resources.Concat nil | resources.ExecuteAsTemplate nil nil | resources.PostCSS }}
   {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
   {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
   {{ $prism := resources.Get "css/prism.css" | resources.ExecuteAsTemplate "css/prism.css" . | resources.PostCSS }}
   {{ $nonCritical := resources.Get "css/_non-critical.css" | resources.PostCSS }}
   {{ $bundle := slice $prism $nonCritical | resources.Concat "css/bundle.css" }}
 
+
+  <!-- TODO lots of code duplication ahead ... -->
   {{ if hugo.IsProduction }}
     {{ $critical = $critical | resources.PostProcess }}
     {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
@@ -111,20 +113,11 @@
 
     <noscript>
       {{ if eq $defaultTheme "light" }}
-        <link
-          rel="stylesheet"
-          href="{{ $prismLight.RelPermalink }}"
-        />
+        <link rel="stylesheet" href="{{ $prismLight.RelPermalink }}" />
       {{ else }}
-        <link
-          rel="stylesheet"
-          href="{{ $prismDark.RelPermalink }}"
-        />
+        <link rel="stylesheet" href="{{ $prismDark.RelPermalink }}" />
       {{ end }}
-      <link
-        rel="stylesheet"
-        href="{{ $bundle.RelPermalink }}"
-      />
+      <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" />
     </noscript>
   {{ end }}
 
