@@ -16,9 +16,7 @@
   {{ $critical := (resources.Match "css/critical/*.css") | resources.Concat nil | resources.ExecuteAsTemplate nil nil | resources.PostCSS }}
   {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
   {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
-  {{ $prism := resources.Get "css/prism.css" | resources.ExecuteAsTemplate "css/prism.css" . | resources.PostCSS }}
-  {{ $nonCritical := resources.Get "css/_non-critical.css" | resources.PostCSS }}
-  {{ $bundle := slice $prism $nonCritical | resources.Concat "css/bundle.css" }}
+  {{ $bundle := (resources.Match "css/non-critical/*.css") | resources.Concat "css/bundle.css" | resources.ExecuteAsTemplate "css/bundle.css" . | resources.PostCSS }}
 
 
   <!-- TODO lots of code duplication ahead ... -->

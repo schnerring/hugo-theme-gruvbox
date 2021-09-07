@@ -1,10 +1,11 @@
 /*! purgecss start ignore */
 
 /* Prism Plugins */
-{{ range .Site.Params.prism.plugins }}
+{{ range $.Site.Params.prism.plugins }}
   {{ $path := printf "prismjs/plugins/%s/prism-%s.css" . . }}
   {{ $plugin := resources.Get $path }}
   {{ if $plugin }}
+  {{ printf "/*%s*/" $plugin }}
     @import "{{ $plugin }}";
   {{ end }}
 {{ end }}
