@@ -183,7 +183,7 @@ pre {
 
 blockquote,
 blockquote.twitter-tweet {
-  border-left: var(--aqua2) 5px solid;
+  border-left: var(--primary-alt) 5px solid;
   margin: 0.5rem 0;
 
   & code {

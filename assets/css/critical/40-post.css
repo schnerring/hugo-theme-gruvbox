@@ -21,18 +21,18 @@
 }
 
 .post-content__read-more {
-  color: var(--aqua2);
+  color: var(--primary-alt);
   margin-top: 1.3rem;
 }
 
 .post-header,
 .post-content {
   & a {
-    color: var(--aqua2);
+    color: var(--primary-alt);
   }
 
   & a:hover {
-    color: var(--aqua1);
+    color: var(--primary);
   }
 }
 

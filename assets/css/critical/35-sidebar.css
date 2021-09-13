@@ -16,11 +16,11 @@
 
 aside.toc {
   & a {
-    color: var(--aqua2);
+    color: var(--primary-alt);
   }
 
   & a:hover {
-    color: var(--aqua1);
+    color: var(--primary);
   }
 
   & ul {
