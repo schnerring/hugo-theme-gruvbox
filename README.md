@@ -27,7 +27,7 @@ couldn't have created this theme without you. ❤️
 
 ## Installation
 
-Run `npm install` before running `hugo`.
+Run `npm ci` before running `hugo`.
 
 ## Configure Prism
 
