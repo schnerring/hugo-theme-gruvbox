@@ -29,7 +29,19 @@ couldn't have created this theme without you. ❤️
 
 Run `npm ci` before running `hugo`.
 
-## Configure Prism
+## Configuration
+
+### Colors
+
+Two options are available to configure the theme's colors:
+
+- `defaultTheme`: `dark` or `light` (defaults to `light`)  
+  Default theme color for when a user visits the site for the first time.
+- `defaultColor`: `gray`, `red`, `green`, `yellow`, `blue`, `purple`, `aqua`, or
+  `orange` (defaults to `blue`)  
+   Default color for things such as links, headings etc.
+
+### Prism
 
 The theme allows customization of Prism via `config.toml` parameters:
 
@@ -59,7 +71,7 @@ mode functionality. Toggling between color modes swaps the Prism theme between
 and [`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css)
 from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
 
-### Explore Prism Features
+#### Explore Prism Features
 
 After running `npm install`, explore Prism features like this:
 
