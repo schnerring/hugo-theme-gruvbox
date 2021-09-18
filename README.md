@@ -12,6 +12,65 @@ what features are missing. As soon as the core features are implemented, I will
 publish it to the [Hugo showcase](https://themes.gohugo.io/) and release
 version v0.1.0.
 
+## Getting Started
+
+Create a new Hugo website:
+
+```shell
+hugo new site example.com
+cd example.com/
+```
+
+Initialize the site as Hugo module
+
+```shell
+hugo mod init example.com
+```
+
+Create the `config/_default` directory and add a `module.toml` file to it:
+
+```toml
+[[imports]]
+  path = "github.com/schnerring/hugo-gruvbox"
+[[mounts]]
+  source = "node_modules/prismjs"
+  target = "assets/prismjs"
+[[mounts]]
+  source = "node_modules/prism-themes/themes"
+  target = "assets/prism-themes"
+[[mounts]]
+  source = "node_modules/typeface-fira-code/files"
+  target = "static/fonts"
+[[mounts]]
+  source = "node_modules/typeface-roboto-slab/files"
+  target = "static/fonts"
+[[mounts]]
+  source = "node_modules/@tabler/icons/icons"
+  target = "assets/tabler-icons"
+[[mounts]]
+  source = "node_modules/simple-icons/icons"
+  target = "assets/simple-icons"
+```
+
+Install the theme:
+
+```shell
+hugo mod get
+```
+
+Initialize the NPM `package.json` and install the dependencies:
+
+```shell
+hugo npm mod pack
+npm install
+```
+
+Run Hugo:
+
+```shell
+hugo server
+```
+
 ## Features
 
 - Code highlighting with [Prism](https://prismjs.com/)
@@ -33,7 +92,7 @@ Run `npm ci` before running `hugo`.
 
 ### Colors
 
-Two options are available to configure the theme's colors:
+Two options are available to configure the theme colors:
 
 - `defaultTheme`: `dark` or `light` (defaults to `light`)  
   Default theme color for when a user visits the site for the first time.
