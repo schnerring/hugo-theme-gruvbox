@@ -1,11 +1,11 @@
 node_modules
 
-exampleSite/public
-exampleSite/resources
+public
+resources
 
 # Leave content from gohugoio/hugoBasicExample as is
-exampleSite/content/posts/emoji-support.md
-exampleSite/content/posts/markdown-syntax.md
-exampleSite/content/posts/math-typesetting.md
-exampleSite/content/posts/placeholder-text.md
-exampleSite/content/posts/rich-content.md
+content/posts/emoji-support.md
+content/posts/markdown-syntax.md
+content/posts/math-typesetting.md
+content/posts/placeholder-text.md
+content/posts/rich-content.md

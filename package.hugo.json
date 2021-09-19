@@ -19,13 +19,28 @@
   },
   "keywords": ["hugo", "gruvbox", "theme"],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:css": "stylelint --fix **/*.css",
+    "lint:js": "eslint --fix --ext js .",
+    "lint:md": "markdownlint --fix **/*.md",
+    "lint": "npm run lint:css && npm run lint:js && npm run lint:md",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix",
+    "*.css": "stylelint --fix",
+    "*.md": "markdownlint --fix"
   },
   "dependencies": {},
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@tabler/icons": "^1.41.2",
     "cssnano": "^5.0.6",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.1",
+    "markdownlint-cli": "^0.28.1",
     "normalize.css": "^8.0.1",
     "postcss": "^8.3.5",
     "postcss-cli": "^8.3.1",
@@ -34,9 +49,14 @@
     "postcss-nesting": "^8.0.1",
     "postcss-preset-env": "^6.7.0",
     "postcss-url": "^10.1.3",
+    "prettier": "^2.3.2",
+    "prettier-plugin-go-template": "0.0.11",
     "prism-themes": "^1.8.0",
     "prismjs": "^1.24.0",
     "simple-icons": "^5.4.0",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.2.0",
     "typeface-fira-code": "^1.1.13",
     "typeface-roboto-slab": "^1.1.13"
   }

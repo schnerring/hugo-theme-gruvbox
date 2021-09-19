@@ -1,6 +1,12 @@
-replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
-[[imports]]
-  path = "github.com/schnerring/hugo-gruvbox"
+# replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
+# [[imports]]
+#   path = "github.com/schnerring/hugo-gruvbox"
+[[mounts]]
+  source = "assets"
+  target = "assets"
+[[mounts]]
+  source = "static"
+  target = "static"
 [[mounts]]
   source = "node_modules/prismjs"
   target = "assets/prismjs"
