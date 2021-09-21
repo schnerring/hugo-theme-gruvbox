@@ -27,29 +27,21 @@ Initialize the site as Hugo module
 hugo mod init example.com
 ```
 
-Create the `config/_default` directory and add a `module.toml` file to it:
+Add the following to the `config.toml` file:
 
 ```toml
-[[imports]]
-  path = "github.com/schnerring/hugo-gruvbox"
-[[mounts]]
-  source = "node_modules/prismjs"
-  target = "assets/prismjs"
-[[mounts]]
-  source = "node_modules/prism-themes/themes"
-  target = "assets/prism-themes"
-[[mounts]]
-  source = "node_modules/typeface-fira-code/files"
-  target = "static/fonts"
-[[mounts]]
-  source = "node_modules/typeface-roboto-slab/files"
-  target = "static/fonts"
-[[mounts]]
-  source = "node_modules/@tabler/icons/icons"
-  target = "assets/tabler-icons"
-[[mounts]]
-  source = "node_modules/simple-icons/icons"
-  target = "assets/simple-icons"
+[build]
+  _merge = "deep"
+
+[markup]
+  _merge = "deep"
+
+[module]
+  # Currently doesn't work.
+  # See: https://github.com/gohugoio/hugo/issues/8933#issuecomment-924041967
+  _merge = "deep"
+  [[module.imports]]
+    path = "github.com/schnerring/hugo-gruvbox"
 ```
 
 Install the theme:
