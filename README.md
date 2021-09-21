@@ -30,10 +30,13 @@ hugo mod init example.com
 Add the following to the `config.toml` file:
 
 ```toml
-[build]
-  _merge = "deep"
-
 [markup]
+  # (Optional) To be able to use all Prism plugins, the theme enables unsafe
+  # rendering by default
+  #_merge = "deep"
+
+[build]
+  # The theme enables writeStats which is required for PurgeCSS
   _merge = "deep"
 
 [module]
