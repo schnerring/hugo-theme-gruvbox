@@ -39,12 +39,38 @@ Add the following to the `config.toml` file:
   # The theme enables writeStats which is required for PurgeCSS
   _merge = "deep"
 
+# This hopefully will be simpler in the future.
+# See: https://github.com/schnerring/hugo-gruvbox/issues/16
 [module]
-  # Currently doesn't work.
-  # See: https://github.com/gohugoio/hugo/issues/8933#issuecomment-924041967
-  _merge = "deep"
   [[module.imports]]
     path = "github.com/schnerring/hugo-gruvbox"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "node_modules/prismjs"
+    target = "assets/prismjs"
+  [[module.mounts]]
+    source = "node_modules/prism-themes/themes"
+    target = "assets/prism-themes"
+  [[module.mounts]]
+    source = "node_modules/typeface-fira-code/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/typeface-roboto-slab/files"
+    target = "static/fonts"
+  [[module.mounts]]
+    source = "node_modules/@tabler/icons/icons"
+    target = "assets/tabler-icons"
+  [[module.mounts]]
+    source = "node_modules/simple-icons/icons"
+    target = "assets/simple-icons"
 ```
 
 Install the theme:
@@ -56,7 +82,7 @@ hugo mod get
 Initialize the NPM `package.json` and install the dependencies:
 
 ```shell
-hugo npm mod pack
+hugo mod npm pack
 npm install
 ```
 
