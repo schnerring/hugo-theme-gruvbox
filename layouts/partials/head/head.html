@@ -25,100 +25,60 @@
     {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
     {{ $prismLight = $prismLight | minify | fingerprint "sha512" }}
     {{ $bundle = $bundle | fingerprint "sha512" | resources.PostProcess }}
-
-    <style>
-      /* stylelint-disable */
-      {{ $critical.Content | safeCSS }}
-      /* stylelint-enable */
-    </style>
-
-    <link
-      id="prism-dark"
-      rel="preload"
-      href="{{ $prismDark.RelPermalink }}"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      integrity="{{ $prismDark.Data.Integrity }}"
-      {{ if eq $defaultTheme "light" }}disabled{{ end }}
-    />
-    <link
-      id="prism-light"
-      rel="preload"
-      href="{{ $prismLight.RelPermalink }}"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      integrity="{{ $prismLight.Data.Integrity }}"
-      {{ if eq $defaultTheme "dark" }}disabled{{ end }}
-    />
-    <link
-      rel="preload"
-      href="{{ $bundle.RelPermalink }}"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      integrity="{{ $bundle.Data.Integrity }}"
-    />
-
-    <noscript>
-      {{ if eq $defaultTheme "light" }}
-        <link
-          rel="stylesheet"
-          href="{{ $prismLight.RelPermalink }}"
-          integrity="{{ $prismLight.Data.Integrity }}"
-        />
-      {{ else }}
-        <link
-          rel="stylesheet"
-          href="{{ $prismDark.RelPermalink }}"
-          integrity="{{ $prismDark.Data.Integrity }}"
-        />
-      {{ end }}
-      <link
-        rel="stylesheet"
-        href="{{ $bundle.RelPermalink }}"
-        integrity="{{ $bundle.Data.Integrity }}"
-      />
-    </noscript>
-  {{ else }}
-
-    <style>
-      /* stylelint-disable */
-      {{ $critical.Content | safeCSS }}
-      /* stylelint-enable */
-    </style>
-
-    <link
-      id="prism-dark"
-      rel="preload"
-      href="{{ $prismDark.RelPermalink }}"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      {{ if eq $defaultTheme "light" }}disabled{{ end }}
-    />
-    <link
-      id="prism-light"
-      rel="preload"
-      href="{{ $prismLight.RelPermalink }}"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      {{ if eq $defaultTheme "dark" }}disabled{{ end }}
-    />
-    <link
-      rel="preload"
-      href="{{ $bundle.RelPermalink }}"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-
-    <noscript>
-      {{ if eq $defaultTheme "light" }}
-        <link rel="stylesheet" href="{{ $prismLight.RelPermalink }}" />
-      {{ else }}
-        <link rel="stylesheet" href="{{ $prismDark.RelPermalink }}" />
-      {{ end }}
-      <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" />
-    </noscript>
   {{ end }}
 
+  <style>
+    /* stylelint-disable */
+    {{ $critical.Content | safeCSS }}
+    /* stylelint-enable */
+  </style>
+
+  <link
+    id="prism-dark"
+    rel="preload"
+    href="{{ $prismDark.RelPermalink }}"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+    {{ if hugo.IsProduction }}integrity="{{ $prismDark.Data.Integrity }}"{{ end }}
+    {{ if eq $defaultTheme "light" }}disabled{{ end }}
+  />
+  <link
+    id="prism-light"
+    rel="preload"
+    href="{{ $prismLight.RelPermalink }}"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+    {{ if hugo.IsProduction }}integrity="{{ $prismLight.Data.Integrity }}"{{ end }}
+    {{ if eq $defaultTheme "dark" }}disabled{{ end }}
+  />
+  <link
+    rel="preload"
+    href="{{ $bundle.RelPermalink }}"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+    {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}
+  />
+
+  <noscript>
+    {{ if eq $defaultTheme "light" }}
+      <link
+        rel="stylesheet"
+        href="{{ $prismLight.RelPermalink }}"
+        {{ if hugo.IsProduction }}integrity="{{ $prismLight.Data.Integrity }}"{{ end }}
+      />
+    {{ else }}
+      <link
+        rel="stylesheet"
+        href="{{ $prismDark.RelPermalink }}"
+        {{ if hugo.IsProduction }}integrity="{{ $prismDark.Data.Integrity }}"{{ end }}
+      />
+    {{ end }}
+    <link
+      rel="stylesheet"
+      href="{{ $bundle.RelPermalink }}"
+      {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}
+    />
+  </noscript>
 
   <link rel="icon" href="/img/favicon.svg" sizes="any" type="image/svg+xml" />
 
