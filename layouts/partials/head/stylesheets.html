@@ -2,17 +2,15 @@
 {{ $defaultTheme := .Param "defaultTheme" | default "light" }}
 
 {{ $critical := (resources.Match "css/critical/*.css") | resources.Concat nil | resources.ExecuteAsTemplate nil . | resources.PostCSS }}
+{{ $nonCritical := (resources.Match "css/non-critical/*.css") | resources.Concat "css/non-critical.css" | resources.ExecuteAsTemplate "css/non-critical.css" . | resources.PostCSS }}
 {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
 {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
-{{ $bundle := (resources.Match "css/non-critical/*.css") | resources.Concat "css/bundle.css" | resources.ExecuteAsTemplate "css/bundle.css" . | resources.PostCSS }}
 
-
-<!-- TODO lots of code duplication ahead ... -->
 {{ if hugo.IsProduction }}
   {{ $critical = $critical | resources.PostProcess }}
+  {{ $nonCritical = $nonCritical | fingerprint "sha512" | resources.PostProcess }}
   {{ $prismDark = $prismDark | minify | fingerprint "sha512" }}
   {{ $prismLight = $prismLight | minify | fingerprint "sha512" }}
-  {{ $bundle = $bundle | fingerprint "sha512" | resources.PostProcess }}
 {{ end }}
 
 <style>
@@ -20,6 +18,14 @@
   {{ $critical.Content | safeCSS }}
   /* stylelint-enable */
 </style>
+
+<link
+  rel="preload"
+  href="{{ $nonCritical.RelPermalink }}"
+  as="style"
+  onload="this.onload=null;this.rel='stylesheet'"
+  {{ if hugo.IsProduction }}integrity="{{ $nonCritical.Data.Integrity }}"{{ end }}
+/>
 
 <link
   id="prism-dark"
@@ -30,6 +36,7 @@
   {{ if hugo.IsProduction }}integrity="{{ $prismDark.Data.Integrity }}"{{ end }}
   {{ if eq $defaultTheme "light" }}disabled{{ end }}
 />
+
 <link
   id="prism-light"
   rel="preload"
@@ -38,13 +45,6 @@
   onload="this.onload=null;this.rel='stylesheet'"
   {{ if hugo.IsProduction }}integrity="{{ $prismLight.Data.Integrity }}"{{ end }}
   {{ if eq $defaultTheme "dark" }}disabled{{ end }}
-/>
-<link
-  rel="preload"
-  href="{{ $bundle.RelPermalink }}"
-  as="style"
-  onload="this.onload=null;this.rel='stylesheet'"
-  {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}
 />
 
 <noscript>
@@ -61,9 +61,10 @@
       {{ if hugo.IsProduction }}integrity="{{ $prismDark.Data.Integrity }}"{{ end }}
     />
   {{ end }}
+
   <link
     rel="stylesheet"
-    href="{{ $bundle.RelPermalink }}"
-    {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}
+    href="{{ $nonCritical.RelPermalink }}"
+    {{ if hugo.IsProduction }}integrity="{{ $nonCritical.Data.Integrity }}"{{ end }}
   />
 </noscript>
