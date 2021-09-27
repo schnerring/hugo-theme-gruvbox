@@ -32,7 +32,7 @@
         <hr />
         <div class="social social--col">
           {{ range . }}
-            {{ partial "social-icon" (dict "URL" .URL "icon" .icon "label" .label) }}
+            {{ partial "icons/social-icon" (dict "URL" .URL "icon" .icon "label" .label) }}
           {{ end }}
         </div>
       {{ end }}
@@ -40,7 +40,7 @@
         <hr />
         <div class="social social--row">
           {{ range . }}
-            {{ partial "social-icon" (dict "URL" .URL "icon" .icon "label" .label) }}
+            {{ partial "icons/social-icon" (dict "URL" .URL "icon" .icon "label" .label) }}
           {{ end }}
         </div>
       {{ end }}
