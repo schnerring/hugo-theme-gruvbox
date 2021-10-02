@@ -105,10 +105,6 @@ Big thanks to the creators of [Hugo](https://gohugo.io/) and the software
 mentioned above. Also, thanks to everyone participating in open-source. I
 couldn't have created this theme without you. ❤️
 
-## Installation
-
-Run `npm ci` before running `hugo`.
-
 ## Configuration
 
 ### Colors
