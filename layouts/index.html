@@ -2,4 +2,5 @@
   {{/* See https://gohugo.io/functions/where/#mainsections */}}
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
   {{ partial "post-list.html" $pages }}
+  {{ partial "pagination.html" . }}
 {{ end }}
