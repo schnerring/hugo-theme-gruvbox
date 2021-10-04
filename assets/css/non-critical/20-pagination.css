@@ -1,6 +1,5 @@
 .pagination {
   display: flex;
-  justify-content: space-between;
   margin-top: 2rem;
 }
 
@@ -11,4 +10,8 @@
 
 .pagination__button:hover {
   color: var(--primary);
+}
+
+.pagination__button--next {
+  margin-left: auto;
 }

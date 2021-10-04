@@ -1,6 +1,7 @@
 baseURL = "http://localhost"
 copyright = "Copyright © 2021"
 title = "hugo-gruvbox"
+paginate = 2
 
 [markup]
   [markup.goldmark]
