@@ -1,4 +1,4 @@
-{{ range . }}
+{{ range .Pages }}
   <article class="post">
     {{ partial "post-header.html" . }}
     <div class="post-content">
@@ -17,3 +17,5 @@
     </div>
   </article>
 {{ end }}
+
+{{ partial "pagination.html" . }}

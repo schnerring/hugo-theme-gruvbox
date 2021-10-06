@@ -1,15 +1,15 @@
 <div class="pagination">
-  {{ if .Paginator.HasPrev }}
+  {{ if .HasPrev }}
     <span class="pagination__button pagination__button--previous">
-      <a href="{{ .Paginator.Prev.URL }}">
+      <a href="{{ .Prev.URL }}">
         <span>&lt;</span>
         <span>Previous</span>
       </a>
     </span>
   {{ end }}
-  {{ if .Paginator.HasNext }}
+  {{ if .HasNext }}
     <span class="pagination__button pagination__button--next">
-      <a href="{{ .Paginator.Next.URL }}">
+      <a href="{{ .Next.URL }}">
         <span>Next</span>
         <span>&gt;</span>
       </a>
