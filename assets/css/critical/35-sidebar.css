@@ -64,17 +64,17 @@ aside.bio {
   }
 
   & .bio__description {
-    color: var(--gray1);
+    color: var(--fg3);
     font-style: italic;
   }
 }
 
 .social {
   & a:hover {
-    color: var(--gray1);
+    color: var(--fg3);
 
     & svg {
-      fill: var(--gray1);
+      fill: var(--fg3);
     }
   }
 

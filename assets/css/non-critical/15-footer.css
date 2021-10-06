@@ -1,6 +1,6 @@
 footer {
   align-items: center;
-  color: var(--gray1);
+  color: var(--fg3);
   display: flex;
   font-family: var(--font-monospace);
   justify-content: center;
