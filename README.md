@@ -116,7 +116,7 @@ Two options are available to configure the theme colors:
 - `defaultColor`: `gray`, `red`, `green`, `yellow`, `blue`, `purple`, `aqua`, or
   `orange` (defaults to `blue`)  
   Theme color for things such as links, headings etc.
-- `defaultContrast`: `soft`, `medium`, or `hard` (defaults to `medium`)  
+- `themeContrast`: `soft`, `medium`, or `hard` (defaults to `medium`)  
   Theme background color
 
 ### Prism

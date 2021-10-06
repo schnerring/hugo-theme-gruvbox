@@ -14,7 +14,7 @@ paginate = 2
   # gray red green yellow blue purple aqua orange, defaults to blue
   #defaultColor = "blue"
   # soft medium hard, defaults to medium
-  #defaultContrast = "medium"
+  #themeContrast = "medium"
   author = "Michael Schnerring"
   subtitle = "Theme Demo"
   description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."

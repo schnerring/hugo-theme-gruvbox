@@ -1,8 +1,8 @@
-{{ $defaultContrast := .Param "defaultContrast" | default "medium" }}
+{{ $themeContrast := .Param "themeContrast" | default "medium" }}
 {{ $backgroundColor := "bg0" }}
-{{ if eq $defaultContrast "soft" }}
+{{ if eq $themeContrast "soft" }}
   {{ $backgroundColor = "bg0_s" }}
-{{ else if eq $defaultContrast "hard" }}
+{{ else if eq $themeContrast "hard" }}
   {{ $backgroundColor = "bg0_h" }}
 {{ end }}
 
