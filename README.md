@@ -113,7 +113,7 @@ Two options are available to configure the theme colors:
 
 - `defaultTheme`: `dark` or `light` (defaults to `light`)  
   Default theme color for when a user visits the site for the first time.
-- `defaultColor`: `gray`, `red`, `green`, `yellow`, `blue`, `purple`, `aqua`, or
+- `themeColor`: `gray`, `red`, `green`, `yellow`, `blue`, `purple`, `aqua`, or
   `orange` (defaults to `blue`)  
   Theme color for things such as links, headings etc.
 - `themeContrast`: `soft`, `medium`, or `hard` (defaults to `medium`)  

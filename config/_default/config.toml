@@ -12,7 +12,7 @@ paginate = 2
   # dark or light, defaults to light
   #defaultTheme = "dark"
   # gray red green yellow blue purple aqua orange, defaults to blue
-  #defaultColor = "blue"
+  #themeColor = "blue"
   # soft medium hard, defaults to medium
   #themeContrast = "medium"
   author = "Michael Schnerring"
