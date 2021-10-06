@@ -27,7 +27,7 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
-    "*.css": "stylelint --fix",
+    "*.css": "stylelint --fix --allow-empty-input",
     "*.md": "markdownlint --fix"
   },
   "dependencies": {},

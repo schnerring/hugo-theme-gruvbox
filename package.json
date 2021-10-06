@@ -78,7 +78,7 @@
   ],
   "license": "MIT",
   "lint-staged": {
-    "*.css": "stylelint --fix",
+    "*.css": "stylelint --fix --allow-empty-input",
     "*.js": "eslint --cache --fix",
     "*.md": "markdownlint --fix"
   },
