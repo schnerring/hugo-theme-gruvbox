@@ -1,5 +1,13 @@
+{{ $defaultContrast := .Param "defaultContrast" | default "medium" }}
+{{ $backgroundColor := "bg0" }}
+{{ if eq $defaultContrast "soft" }}
+  {{ $backgroundColor = "bg0_s" }}
+{{ else if eq $defaultContrast "hard" }}
+  {{ $backgroundColor = "bg0_h" }}
+{{ end }}
+
 :root[theme="light"] {
-  --bg: var(--bg0);
+  --bg: var(--{{ $backgroundColor }});
   --bg0: #fbf1c7;
   --bg0_h: #f9f5d7;
   --bg0_s: #f2e5bc;
@@ -36,7 +44,7 @@
 }
 
 :root[theme="dark"] {
-  --bg: var(--bg0);
+  --bg: var(--{{ $backgroundColor }});
   --bg0: #282828;
   --bg0_h: #1d2021;
   --bg0_s: #32302f;

@@ -115,7 +115,9 @@ Two options are available to configure the theme colors:
   Default theme color for when a user visits the site for the first time.
 - `defaultColor`: `gray`, `red`, `green`, `yellow`, `blue`, `purple`, `aqua`, or
   `orange` (defaults to `blue`)  
-   Default color for things such as links, headings etc.
+  Theme color for things such as links, headings etc.
+- `defaultContrast`: `soft`, `medium`, or `hard` (defaults to `medium`)  
+  Theme background color
 
 ### Prism
 
