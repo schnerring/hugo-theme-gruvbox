@@ -25,3 +25,14 @@
 <!-- Internal Hugo Templates -->
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/opengraph.html" . }}
+
+
+<!-- See https://gohugo.io/templates/rss/#reference-your-rss-feed-in-head -->
+{{ range .AlternativeOutputFormats -}}
+  <link
+    rel="{{ .Rel }}"
+    type="{{ .MediaType.Type }}"
+    href="{{ .Permalink }}"
+    title="{{ $.Site.Title }}"
+  />
+{{ end -}}
