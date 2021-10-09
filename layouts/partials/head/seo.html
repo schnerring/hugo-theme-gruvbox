@@ -22,11 +22,14 @@
 
 <link rel="canonical" href="{{ .Permalink }}" />
 
-<!-- Internal Hugo Templates -->
+<!-- Internal Hugo templates -->
+<!-- See https://gohugo.io/templates/internal -->
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/opengraph.html" . }}
+{{ template "_internal/schema.html" . }}
 
 
+<!-- RSS feed -->
 <!-- See https://gohugo.io/templates/rss/#reference-your-rss-feed-in-head -->
 {{ range .AlternativeOutputFormats -}}
   <link
