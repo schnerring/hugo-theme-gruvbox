@@ -15,3 +15,8 @@
     width: 2rem;
   }
 }
+
+.cv__work-position {
+  font-size: 1.25rem;
+  justify-content: space-between;
+}

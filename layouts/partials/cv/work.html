@@ -1,0 +1,31 @@
+{{ partial "cv/heading.html" (dict "tablerIcon" "building" "heading" "Work") }}
+{{ range . }}
+  <div class="cv__work-item">
+    <div class="cv__work-position">
+      <strong>{{ .position }}</strong>,
+      <a href="{{ .url }}">{{ .name }}</a>
+      {{ with .description }}
+        <span>, {{ . }}</span>
+      {{ end }}
+    </div>
+    <div class="cv__work-date">
+      <span>{{ .startDate }}</span>
+      <span>—</span>
+      <span>{{ .endDate }}</span>
+    </div>
+    <div class="cv__work-details">
+      <p></p>
+      <p>
+        {{ .summary }}
+      </p>
+      {{ with .highlights }}
+        <ul>
+          {{ range . }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      {{ end }}
+    </div>
+  </div>
+  <hr />
+{{ end }}

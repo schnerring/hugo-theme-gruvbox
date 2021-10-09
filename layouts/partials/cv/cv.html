@@ -1,16 +1,7 @@
 {{ $cv := $.Site.Data.cv }}
 
 {{ with $cv.work }}
-  {{ partial "cv/heading.html" (dict "tablerIcon" "building" "heading" "Work") }}
-  <ul>
-    {{ range . }}
-      <li>
-        <span>{{ .startDate }}</span>
-        <span>—</span>
-        <span>{{ .endDate }}</span>
-      </li>
-    {{ end }}
-  </ul>
+  {{ partial "cv/work.html" . }}
 {{ end }}
 
 {{ with $cv.volunteer }}
