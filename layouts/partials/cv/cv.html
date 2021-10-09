@@ -1,0 +1,95 @@
+{{ $cv := $.Site.Data.cv }}
+
+{{ with $cv.work }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "building" "heading" "Work") }}
+  <ul>
+    {{ range . }}
+      <li>
+        <span>{{ .startDate }}</span>
+        <span>—</span>
+        <span>{{ .endDate }}</span>
+      </li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.volunteer }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "gift" "heading" "Volunteer") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.education }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "school" "heading" "Education") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.awards }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "award" "heading" "Awards") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.certificates }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "certificate" "heading" "Certificates") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.publications }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "file-text" "heading" "Publications") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.skills }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "chart-arrows" "heading" "Skills") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.languages }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "language" "heading" "Languages") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.interests }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "device-gamepad" "heading" "Interests") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}
+
+{{ with $cv.references }}
+  {{ partial "cv/heading.html" (dict "tablerIcon" "thumb-up" "heading" "References") }}
+  <ul>
+    {{ range . }}
+      <li></li>
+    {{ end }}
+  </ul>
+{{ end }}

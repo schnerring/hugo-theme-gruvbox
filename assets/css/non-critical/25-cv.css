@@ -1,0 +1,17 @@
+.cv__heading {
+  display: flex;
+  align-items: center;
+
+  & .icon-tabler {
+    height: 1.75rem;
+    margin-right: 1rem;
+    width: 1.75rem;
+  }
+}
+
+@media (--md) {
+  .cv__heading .icon-tabler {
+    height: 2rem;
+    width: 2rem;
+  }
+}
