@@ -100,6 +100,7 @@ hugo server
 - All third-party dependencies are managed with [npm](https://www.npmjs.com/)
   to make updating a breeze and reduce code clutter
 - Dark mode that also changes Prism themes
+- Display your CV using [JSON Resume](https://jsonresume.org/)
 
 Big thanks to the creators of [Hugo](https://gohugo.io/) and the software
 mentioned above. Also, thanks to everyone participating in open-source. I
