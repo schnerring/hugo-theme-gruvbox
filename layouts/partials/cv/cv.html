@@ -11,12 +11,7 @@
   {{ end }}
 
   {{ with $cv.education }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "school" "heading" "Education") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/education" . }}
   {{ end }}
 
   {{ with $cv.awards }}
