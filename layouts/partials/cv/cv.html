@@ -35,12 +35,7 @@
   {{ end }}
 
   {{ with $cv.interests }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "heart" "heading" "Interests") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/interests" . }}
   {{ end }}
 
   {{ with $cv.references }}
