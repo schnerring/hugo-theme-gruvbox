@@ -31,12 +31,7 @@
   {{ end }}
 
   {{ with $cv.languages }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "language" "heading" "Languages") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/languages" . }}
   {{ end }}
 
   {{ with $cv.interests }}
