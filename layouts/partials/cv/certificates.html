@@ -1,0 +1,22 @@
+{{ partial "cv/heading.html" (dict "tablerIcon" "certificate" "heading" "Certificates") }}
+{{ range . }}
+  <div class="cv__item">
+    <div class="cv__position">
+      <strong>
+        {{ if .url }}
+          <a href="{{ .url }}">
+            {{ .name }}
+          </a>
+        {{ else }}
+          <span>{{ .name }}</span>
+        {{ end }}
+      </strong>
+      <span>—</span>
+      <span>{{ .issuer }}</span>
+    </div>
+    <div class="cv__duration">
+      {{ partial "icons/tabler-icon" "clock" }}
+      <span>{{ .date }}</span>
+    </div>
+  </div>
+{{ end }}

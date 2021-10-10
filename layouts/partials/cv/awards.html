@@ -3,10 +3,8 @@
   <div class="cv__item">
     <div class="cv__position">
       <strong>{{ .title }}</strong>
-      {{ if .awarder }}
-        <span>—</span>
-        <span>{{ .awarder }}</span>
-      {{ end }}
+      <span>—</span>
+      <span>{{ .awarder }}</span>
     </div>
     <div class="cv__duration">
       {{ partial "icons/tabler-icon" "clock" }}

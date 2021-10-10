@@ -19,12 +19,7 @@
   {{ end }}
 
   {{ with $cv.certificates }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "certificate" "heading" "Certificates") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/certificates" . }}
   {{ end }}
 
   {{ with $cv.publications }}
