@@ -42,27 +42,6 @@ title = "hugo-gruvbox"
       "diff-highlight"
     ]
 
-  [params.bio]
-    #avatarURL = "/avatar.jpg"
-    description = "I love coding. I'm passionate about open-source and digital privacy. I like video games and CrossFit. I'm also terrible at blogging."
-
-    [[params.bio.social]]
-      icon = "github"
-      URL = "https://github.com/schnerring"
-      label = "schnerring"
-    [[params.bio.social]]
-      icon = "matrix"
-      label = "@michael:schnerring.net"
-    [[params.bio.social]]
-      icon = "twitter"
-      URL = "https://twitter.com/schnerringo"
-    [[params.bio.social]]
-      icon = "linkedin"
-      URL = "https://www.linkedin.com/in/schnerring"
-    [[params.bio.social]]
-      icon = "stackoverflow"
-      URL = "https://stackoverflow.com/users/1154965/michael-schnerring"
-
 [menu]
   [[menu.main]]
     identifier = "blog"
@@ -79,4 +58,3 @@ title = "hugo-gruvbox"
     name = "About"
     url = "/about"
     weight = 30
-        

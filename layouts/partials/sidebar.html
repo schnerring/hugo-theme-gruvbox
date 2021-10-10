@@ -11,9 +11,10 @@
     {{ end }}
   {{ end }}
 
-  {{ with $.Site.Params.bio }}
+  {{ $cv := index $.Site.Data.cv $.Site.Language.Lang }}
+  {{ with $cv.basics }}
     <aside class="bio">
-      {{ with .avatarURL }}
+      {{ with .image }}
         <div class="bio__avatar">
           <img src="{{ . }}" alt="Author profile picture" />
         </div>
@@ -21,26 +22,31 @@
 
 
       <p class="sidebar__heading">
-        {{ $.Site.Params.Author }}
+        {{ .name }}
       </p>
 
-      {{ with .description }}
+      {{ with .label }}
         <p class="bio__description">{{ . }}</p>
       {{ end }}
 
-      {{ with where .social "label" "ne" nil }}
+      {{ with .summary }}
+        <p class="bio__description">{{ . }}</p>
+      {{ end }}
+
+      {{ with where .profiles "username" "ne" nil }}
         <hr />
         <div class="social social--col">
           {{ range . }}
-            {{ partial "icons/social-icon" (dict "URL" .URL "icon" .icon "label" .label) }}
+            {{ partial "icons/social-icon" (dict "URL" .url "icon" .network "label" .username) }}
           {{ end }}
         </div>
       {{ end }}
-      {{ with where .social "label" "eq" nil }}
+
+      {{ with where .profiles "username" "eq" nil }}
         <hr />
         <div class="social social--row">
           {{ range . }}
-            {{ partial "icons/social-icon" (dict "URL" .URL "icon" .icon "label" .label) }}
+            {{ partial "icons/social-icon" (dict "URL" .url "icon" .network "label" .username) }}
           {{ end }}
         </div>
       {{ end }}
