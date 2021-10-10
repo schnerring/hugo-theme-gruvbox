@@ -1,6 +1,50 @@
 {{ partial "cv/heading.html" (dict "tablerIcon" "list-check" "heading" "Projects") }}
-<ul>
-  {{ range . }}
-    <li></li>
-  {{ end }}
-</ul>
+{{ range . }}
+  <div class="cv__item">
+    <div class="cv__position">
+      <strong>
+        {{ if .url }}
+          <a href="{{ .url }}">
+            {{ .name }}
+          </a>
+        {{ else }}
+          <span>{{ .name }}</span>
+        {{ end }}
+      </strong>
+      {{ with .description }}
+        <span>—</span>
+        <span>{{ . }}</span>
+      {{ end }}
+    </div>
+
+    {{ partial "cv/duration.html" . }}
+
+    {{ with .entity }}
+      <p>{{ . }}</p>
+    {{ end }}
+
+    {{ with .type }}
+      <p>{{ . }}</p>
+    {{ end }}
+
+    {{ with .roles }}
+      <p>
+        {{ delimit . ", " }}
+      </p>
+    {{ end }}
+
+    {{ with .keywords }}
+      <p>
+        {{ delimit . ", " }}
+      </p>
+    {{ end }}
+
+    {{ with .highlights }}
+      <ul>
+        {{ range . }}
+          <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  </div>
+{{ end }}
