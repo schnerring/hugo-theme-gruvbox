@@ -1,7 +1,0 @@
-{{ partial "cv/heading.html" (dict "tablerIcon" "thumb-up" "heading" "References") }}
-{{ range . }}
-  <blockquote>
-    <p>{{ .reference }}</p>
-    <p>— {{ .name }}</p>
-  </blockquote>
-{{ end }}

@@ -1,6 +1,0 @@
-{{ partial "cv/heading.html" (dict "tablerIcon" "heart" "heading" "Interests") }}
-<ul>
-  {{ range . }}
-    <li>{{ .name }} — {{ delimit .keywords ", " }}</li>
-  {{ end }}
-</ul>
