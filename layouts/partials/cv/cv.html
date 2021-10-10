@@ -39,11 +39,10 @@
   {{ end }}
 
   {{ with $cv.references }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "thumb-up" "heading" "References") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/references" . }}
+  {{ end }}
+
+  {{ with $cv.projects }}
+    {{ partial "cv/projects" . }}
   {{ end }}
 </div>
