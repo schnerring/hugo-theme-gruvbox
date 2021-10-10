@@ -1,9 +1,10 @@
+{{ partial "cv/heading" (dict "tablerIcon" "building" "heading" "Work") }}
 {{ range . }}
-  <div class="cv__work-item">
-    <div class="cv__work-position">
+  <div class="cv__item">
+    <div class="cv__position">
       <strong>{{ .position }}</strong>
       {{ if .name }}
-        <span>,</span>
+        <span>—</span>
         {{ if .url }}
           <a href="{{ .url }}">
             {{ .name }}
@@ -17,24 +18,16 @@
         <span>{{ . }}</span>
       {{ end }}
     </div>
-    <div class="cv__work-date">
-      <span>{{ .startDate }}</span>
-      <span>—</span>
-      <span>{{ .endDate }}</span>
-    </div>
-    <div class="cv__work-details">
-      <p></p>
-      <p>
-        {{ .summary }}
-      </p>
-      {{ with .highlights }}
-        <ul>
-          {{ range . }}
-            <li>{{ . }}</li>
-          {{ end }}
-        </ul>
-      {{ end }}
-    </div>
+
+    {{ partial "cv/duration.html" . }}
+
+    {{ with .location }}
+      <div class="cv__location">
+        {{ partial "icons/tabler-icon" "map-pin" }}
+        <span>{{ . }}</span>
+      </div>
+    {{ end }}
+
+    {{ partial "cv/summary" . }}
   </div>
-  <hr />
 {{ end }}
