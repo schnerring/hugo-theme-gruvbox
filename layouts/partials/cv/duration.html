@@ -1,4 +1,12 @@
 <div class="cv__duration">
   {{ partial "icons/tabler-icon" "clock" }}
-  <span>{{ .startDate }}&nbsp;-&nbsp;{{ .endDate }}</span>
+  <span>{{ .startDate }}</span>
+  <span>&nbsp;-&nbsp;</span>
+  <span>
+    {{- with .endDate -}}
+      {{- . -}}
+    {{- else -}}
+      present
+    {{- end -}}
+  </span>
 </div>
