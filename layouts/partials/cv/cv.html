@@ -27,12 +27,7 @@
   {{ end }}
 
   {{ with $cv.skills }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "chart-arrows" "heading" "Skills") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/skills" . }}
   {{ end }}
 
   {{ with $cv.languages }}
