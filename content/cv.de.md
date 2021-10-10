@@ -1,49 +1,49 @@
 ---
-title: "CV"
+title: "Lebenslauf"
 draft: false
 type: "cv"
 ---
 
-## Experience
+## Erfahrung
 
 {{< json-resume/work >}}
 
-## Education
+## Ausbildung
 
 {{< json-resume/education >}}
 
-## Volunteering
+## Ehrenamt
 
 {{< json-resume/volunteer >}}
 
-## Awards
+## Auszeichnungen
 
 {{< json-resume/awards >}}
 
-## Certificates
+## Zertifikate
 
 {{< json-resume/certificates >}}
 
-## Publications
+## Publikationen
 
 {{< json-resume/publications >}}
 
-## Skills
+## Fähigkeiten
 
 {{< json-resume/skills >}}
 
-## Languages
+## Sprachen
 
 {{< json-resume/languages >}}
 
-## Interests
+## Interessen
 
 {{< json-resume/interests >}}
 
-## References
+## Referenzen
 
 {{< json-resume/references >}}
 
-## Projects
+## Projekte
 
 {{< json-resume/projects >}}

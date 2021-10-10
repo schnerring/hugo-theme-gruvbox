@@ -58,3 +58,11 @@ title = "hugo-gruvbox"
     name = "About"
     url = "/about"
     weight = 30
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 10
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 20
