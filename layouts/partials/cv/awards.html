@@ -1,0 +1,19 @@
+{{ partial "cv/heading" (dict "tablerIcon" "award" "heading" "Awards") }}
+{{ range . }}
+  <div class="cv__item">
+    <div class="cv__position">
+      <strong>{{ .title }}</strong>
+      {{ if .awarder }}
+        <span>—</span>
+        <span>{{ .awarder }}</span>
+      {{ end }}
+    </div>
+    <div class="cv__duration">
+      {{ partial "icons/tabler-icon" "clock" }}
+      <span>{{ .date }}</span>
+    </div>
+    <p>
+      {{ .summary }}
+    </p>
+  </div>
+{{ end }}

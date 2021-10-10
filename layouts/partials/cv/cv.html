@@ -15,12 +15,7 @@
   {{ end }}
 
   {{ with $cv.awards }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "award" "heading" "Awards") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/awards" . }}
   {{ end }}
 
   {{ with $cv.certificates }}
