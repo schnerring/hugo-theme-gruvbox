@@ -23,12 +23,7 @@
   {{ end }}
 
   {{ with $cv.publications }}
-    {{ partial "cv/heading.html" (dict "tablerIcon" "file-text" "heading" "Publications") }}
-    <ul>
-      {{ range . }}
-        <li></li>
-      {{ end }}
-    </ul>
+    {{ partial "cv/publications" . }}
   {{ end }}
 
   {{ with $cv.skills }}
