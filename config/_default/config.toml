@@ -63,6 +63,10 @@ title = "hugo-gruvbox"
   [languages.en]
     languageName = "English"
     weight = 10
+    [languages.en.params.jsonResume]
+      present = "present"
   [languages.de]
     languageName = "Deutsch"
     weight = 20
+    [languages.de.params.jsonResume]
+      present = "heute"

@@ -1,8 +1,18 @@
 # replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
+# replacements = "github.com/schnerring/hugo-json-resume -> ../../hugo-json-resume"
 # [[imports]]
 #   path = "github.com/schnerring/hugo-gruvbox"
 [[imports]]
   path = "github.com/schnerring/hugo-json-resume"
+  [[imports.mounts]]
+    source = "data"
+    target = "data"
+  [[imports.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[imports.mounts]]
+    source = "assets/css/json-resume.css"
+    target = "assets/css/non-critical/100-json-resume.css"
 [[mounts]]
   source = "assets"
   target = "assets"
