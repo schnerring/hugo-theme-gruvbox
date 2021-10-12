@@ -1,3 +1,15 @@
 .jr__item-meta {
   font-family: var(--font-monospace);
 }
+
+.jr__item-meta {
+  align-items: start;
+  flex-flow: column;
+}
+
+@media (--md) {
+  .jr__item-meta {
+    align-items: center;
+    flex-flow: row;
+  }
+}
