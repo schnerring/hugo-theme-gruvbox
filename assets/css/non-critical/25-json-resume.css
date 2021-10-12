@@ -1,0 +1,29 @@
+.jr__item-meta {
+  font-family: var(--font-monospace);
+}
+
+.jr__item-meta {
+  align-items: start;
+  flex-flow: column;
+}
+
+@media (--md) {
+  .jr__item-meta {
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  .jr__date,
+  .jr__date-range,
+  .jr-work__location {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  .jr-awards__awarder,
+  .jr-publications__publisher,
+  .jr-education__institution,
+  .jr-volunteer__organization {
+    flex-basis: 100%;
+  }
+}
