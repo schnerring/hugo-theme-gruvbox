@@ -94,9 +94,10 @@ hugo server
 
 ## Features
 
+- [hugo-json-resume Hugo module](https://github.com/schnerring/hugo-json-resume)
+  to display structured CV data
 - Code highlighting with [Prism](https://prismjs.com/)
-- [Tabler Icons](https://tabler-icons.io/) for generic icons
-- [Simple Icons](https://simpleicons.org/) for social icons
+- [Tabler Icons](https://tabler-icons.io/) to display SVG icons
 - All third-party dependencies are managed with [npm](https://www.npmjs.com/)
   to make updating a breeze and reduce code clutter
 - Dark mode that also changes Prism themes

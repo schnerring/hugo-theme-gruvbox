@@ -12,44 +12,9 @@
   {{ end }}
 
   {{ $cv := index $.Site.Data.cv $.Site.Language.Lang }}
-  {{ with $cv.basics }}
+  {{ if $cv.basics }}
     <aside class="bio">
-      {{ with .image }}
-        <div class="bio__avatar">
-          <img src="{{ . }}" alt="Author profile picture" />
-        </div>
-      {{ end }}
-
-
-      <p class="sidebar__heading">
-        {{ .name }}
-      </p>
-
-      {{ with .label }}
-        <p class="bio__description">{{ . }}</p>
-      {{ end }}
-
-      {{ with .summary }}
-        <p class="bio__description">{{ . }}</p>
-      {{ end }}
-
-      {{ with where .profiles "username" "ne" nil }}
-        <hr />
-        <div class="social social--col">
-          {{ range . }}
-            {{ partial "icons/social-icon" (dict "URL" .url "icon" .network "label" .username) }}
-          {{ end }}
-        </div>
-      {{ end }}
-
-      {{ with where .profiles "username" "eq" nil }}
-        <hr />
-        <div class="social social--row">
-          {{ range . }}
-            {{ partial "icons/social-icon" (dict "URL" .url "icon" .network "label" .username) }}
-          {{ end }}
-        </div>
-      {{ end }}
+      {{ partial "json-resume/basics.html" . }}
     </aside>
   {{ end }}
 </div>
