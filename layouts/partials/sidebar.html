@@ -11,7 +11,7 @@
     {{ end }}
   {{ end }}
 
-  {{ $cv := index $.Site.Data.cv $.Site.Language.Lang }}
+  {{ $cv := index $.Site.Data.json_resume $.Site.Language.Lang }}
   {{ if $cv.basics }}
     <aside class="bio">
       {{ partial "json-resume/basics.html" . }}
