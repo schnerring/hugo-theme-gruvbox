@@ -6,44 +6,44 @@ type: "cv"
 
 ## Experience
 
-{{< json-resume/work >}}
+{{< json-resume "work" >}}
 
 ## Education
 
-{{< json-resume/education >}}
+{{< json-resume "education" >}}
 
 ## Volunteering
 
-{{< json-resume/volunteer >}}
+{{< json-resume "volunteer" >}}
 
 ## Awards
 
-{{< json-resume/awards >}}
+{{< json-resume "awards" >}}
 
 ## Certificates
 
-{{< json-resume/certificates >}}
+{{< json-resume "certificates" >}}
 
 ## Publications
 
-{{< json-resume/publications >}}
+{{< json-resume "publications" >}}
 
 ## Skills
 
-{{< json-resume/skills >}}
+{{< json-resume "skills" >}}
 
 ## Languages
 
-{{< json-resume/languages >}}
+{{< json-resume "languages" >}}
 
 ## Interests
 
-{{< json-resume/interests >}}
+{{< json-resume "interests" >}}
 
 ## References
 
-{{< json-resume/references >}}
+{{< json-resume "references" >}}
 
 ## Projects
 
-{{< json-resume/projects >}}
+{{< json-resume "projects" >}}
