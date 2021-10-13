@@ -12,7 +12,13 @@ what features are missing. As soon as the core features are implemented, I will
 publish it to the [Hugo showcase](https://themes.gohugo.io/) and release
 version v0.1.0.
 
-## Getting Started
+## Quickstart
+
+1. `git clone` the repository and `cd` into it
+2. Run `npm install` to install the dependencies
+3. Run `hugo server`
+
+## Install The Theme
 
 Create a new Hugo website:
 
