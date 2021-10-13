@@ -32,11 +32,9 @@ document.addEventListener("keydown", (e) => {
   const suggestionsHidden = suggestions.classList.contains(
     "search__suggestions--hidden"
   );
-
   if (suggestionsHidden) return;
 
   const focusableSuggestions = [...suggestions.querySelectorAll("a")];
-
   if (focusableSuggestions.length === 0) return;
 
   const currentIndex = focusableSuggestions.indexOf(document.activeElement);
@@ -52,7 +50,7 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowUp") {
     // Focus previous suggestion
     e.preventDefault();
-    const nextIndex = currentIndex > 0 ? currentIndex - 1 : currentIndex;
+    nextIndex = currentIndex > 0 ? currentIndex - 1 : 0;
     focusableSuggestions[nextIndex].focus();
   }
 });
