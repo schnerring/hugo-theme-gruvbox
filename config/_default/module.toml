@@ -12,7 +12,7 @@
     target = "layouts"
   [[imports.mounts]]
     source = "assets/css/json-resume.css"
-    target = "assets/css/non-critical/100-json-resume.css"
+    target = "assets/css/non-critical/24-json-resume.css"
 [[mounts]]
   source = "assets"
   target = "assets"
