@@ -1,5 +1,5 @@
 .post {
-  border-bottom: var(--bg1) 2px dotted;
+  border-bottom: 2px dotted var(--bg1);
   padding: 2rem 0;
 }
 

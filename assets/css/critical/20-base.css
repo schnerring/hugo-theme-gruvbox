@@ -31,14 +31,22 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-monospace);
-  line-height: 1.4;
-  font-weight: 300;
   color: var(--fg0);
+  font-family: var(--font-monospace);
+  font-weight: 300;
+  line-height: 1.4;
 
   & code {
     font-size: 1em;
   }
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: 1px solid var(--bg1);
 }
 
 h1 {
@@ -143,17 +151,6 @@ kbd {
   & code,
   & kbd {
     background: var(--bg2);
-    margin: 0 0.1rem;
-
-    & code,
-    & kbd {
-      background: var(--bg3);
-
-      & code,
-      & kbd {
-        background: var(--bg4);
-      }
-    }
   }
 }
 
