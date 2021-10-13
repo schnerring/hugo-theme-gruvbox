@@ -1,10 +1,7 @@
+# replacements = "github.com/schnerring/hugo-json-resume -> ../../hugo-json-resume"
 [hugoVersion]
   extended = true
   min = "0.84.0"
-# replacements = "github.com/schnerring/hugo-gruvbox -> ../.."
-# replacements = "github.com/schnerring/hugo-json-resume -> ../../hugo-json-resume"
-# [[imports]]
-#   path = "github.com/schnerring/hugo-gruvbox"
 [[imports]]
   path = "github.com/schnerring/hugo-json-resume"
   [[imports.mounts]]
