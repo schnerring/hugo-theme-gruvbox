@@ -9,7 +9,7 @@
 {{ $theme := resources.Get "js/theme.js" }}
 {{ $flexsearch := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate "js/flexsearch.js" . }}
 {{ $prism := resources.Get "js/prism.js" | resources.ExecuteAsTemplate "js/prism.js" . }}
-{{ $bundle := slice $theme $flexsearch $prism | resources.Concat "js/main.js" | js.Build (dict "target" "es6") }}
+{{ $bundle := slice $theme $flexsearch $prism | resources.Concat "js/main.js" | js.Build (dict "target" "es6" "minify" true) }}
 
 {{ if hugo.IsProduction }}
   {{ $bundle = $bundle | fingerprint "sha512" }}
