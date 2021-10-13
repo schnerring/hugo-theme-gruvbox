@@ -97,11 +97,12 @@ hugo server
 - [hugo-json-resume Hugo module](https://github.com/schnerring/hugo-json-resume)
   to display structured CV data
 - Code highlighting with [Prism](https://prismjs.com/)
+- Display your CV using [JSON Resume](https://jsonresume.org/)
+- Full-text search with [Flex Search](https://github.com/nextapps-de/flexsearch)
+- Dark mode that also changes Prism themes
 - [Tabler Icons](https://tabler-icons.io/) to display SVG icons
 - All third-party dependencies are managed with [npm](https://www.npmjs.com/)
   to make updating a breeze and reduce code clutter
-- Dark mode that also changes Prism themes
-- Display your CV using [JSON Resume](https://jsonresume.org/)
 
 Big thanks to the creators of [Hugo](https://gohugo.io/) and the software
 mentioned above. Also, thanks to everyone participating in open-source. I
