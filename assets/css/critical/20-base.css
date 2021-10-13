@@ -97,7 +97,7 @@ table {
 table,
 th,
 td {
-  border: var(--bg2) 1px solid;
+  border: 1px solid var(--bg1);
   padding: 0.5rem;
 }
 

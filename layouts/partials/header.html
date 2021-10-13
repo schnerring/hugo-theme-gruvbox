@@ -1,18 +1,32 @@
 <header>
-  <nav id="menu">
-    <h1 class="menu__heading">
-      <a
-        href="
-        {{- with $.Site.Params.Logo.URL -}}
-          {{- . -}}
-        {{- else -}}
-          {{- $.Site.BaseURL -}}
-        {{- end -}}"
-      >
-        {{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}&nbsp;&gt;
-      </a>
-    </h1>
+  <div class="logo">
+    <a
+      class="logo__text"
+      href="
+      {{- with $.Site.Params.Logo.URL -}}
+        {{- . -}}
+      {{- else -}}
+        {{- $.Site.BaseURL -}}
+      {{- end -}}"
+    >
+      {{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}
+    </a>
+    <div class="logo__chevron">></div>
+    <div class="logo__cursor">█</div>
+  </div>
 
+  <div class="search">
+    <input
+      id="search__text"
+      type="search"
+      placeholder="Search..."
+      aria-label="Search"
+      autocomplete="off"
+    />
+    <div id="search__suggestions" class="search__suggestions--hidden"></div>
+  </div>
+
+  <nav id="menu">
     <ul class="menu--horizontal">
       {{ range $.Site.Menus.main }}
         <li class="menu__item">
