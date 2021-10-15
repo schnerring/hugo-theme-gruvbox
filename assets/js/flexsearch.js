@@ -90,8 +90,9 @@ document.addEventListener("keydown", (e) => {
   ;
 
   search.addEventListener("input", function () {
+    const maxResultsCount = {{ $.Site.Params.flexsearch.maxResultsCount | default 5 }};
     const searchText = this.value;
-    const searchResults = index.search(searchText, { limit: 5, enrich: true });
+    const searchResults = index.search(searchText, maxResultsCount, { enrich: true });
     const searchResultsMap = new Map();
 
     // Deduplicate search results by href
@@ -118,6 +119,8 @@ document.addEventListener("keydown", (e) => {
       description.textContent = searchResult.description;
       description.classList.add("search__suggestion-description");
       suggestion.appendChild(description);
+
+      if (suggestions.childElementCount === maxResultsCount) break;
     }
   });
 })();
