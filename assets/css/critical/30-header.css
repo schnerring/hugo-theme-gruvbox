@@ -106,6 +106,10 @@ header {
     cursor: pointer;
     outline: none;
   }
+
+  &:last-child {
+    border: none;
+  }
 }
 
 .search__suggestion-title,
