@@ -81,7 +81,7 @@ document.addEventListener("keydown", (e) => {
         {{ else }}
           description: {{ .Summary | plainify | jsonify }},
         {{ end }}
-        content: {{ .Content | jsonify }}
+        content: {{ .Plain | jsonify }}
       })
       {{ if ne (add $index 1) $len }}
         .add(
@@ -98,8 +98,8 @@ document.addEventListener("keydown", (e) => {
       flatResults[searchResult.doc.href] = searchResult.doc;
     }
 
-    suggestions.classList.remove("search__suggestions--hidden");
     suggestions.innerHTML = "";
+    suggestions.classList.remove("search__suggestions--hidden");
 
     for (const href in flatResults) {
       const suggestion = document.createElement("a");
