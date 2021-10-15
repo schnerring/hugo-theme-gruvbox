@@ -38,7 +38,7 @@ footer {
   display: none;
   flex-direction: column;
   grid-area: sidebar;
-  margin-top: 10rem;
+  margin-top: 3rem;
   position: sticky;
   top: 2rem;
 
