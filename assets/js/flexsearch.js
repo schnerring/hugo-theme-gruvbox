@@ -91,29 +91,31 @@ document.addEventListener("keydown", (e) => {
 
   search.addEventListener("input", function () {
     const searchText = this.value;
-    var searchResults = index.search(searchText, { limit: 5, enrich: true });
+    const searchResults = index.search(searchText, { limit: 5, enrich: true });
+    const searchResultsMap = new Map();
 
-    const flatResults = {};
+    // Deduplicate search results by href
     for (const searchResult of searchResults.flatMap((r) => r.result)) {
-      flatResults[searchResult.doc.href] = searchResult.doc;
+      if (searchResultsMap.has(searchResult.href)) continue;
+      searchResultsMap.set(searchResult.doc.href, searchResult.doc);
     }
 
     suggestions.innerHTML = "";
     suggestions.classList.remove("search__suggestions--hidden");
 
-    for (const href in flatResults) {
+    for (const [href, searchResult] of searchResultsMap) {
       const suggestion = document.createElement("a");
       suggestion.href = href;
       suggestion.classList.add("search__suggestion-item");
       suggestions.appendChild(suggestion);
 
       const title = document.createElement("div");
-      title.innerHTML = flatResults[href].title;
+      title.textContent = searchResult.title;
       title.classList.add("search__suggestion-title");
       suggestion.appendChild(title);
 
       const description = document.createElement("div");
-      description.innerHTML = flatResults[href].description;
+      description.textContent = searchResult.description;
       description.classList.add("search__suggestion-description");
       suggestion.appendChild(description);
     }
