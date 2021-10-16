@@ -23,6 +23,13 @@
 
 .post-content {
   margin: 1.3rem 0;
+
+  & figure,
+  & img:not(figure img),
+  & svg:not(figure svg) {
+    margin: 0.5rem 1rem;
+    max-width: calc(100% - 2rem);
+  }
 }
 
 .post-content__read-more {

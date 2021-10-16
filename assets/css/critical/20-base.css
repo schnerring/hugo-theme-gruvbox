@@ -30,11 +30,6 @@ figure {
   display: inline-block;
 }
 
-img:not(figure img),
-figure {
-  margin: 0.5rem 1rem;
-}
-
 figcaption {
   color: var(--fg3);
   font-family: var(--font-serif);
