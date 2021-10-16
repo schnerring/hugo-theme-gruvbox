@@ -10,6 +10,11 @@
 
 .post-meta {
   color: var(--fg3);
+
+  & figure,
+  & img:not(figure img) {
+    margin: 0.5rem 0;
+  }
 }
 
 .post-meta__author {

@@ -109,6 +109,8 @@ hugo server
 - [Tabler Icons](https://tabler-icons.io/) to display SVG icons
 - All third-party dependencies are managed with [npm](https://www.npmjs.com/)
   to make updating a breeze and reduce code clutter
+- Responsive, mobile-first design
+- Automated image processing
 
 Big thanks to the creators of [Hugo](https://gohugo.io/) and the software
 mentioned above. Also, thanks to everyone participating in open-source. I
@@ -168,6 +170,21 @@ ls node_modules/prismjs/components
 
 # Plugins
 ls node_modules/prismjs/plugins
+```
+
+## Blog Cover
+
+Configure the cover of a blog post in the front matter. The cover must be part
+of the [page bundle](https://gohugo.io/content-management/page-bundles/)
+due to image processing.
+
+```markdown
+---
+cover:
+  src: my-blog-cover.jpg
+  alt: A beautiful image containing interesting things
+  caption: Source: my imagination
+---
 ```
 
 ## Extensibility

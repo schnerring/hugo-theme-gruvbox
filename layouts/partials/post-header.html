@@ -32,5 +32,8 @@
         </span>
       {{ end }}
     {{ end }}
+    {{ if .Params.cover }}
+      {{ partial "image" (dict "page" . "src" .Params.cover.src "alt"  .Params.cover.src "caption"  .Params.cover.caption) }}
+    {{ end }}
   </div>
 </div>
