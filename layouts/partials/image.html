@@ -1,33 +1,52 @@
 {{ $images := .page.Resources.ByType "image" -}}
 {{ $image := $images.GetMatch .src -}}
 
-{{ $maxWidth := 700 -}}
-{{ $widths := seq 100 100 $maxWidth -}}
-{{ if lt $image.Width $maxWidth -}}
-  {{ $widths = $widths | append $image.Width -}}
-{{ end -}}
-
-{{ $srcSet := slice -}}
-{{ range $widths -}}
-  {{ if ge $image.Width . -}}
-    {{ $resized := $image.Resize (printf "%dx" .) -}}
-    {{ $srcSet = $srcSet | append (printf "%s %dw" $resized.RelPermalink $resized.Width) -}}
-  {{ end -}}
-{{ end -}}
-
 
 <!-- prettier-ignore -->
 {{ if .caption -}}
   <figure>
 {{ end -}}
-<img
-  src="{{ $image.RelPermalink }}"
-  {{ with $srcSet }}srcset="{{ delimit . "," }}"{{ end }}
-  alt="{{ .PlainText }}"
-  {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
-  width="{{ $image.Width }}"
-  height="{{ $image.Height }}"
-/>
+
+{{ if eq $image.MediaType.SubType "svg" -}}
+  {{ $image.Content | safeHTML }}
+{{ else -}}
+  {{ $maxWidth := 700 -}}
+  {{ $widths := seq 100 100 $maxWidth -}}
+  {{ if lt $image.Width $maxWidth -}}
+    {{ $widths = $widths | append $image.Width -}}
+  {{ end -}}
+
+  {{ $srcSet := slice -}}
+  {{ $webpSrcSet := slice -}}
+  {{ range $widths -}}
+    {{ if ge $image.Width . -}}
+      {{ $resized := $image.Resize (printf "%dx" .) -}}
+      {{ $srcSet = $srcSet | append (printf "%s %dw" $resized.RelPermalink $resized.Width) -}}
+      {{ if not (eq "webp" $image.MediaType.SubType) -}}
+        {{ $webp := $image.Resize (printf "%dx webp" .) -}}
+        {{ $webpSrcSet = $webpSrcSet | append (printf "%s %dw" $webp.RelPermalink $webp.Width) -}}
+      {{ end }}
+    {{ end -}}
+  {{ end -}}
+
+
+  <picture>
+    {{ with $webpSrcSet }}
+      <source srcset="{{ delimit . "," }}" />
+    {{ end }}
+    <img
+      src="{{ $image.RelPermalink }}"
+      {{ with $srcSet }}srcset="{{ delimit . "," }}"{{ end }}
+      alt="{{ .PlainText }}"
+      {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
+      loading="lazy"
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
+    />
+  </picture>
+{{ end -}}
+
+
 <!-- prettier-ignore -->
 {{ if .caption -}}
     <figcaption>{{ .caption | markdownify }}</figcaption>
