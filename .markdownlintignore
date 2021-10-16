@@ -4,8 +4,8 @@ public
 resources
 
 # Leave content from gohugoio/hugoBasicExample as is
-content/posts/emoji-support.md
-content/posts/markdown-syntax.md
-content/posts/math-typesetting.md
-content/posts/placeholder-text.md
-content/posts/rich-content.md
+content/blog/emoji-support.md
+content/blog/markdown-syntax.md
+content/blog/math-typesetting.md
+content/blog/placeholder-text.md
+content/blog/rich-content.md

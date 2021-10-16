@@ -46,7 +46,7 @@ title = "hugo-gruvbox"
   [[menu.main]]
     identifier = "blog"
     name = "Blog"
-    url = "/"
+    url = "/blog"
     weight = 10
   [[menu.main]]
     identifier = "cv"
