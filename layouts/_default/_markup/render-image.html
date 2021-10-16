@@ -1,0 +1,35 @@
+{{ $images := .Page.Resources.ByType "image" -}}
+{{ $image := $images.GetMatch .Destination -}}
+
+{{ $maxWidth := 700 -}}
+{{ $widths := seq 100 100 $maxWidth -}}
+{{ if lt $image.Width $maxWidth -}}
+  {{ $widths = $widths | append $image.Width -}}
+{{ end -}}
+
+{{ $srcSet := slice -}}
+{{ range $widths -}}
+  {{ if ge $image.Width . -}}
+    {{ $resized := $image.Resize (printf "%dx" .) -}}
+    {{ $srcSet = $srcSet | append (printf "%s %dw" $resized.RelPermalink $resized.Width) -}}
+  {{ end -}}
+{{ end -}}
+
+
+<!-- prettier-ignore -->
+{{ if .Title -}}
+  <figure>
+{{ end -}}
+<img
+  src="{{ $image.RelPermalink }}"
+  {{ with $srcSet }}srcset="{{ delimit . "," }}"{{ end }}
+  alt="{{ .PlainText }}"
+  {{ with .Title }}title="{{ . | markdownify | plainify }}"{{ end }}
+  width="{{ $image.Width }}"
+  height="{{ $image.Height }}"
+/>
+<!-- prettier-ignore -->
+{{ if .Title -}}
+    <figcaption>{{ .Title | markdownify }}</figcaption>
+  </figure>
+{{ end -}}
