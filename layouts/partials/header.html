@@ -1,19 +1,19 @@
 <header>
-  <div class="logo">
-    <a
-      class="logo__text"
-      href="
-      {{- with $.Site.Params.Logo.URL -}}
-        {{- . -}}
-      {{- else -}}
-        {{- $.Site.BaseURL -}}
-      {{- end -}}"
-    >
-      {{ with $.Site.Params.Logo.Text }}{{ . }}{{ end }}
-    </a>
+  <a
+    class="logo"
+    href="
+    {{- with $.Site.Params.Logo.URL -}}
+      {{- . -}}
+    {{- else -}}
+      {{- $.Site.BaseURL -}}
+    {{- end -}}"
+  >
+    {{ with $.Site.Params.Logo.Text }}
+      <div class="logo__text">{{ . }}</div>
+    {{ end }}
     <div class="logo__chevron">></div>
     <div class="logo__cursor">█</div>
-  </div>
+  </a>
 
   <div class="search">
     <input
