@@ -11,7 +11,7 @@
     {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
     loading="lazy"
   />
-{{ else if  (strings.HasPrefix .src "/") }}
+{{ else if (strings.HasPrefix .src "/") }}
   <!-- Image from static/ -->
   {{ $imageConfig := imageConfig (path.Join "static" .src) }}
   <img
@@ -44,7 +44,7 @@
         {{ $resized := $image.Resize (printf "%dx" .) }}
         {{ $srcSet = $srcSet | append (printf "%s %dw" $resized.RelPermalink $resized.Width) }}
         {{ if not (eq "webp" $image.MediaType.SubType) }}
-          <!-- If the image format is not WebP, create resized WebP images -->
+          <!-- If image format is not WebP, add conversions -->
           {{ $webp := $image.Resize (printf "%dx webp" .) }}
           {{ $webpSrcSet = $webpSrcSet | append (printf "%s %dw" $webp.RelPermalink $webp.Width) }}
         {{ end }}

@@ -31,11 +31,11 @@
 
 <!-- RSS feed -->
 <!-- See https://gohugo.io/templates/rss/#reference-your-rss-feed-in-head -->
-{{ range .AlternativeOutputFormats -}}
+{{ range .AlternativeOutputFormats }}
   <link
     rel="{{ .Rel }}"
     type="{{ .MediaType.Type }}"
     href="{{ .Permalink }}"
     title="{{ $.Site.Title }}"
   />
-{{ end -}}
+{{ end }}
