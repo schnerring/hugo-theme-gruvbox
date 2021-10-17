@@ -13,7 +13,7 @@ function getTheme() {
 }
 
 function setTheme(theme) {
-  // Hugo theme
+  // Main theme
   document.documentElement.setAttribute("theme", theme);
 
   // Prism theme
@@ -26,6 +26,10 @@ function setTheme(theme) {
   localStorage.setItem("theme", theme);
 }
 
+// Initial load
+const theme = getTheme();
+if (theme) setTheme(theme);
+
 function toggleTheme(e) {
   const theme = e.currentTarget.classList.contains("light--hidden")
     ? "light"
@@ -33,10 +37,11 @@ function toggleTheme(e) {
   setTheme(theme);
 }
 
-const toggleButtons = document.querySelectorAll(".theme__toggle");
-toggleButtons.forEach((btn) => {
-  btn.addEventListener("click", toggleTheme);
+// This script is inlined in the <head> of the document, so we have to wait
+// for the DOM content before can add event listeners to the toggle buttons
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll(".theme__toggle");
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener("click", toggleTheme);
+  });
 });
-
-const theme = getTheme();
-if (theme) setTheme(theme);

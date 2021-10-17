@@ -2,18 +2,20 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  {{ partial "head/resource-hints.html" . }}
-  {{ partial "head/seo.html" . }}
+  {{ partial "head/resource-hints" . }}
+  {{ partial "head/seo" . }}
 
 
   <!-- Extensibility -->
-  {{ partial "head/head_start.html" . }}
+  {{ partial "head/head_start" . }}
 
-  {{ partial "head/stylesheets.html" . }}
+  {{ partial "head/stylesheets" . }}
+
+  {{ partial "head/dark-mode" . }}
 
 
   <link rel="icon" href="/img/favicon.svg" sizes="any" type="image/svg+xml" />
 
   <!-- Extensibility -->
-  {{ partial "head/head_end.html" . }}
+  {{ partial "head/head_end" . }}
 </head>

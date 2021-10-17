@@ -6,9 +6,8 @@
   </div>
 </footer>
 
-{{ $theme := resources.Get "js/theme.js" -}}
 {{ $prism := resources.Get "js/prism.js" | resources.ExecuteAsTemplate "js/prism.js" . -}}
-{{ $bundle := slice $theme $prism | resources.Concat "js/main.js" | js.Build (dict "target" "es6" "minify" true) -}}
+{{ $bundle := slice $prism | resources.Concat "js/main.js" | js.Build (dict "target" "es6" "minify" true) -}}
 {{ $flexsearch := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate "js/flexsearch.js" . | js.Build (dict "target" "es6" "minify" true) -}}
 
 {{ if hugo.IsProduction -}}

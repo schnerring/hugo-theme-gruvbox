@@ -1,0 +1,5 @@
+{{ $darkMode := resources.Get "js/dark-mode.js" | js.Build (dict "target" "es6" "minify" true) }}
+
+<script>
+  {{ $darkMode.Content | safeJS -}}
+</script>
