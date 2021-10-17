@@ -34,8 +34,6 @@ figcaption {
   color: var(--fg3);
   font-family: var(--font-serif);
   font-size: 0.9rem;
-  line-height: 0.5;
-  text-align: right;
 }
 
 *::selection {
