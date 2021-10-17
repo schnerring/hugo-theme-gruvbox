@@ -94,6 +94,7 @@ Add the following to the `config.toml` file:
   [[module.mounts]]
     source = "node_modules/@tabler/icons/icons"
     target = "assets/tabler-icons"
+  # required by hugo-mod-json-resume
   [[module.mounts]]
     source = "node_modules/simple-icons/icons"
     target = "assets/simple-icons"

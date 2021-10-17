@@ -49,15 +49,20 @@ title = "hugo-theme-gruvbox"
     url = "/blog"
     weight = 10
   [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects"
+    weight = 20
+  [[menu.main]]
     identifier = "cv"
     name = "CV"
     url = "/cv"
-    weight = 20
+    weight = 30
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about"
-    weight = 30
+    weight = 40
 
 [languages]
   [languages.en]
