@@ -1,8 +1,14 @@
 # hugo-theme-gruvbox
 
-A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox).
-The pastel colors are high contrast, easily distinguishable, pleasing to the
-eye, and feature light and dark color palettes.
+A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox)
+to build secure, fast and SEO-ready websites.
+
+This theme is easily customizable with features that any coder loves.
+
+Lots of inspiration was taken from the [Hello Friend](https://github.com/panr/hugo-theme-hello-friend)
+and [Doks](https://github.com/h-enk/doks) Hugo themes.
+
+## DEMO [https://hugo-theme-gruvbox.pages.dev/](https://hugo-theme-gruvbox.pages.dev/)
 
 ## DISCLAIMER: Project Status
 
@@ -11,6 +17,20 @@ This theme is still under heavy development and not production ready.
 to see what features are missing. As soon as the core features are implemented,
 I will publish it to the [Hugo showcase](https://themes.gohugo.io/) and release
 version v0.1.0.
+
+## Highlights
+
+- [Code highlighting with Prism](#Prism)
+- Full-text search with [Flex Search](https://github.com/nextapps-de/flexsearch)
+- Display your CV using structured [JSON Resume](https://jsonresume.org/) data
+- Integrated image optimization
+- Dark mode that also changes Prism themes
+- [Dynamic color choices from the Gruvbox color palette](#colors)
+- [Extensible to make it suit your needs](#extensibility)
+- Responsive, mobile-first design
+- Beautiful SVG icons with [Tabler Icons](https://tabler-icons.io/)
+
+A big thank you to the authors of the software that make this theme possible! ❤️
 
 ## Quickstart
 
@@ -98,24 +118,6 @@ Run Hugo:
 hugo server
 ```
 
-## Features
-
-- [hugo-json-resume Hugo module](https://github.com/schnerring/hugo-json-resume)
-  to display structured CV data
-- Code highlighting with [Prism](https://prismjs.com/)
-- Display your CV using [JSON Resume](https://jsonresume.org/)
-- Full-text search with [Flex Search](https://github.com/nextapps-de/flexsearch)
-- Dark mode that also changes Prism themes
-- [Tabler Icons](https://tabler-icons.io/) to display SVG icons
-- All third-party dependencies are managed with [npm](https://www.npmjs.com/)
-  to make updating a breeze and reduce code clutter
-- Responsive, mobile-first design
-- Automated image processing
-
-Big thanks to the creators of [Hugo](https://gohugo.io/) and the software
-mentioned above. Also, thanks to everyone participating in open-source. I
-couldn't have created this theme without you. ❤️
-
 ## Configuration
 
 ### Colors
@@ -132,7 +134,8 @@ Two options are available to configure the theme colors:
 
 ### Prism
 
-The theme allows customization of Prism via `config.toml` parameters:
+The theme allows customization of [Prism](https://prismjs.com/) via
+`config.toml` parameters:
 
 ```toml
 [params]
@@ -159,6 +162,8 @@ mode functionality. Toggling between color modes swaps the Prism theme between
 [`gruvbox-dark`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css)
 and [`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css)
 from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
+
+Check out the [Prism showcase on the Demo site for examples](https://hugo-theme-gruvbox.pages.dev/blog/prism-code-highlighting-showcase/)
 
 #### Explore Prism Features
 
