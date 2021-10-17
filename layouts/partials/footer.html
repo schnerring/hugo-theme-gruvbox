@@ -1,19 +1,24 @@
 <footer>
   <div class="copyright">
     {{ with $.Site.Copyright }}
-      {{- . | safeHTML -}}
+      {{ . | safeHTML }}
     {{ end }}
   </div>
 </footer>
 
-{{ $prism := resources.Get "js/prism.js" | resources.ExecuteAsTemplate "js/prism.js" . -}}
-{{ $bundle := slice $prism | resources.Concat "js/main.js" | js.Build (dict "target" "es6" "minify" true) -}}
-{{ $flexsearch := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate "js/flexsearch.js" . | js.Build (dict "target" "es6" "minify" true) -}}
+{{ $jsBuildOptions := dict "target" "es6" }}
+{{ if hugo.IsProduction }}
+  {{ $jsBuildOptions = $jsBuildOptions | merge (dict "minify" "true") }}
+{{ end }}
 
-{{ if hugo.IsProduction -}}
-  {{ $bundle = $bundle | fingerprint "sha512" -}}
-  {{ $flexsearch = $flexsearch | fingerprint "sha512" -}}
-{{ end -}}
+{{ $prism := resources.Get "js/prism.js" | resources.ExecuteAsTemplate "js/prism.js" . }}
+{{ $bundle := slice $prism | resources.Concat "js/main.js" | js.Build $jsBuildOptions }}
+{{ $flexsearch := resources.Get "js/flexsearch.js" | resources.ExecuteAsTemplate "js/flexsearch.js" . | js.Build $jsBuildOptions }}
+
+{{ if hugo.IsProduction }}
+  {{ $bundle = $bundle | fingerprint "sha512" }}
+  {{ $flexsearch = $flexsearch | fingerprint "sha512" }}
+{{ end }}
 
 <script
   type="text/javascript"
@@ -28,4 +33,4 @@
 </script>
 
 <!-- Extensibility -->
-{{ partial "footer_end.html" . -}}
+{{ partial "footer_end.html" . }}

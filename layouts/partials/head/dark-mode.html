@@ -1,5 +1,10 @@
-{{ $darkMode := resources.Get "js/dark-mode.js" | js.Build (dict "target" "es6" "minify" true) }}
+{{ $jsBuildOptions := dict "target" "es6" }}
+{{ if hugo.IsProduction }}
+  {{ $jsBuildOptions = $jsBuildOptions | merge (dict "minify" "true") }}
+{{ end }}
+
+{{ $darkMode := resources.Get "js/dark-mode.js" | js.Build $jsBuildOptions }}
 
 <script>
-  {{ $darkMode.Content | safeJS -}}
+  {{ $darkMode.Content | safeJS }}
 </script>
