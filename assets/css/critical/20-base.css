@@ -20,6 +20,15 @@ a {
   text-decoration: none;
 }
 
+a.link--external {
+  white-space: nowrap;
+
+  &::after {
+    /* 2009 = Thin Space */
+    content: "\2009↗";
+  }
+}
+
 img {
   border: 2px solid var(--bg1);
   height: auto;

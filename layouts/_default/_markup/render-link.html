@@ -5,10 +5,9 @@
     title="{{ . }}"
   {{ end }}
   {{ if $isExternal }}
-    target="_blank" rel="noreferrer"
+    class="link--external" target="_blank" rel="noreferrer"
   {{ end }}
 >
   {{- .Text | safeHTML -}}
-  {{- if $isExternal }}&nbsp;↗{{ end -}}
 </a>
 {{- /* Trimm trailing whitespace */ -}}
