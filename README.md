@@ -1,4 +1,4 @@
-# hugo-gruvbox
+# hugo-theme-gruvbox
 
 A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox).
 The pastel colors are high contrast, easily distinguishable, pleasing to the
@@ -7,9 +7,9 @@ eye, and feature light and dark color palettes.
 ## DISCLAIMER: Project Status
 
 This theme is still under heavy development and not production ready.
-[Check out the issues](https://github.com/schnerring/hugo-gruvbox/issues) to see
-what features are missing. As soon as the core features are implemented, I will
-publish it to the [Hugo showcase](https://themes.gohugo.io/) and release
+[Check out the issues](https://github.com/schnerring/hugo-theme-gruvbox/issues)
+to see what features are missing. As soon as the core features are implemented,
+I will publish it to the [Hugo showcase](https://themes.gohugo.io/) and release
 version v0.1.0.
 
 ## Quickstart
@@ -46,10 +46,10 @@ Add the following to the `config.toml` file:
   _merge = "deep"
 
 # This hopefully will be simpler in the future.
-# See: https://github.com/schnerring/hugo-gruvbox/issues/16
+# See: https://github.com/schnerring/hugo-theme-gruvbox/issues/16
 [module]
   [[module.imports]]
-    path = "github.com/schnerring/hugo-gruvbox"
+    path = "github.com/schnerring/hugo-theme-gruvbox"
   [[module.mounts]]
     source = "assets"
     target = "assets"

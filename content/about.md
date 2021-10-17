@@ -19,6 +19,6 @@ A big thanks to the creators! ❤️
 
 ## Legal
 
-The theme is [licensed under MIT](https://github.com/schnerring/hugo-gruvbox/blob/main/LICENSE).
+The theme is [licensed under MIT](https://github.com/schnerring/hugo-theme-gruvbox/blob/main/LICENSE).
 
 All trademarks are the property of their respective owners.

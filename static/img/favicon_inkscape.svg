@@ -17,7 +17,7 @@
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
-     id="title83640">hugo-gruvbox</title>
+     id="title83640">hugo-theme-gruvbox</title>
   <sodipodi:namedview
      id="namedview46268"
      pagecolor="#ffffff"
@@ -118,7 +118,7 @@
     <rdf:RDF>
       <cc:Work
          rdf:about="">
-        <dc:title>hugo-gruvbox</dc:title>
+        <dc:title>hugo-theme-gruvbox</dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>

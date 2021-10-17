@@ -1,5 +1,5 @@
-module github.com/schnerring/hugo-gruvbox
+module github.com/schnerring/hugo-theme-gruvbox
 
 go 1.15
 
-require github.com/schnerring/hugo-json-resume v0.0.0-20211013214729-0204bb762994 // indirect
+require github.com/schnerring/hugo-mod-json-resume v0.0.0-20211016234735-a79b36fba777 // indirect

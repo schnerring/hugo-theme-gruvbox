@@ -5,7 +5,7 @@
     "url": "https://schnerring.net"
   },
   "bugs": {
-    "url": "https://github.com/schnerring/hugo-gruvbox/issues"
+    "url": "https://github.com/schnerring/hugo-theme-gruvbox/issues"
   },
   "comments": {
     "dependencies": {
@@ -14,7 +14,7 @@
       "normalize.css": "project",
       "prism-themes": "project",
       "prismjs": "project",
-      "simple-icons": "github.com/schnerring/hugo-json-resume",
+      "simple-icons": "github.com/schnerring/hugo-mod-json-resume",
       "typeface-fira-code": "project",
       "typeface-roboto-slab": "project"
     },
@@ -74,7 +74,7 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-prettier": "^1.2.0"
   },
-  "homepage": "https://github.com/schnerring/hugo-gruvbox#readme",
+  "homepage": "https://github.com/schnerring/hugo-theme-gruvbox#readme",
   "keywords": [
     "hugo",
     "gruvbox",
@@ -87,10 +87,10 @@
     "*.md": "markdownlint --fix"
   },
   "main": "index.js",
-  "name": "hugo-gruvbox",
+  "name": "hugo-theme-gruvbox",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/schnerring/hugo-gruvbox.git"
+    "url": "git+https://github.com/schnerring/hugo-theme-gruvbox.git"
   },
   "scripts": {
     "lint": "npm run lint:css && npm run lint:js && npm run lint:md",

@@ -35,7 +35,7 @@ and `plugins` in the `config.toml` file of your Hugo site:
     ]
 ```
 
-### Languages
+## Languages
 
 The following languages are available:
 
