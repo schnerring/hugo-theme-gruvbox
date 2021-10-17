@@ -1,11 +1,11 @@
 # hugo-theme-gruvbox
 
 A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox)
-to build secure, fast and SEO-ready websites.
+to build secure, fast, and SEO-ready websites.
 
 This theme is easily customizable with features that any coder loves.
 
-Lots of inspiration was taken from the [Hello Friend](https://github.com/panr/hugo-theme-hello-friend)
+I took a lot of inspiration from the [Hello Friend](https://github.com/panr/hugo-theme-hello-friend)
 and [Doks](https://github.com/h-enk/doks) Hugo themes.
 
 ## DEMO [https://hugo-theme-gruvbox.pages.dev/](https://hugo-theme-gruvbox.pages.dev/)
@@ -23,7 +23,7 @@ version v0.1.0.
 - [Code highlighting with Prism](#Prism)
 - Full-text search with [Flex Search](https://github.com/nextapps-de/flexsearch)
 - Display your CV using structured [JSON Resume](https://jsonresume.org/) data
-- Integrated image optimization
+- [Integrated image optimization with next-gen image formats and lazy loading](#image-optimization)
 - Dark mode that also changes Prism themes
 - [Dynamic color choices from the Gruvbox color palette](#colors)
 - [Extensible to make it suit your needs](#extensibility)
@@ -118,9 +118,7 @@ Run Hugo:
 hugo server
 ```
 
-## Configuration
-
-### Colors
+## Colors
 
 Two options are available to configure the theme colors:
 
@@ -132,7 +130,7 @@ Two options are available to configure the theme colors:
 - `themeContrast`: `soft`, `medium`, or `hard` (defaults to `medium`)  
   Theme background color
 
-### Prism
+## Prism
 
 The theme allows customization of [Prism](https://prismjs.com/) via
 `config.toml` parameters:
@@ -165,7 +163,7 @@ from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
 
 Check out the [Prism showcase on the Demo site for examples](https://hugo-theme-gruvbox.pages.dev/blog/prism-code-highlighting-showcase/)
 
-#### Explore Prism Features
+### Explore Prism Features
 
 After running `npm install`, explore Prism features like this:
 
@@ -177,18 +175,54 @@ ls node_modules/prismjs/components
 ls node_modules/prismjs/plugins
 ```
 
-## Blog Cover
+## Image Optimization
 
-Configure the cover of a blog post in the front matter. The cover must be part
-of the [page bundle](https://gohugo.io/content-management/page-bundles/)
-due to image processing.
+Images are optimized by default without requiring [shortcodes](https://gohugo.io/content-management/shortcodes/).
+A [custom render hook](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks)
+does all the heavy lifting (see [render-image.html](./layouts/_default/_markup/render-image.html)).
+
+Every image from markdown content is processed, resulting in resized versions
+that range from 100 to 700 pixels wide (or less if the original is narrower). If
+the image format is not [WebP](https://en.wikipedia.org/wiki/WebP), the image is
+converted. The original file format will serve as a fallback for browsers that
+don't support the WebP format.
+
+Note that only images that are part of the [page bundle](https://gohugo.io/content-management/page-bundles/)
+are processed. If served from the `static/` directory or external sources, the
+image will be displayed but not be processed.
+
+Additionally, all images are lazily loaded to save the bandwidth of your users.
+
+### Image Optimization Configuration
+
+[TODO](https://github.com/schnerring/hugo-theme-gruvbox/issues/17)
+
+Configure image processing quality in your site params:
+
+```toml
+[params.imageOptimization]
+  quality = 75
+```
+
+### Captions
+
+```markdown
+![Alt text](image-url.jpg "Caption with **markdown support**")
+```
+
+[The demo site features examples you can look at (TODO)](https://hugo-theme-gruvbox.pages.dev/blog/prism-code-highlighting-showcase/)
+
+### Blog Post Covers
+
+Add blog post covers by defining them in the [front matter](https://gohugo.io/content-management/front-matter/)
+of your posts:
 
 ```markdown
 ---
 cover:
   src: my-blog-cover.jpg
   alt: A beautiful image containing interesting things
-  caption: Source: my imagination
+  caption: [Source](https://www.flickr.com/)
 ---
 ```
 
