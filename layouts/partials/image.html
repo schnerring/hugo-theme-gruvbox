@@ -72,6 +72,6 @@
 
 <!-- prettier-ignore -->
 {{ if .caption }}
-    <figcaption>{{ .caption | markdownify }}</figcaption>
+    <figcaption>{{ .page.RenderString .caption }}</figcaption>
   </figure>
 {{ end }}
