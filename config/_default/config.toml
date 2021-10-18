@@ -2,6 +2,7 @@ baseURL = "http://localhost"
 copyright = "Copyright © 2021"
 title = "hugo-theme-gruvbox"
 #paginate = 10
+enableRobotsTXT = true
 
 [markup]
   [markup.goldmark]
