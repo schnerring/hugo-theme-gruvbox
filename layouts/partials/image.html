@@ -7,7 +7,7 @@
   <!-- External image -->
   <img
     src="{{ .src }}"
-    alt="{{ .PlainText }}"
+    alt="{{ .alt }}"
     {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
     loading="lazy"
   />
@@ -16,16 +16,20 @@
   {{ $imageConfig := imageConfig (path.Join "static" .src) }}
   <img
     src="{{ .src }}"
-    alt="{{ .PlainText }}"
+    alt="{{ .alt }}"
     {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
     loading="lazy"
     width="{{ $imageConfig.Width }}"
     height="{{ $imageConfig.Height }}"
   />
 {{ else }}
+  {{ $src := .src }}
+  {{ if strings.HasPrefix $src "./" }}
+    {{ $src = substr $src 2 }}
+  {{ end }}
   <!-- Image from page bundle -->
   {{ $images := .page.Resources.ByType "image" }}
-  {{ $image := $images.GetMatch .src }}
+  {{ $image := $images.GetMatch $src }}
   {{ if eq $image.MediaType.SubType "svg" }}
     <!-- No processing for SVGs -->
     {{ $image.Content | safeHTML }}
@@ -59,7 +63,7 @@
       <img
         src="{{ $image.RelPermalink }}"
         {{ with $srcSet }}srcset="{{ delimit . "," }}"{{ end }}
-        alt="{{ .PlainText }}"
+        alt="{{ .alt }}"
         {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
         loading="lazy"
         width="{{ $image.Width }}"

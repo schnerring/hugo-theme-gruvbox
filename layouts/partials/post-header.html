@@ -33,7 +33,7 @@
       </div>
     {{ end }}
     {{ if .Params.cover }}
-      {{ partial "image.html" (dict "page" . "src" .Params.cover.src "alt"  .Params.cover.src "caption"  .Params.cover.caption) }}
+      {{ partial "image.html" (dict "page" . "src" .Params.cover.src "alt" .Params.cover.alt "caption" .Params.cover.caption) }}
     {{ end }}
   </div>
 </div>
