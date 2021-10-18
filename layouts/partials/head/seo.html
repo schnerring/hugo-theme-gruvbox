@@ -1,3 +1,17 @@
+{{ if eq .Kind "404" }}
+  <meta name="robots" content="noindex, follow" />
+{{ else }}
+  {{ with .Params.robots }}
+    <meta name="robots" content="{{ . }}" />
+  {{ else }}
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+  {{ end }}
+{{ end }}
+
+
 <title>
   {{- if not .IsHome -}}
     {{- with .Title }}{{ . }}&nbsp;::&nbsp;{{ end -}}

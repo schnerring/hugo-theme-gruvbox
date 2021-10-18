@@ -227,6 +227,24 @@ cover:
 ---
 ```
 
+## SEO
+
+Due to the [European Copyright Directive](https://wayback.archive-it.org/12090/20210304045117/https://ec.europa.eu/digital-single-market/en/modernisation-eu-copyright-rules)
+it is required to opt into displaying [snippets](https://developers.google.com/search/docs/advanced/appearance/title-link?hl=en)
+in search engine results.
+
+By default, every page (except 404) includes the
+`index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1`
+robots meta value, opting into all snippet features.
+
+You can override the robots meta value in the front matter of your pages:
+
+```markdown
+---
+robots: noindex, nofollow
+---
+```
+
 ## Extensibility
 
 You can extend the theme by overriding the following partials in the `layouts/partials`
