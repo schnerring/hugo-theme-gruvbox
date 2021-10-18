@@ -3,7 +3,7 @@
   "basics": {
     "name": "Richard Hendricks",
     "label": "Programmer",
-    "image": "/img/richard-hendricks.webp",
+    "image": "https://hugo-theme-gruvbox.pages.dev/img/richard-hendricks.webp",
     "email": "richard.hendricks@piedpiper.com",
     "phone": "(912) 555-4321",
     "url": "https://www.hbo.com/silicon-valley",
