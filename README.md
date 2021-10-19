@@ -8,11 +8,11 @@ This theme is easily customizable with features that any coder loves.
 I took a lot of inspiration from the [Hello Friend](https://github.com/panr/hugo-theme-hello-friend)
 and [Doks](https://github.com/h-enk/doks) Hugo themes.
 
-## DEMO [https://hugo-theme-gruvbox.pages.dev/](https://hugo-theme-gruvbox.pages.dev/)
+## DEMO [https://hugo-theme-gruvbox.schnerring.net/](https://hugo-theme-gruvbox.schnerring.net/)
 
 ## DISCLAIMER: Project Status
 
-This theme is still under heavy development and not production ready.
+This theme is still under heavy development and not production-ready.
 [Check out the issues](https://github.com/schnerring/hugo-theme-gruvbox/issues)
 to see what features are missing. As soon as the core features are implemented,
 I will publish it to the [Hugo showcase](https://themes.gohugo.io/) and release
@@ -162,7 +162,7 @@ mode functionality. Toggling between color modes swaps the Prism theme between
 and [`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css)
 from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
 
-Check out the [Prism showcase on the Demo site for examples](https://hugo-theme-gruvbox.pages.dev/blog/prism-code-highlighting-showcase/)
+Check out the [Prism showcase on the Demo site for examples](https://hugo-theme-gruvbox.schnerring.net/blog/prism-code-highlighting-showcase/)
 
 ### Explore Prism Features
 
@@ -211,7 +211,7 @@ Configure image processing quality in your site params:
 ![Alt text](image-url.jpg "Caption with **markdown support**")
 ```
 
-[The demo site features examples you can look at (TODO)](https://hugo-theme-gruvbox.pages.dev/blog/prism-code-highlighting-showcase/)
+[The demo site features examples you can look at (TODO)](https://hugo-theme-gruvbox.schnerring.net/blog/prism-code-highlighting-showcase/)
 
 ### Blog Post Covers
 
