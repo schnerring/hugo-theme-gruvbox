@@ -70,7 +70,22 @@ Add the following to the `config.toml` file:
 # See: https://github.com/schnerring/hugo-theme-gruvbox/issues/16
 [module]
   [[module.imports]]
-    path = "github.com/schnerring/hugo-theme-gruvbox"
+    path = "github.com/schnerring/hugo-mod-github-readme-stats"
+  [[module.imports]]
+    path = "github.com/schnerring/hugo-mod-json-resume"
+    [[module.imports.mounts]]
+      source = "data"
+      target = "data"
+    [[module.imports.mounts]]
+      source = "layouts"
+      target = "layouts"
+    [[module.imports.mounts]]
+      source = "assets/css/json-resume.css"
+      target = "assets/css/critical/44-json-resume.css"
+  [[module.mounts]]
+    # required by hugo-mod-json-resume
+    source = "node_modules/simple-icons/icons"
+    target = "assets/simple-icons"
   [[module.mounts]]
     source = "assets"
     target = "assets"
@@ -95,10 +110,6 @@ Add the following to the `config.toml` file:
   [[module.mounts]]
     source = "node_modules/@tabler/icons/icons"
     target = "assets/tabler-icons"
-  # required by hugo-mod-json-resume
-  [[module.mounts]]
-    source = "node_modules/simple-icons/icons"
-    target = "assets/simple-icons"
 ```
 
 Install the theme:

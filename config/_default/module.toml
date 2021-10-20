@@ -17,6 +17,10 @@
     source = "assets/css/json-resume.css"
     target = "assets/css/critical/44-json-resume.css"
 [[mounts]]
+  # required by hugo-mod-json-resume
+  source = "node_modules/simple-icons/icons"
+  target = "assets/simple-icons"
+[[mounts]]
   source = "assets"
   target = "assets"
 [[mounts]]
@@ -40,6 +44,3 @@
 [[mounts]]
   source = "node_modules/@tabler/icons/icons"
   target = "assets/tabler-icons"
-[[mounts]]
-  source = "node_modules/simple-icons/icons"
-  target = "assets/simple-icons"
