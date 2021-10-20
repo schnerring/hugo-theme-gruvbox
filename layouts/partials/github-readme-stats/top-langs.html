@@ -1,0 +1,4 @@
+{{ $queryString := querify "username" .username }}
+<img
+  src="https://github-readme-stats.vercel.app/api/top-langs/?{{ $queryString | safeURL }}"
+/>

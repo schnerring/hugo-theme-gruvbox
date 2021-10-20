@@ -20,7 +20,7 @@ a {
   text-decoration: none;
 }
 
-a.link--external {
+a.link--external :not(img) {
   white-space: nowrap;
 
   &::after {
