@@ -23,6 +23,11 @@
       },
       {
         "network": "GitHub",
+        "username": "hugo-mod-github-readme-stats",
+        "url": "https://github.com/schnerring/hugo-mod-github-readme-stats"
+      },
+      {
+        "network": "GitHub",
         "username": "hugo-mod-json-resume",
         "url": "https://github.com/schnerring/hugo-mod-json-resume"
       },

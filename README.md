@@ -23,6 +23,7 @@ version v0.1.0.
 - [Code highlighting with Prism](#Prism)
 - Full-text search with [Flex Search](https://github.com/nextapps-de/flexsearch)
 - Display your CV using structured [JSON Resume](https://jsonresume.org/) data
+- Show off your GitHub with integrated [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)
 - [Integrated image optimization with next-gen image formats and lazy loading](#image-optimization)
 - Dark mode that also changes Prism themes
 - [Dynamic color choices from the Gruvbox color palette](#colors)
