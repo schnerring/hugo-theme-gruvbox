@@ -1,4 +1,4 @@
 github.com/schnerring/hugo-mod-github-readme-stats v0.0.0-20211020170905-b0d048864583 h1:ED5p4++N24dvOIeGMHXsE4uyeWCJsJiBrOtbQFFC7X8=
 github.com/schnerring/hugo-mod-github-readme-stats v0.0.0-20211020170905-b0d048864583/go.mod h1:UFUlab+9vQRmtTw2vE8tPRitMp3lYLUYUcfD9QwP/oE=
-github.com/schnerring/hugo-mod-json-resume v0.0.0-20211020171139-af1f5aebb887 h1:ETeUlWRqZ6RDzpuXSOewtpa7oRnI7HR0mVOfEajz/uk=
-github.com/schnerring/hugo-mod-json-resume v0.0.0-20211020171139-af1f5aebb887/go.mod h1:8XG8axdWciaWCd44mdQQLWGvoijmUurVOeyI4sD2hOw=
+github.com/schnerring/hugo-mod-json-resume v0.0.0-20211021131217-daf0b579c56e h1:R2RxTrjfVWQRISRnfibp2Js+PspjaKMT85F8QdeniCI=
+github.com/schnerring/hugo-mod-json-resume v0.0.0-20211021131217-daf0b579c56e/go.mod h1:8XG8axdWciaWCd44mdQQLWGvoijmUurVOeyI4sD2hOw=
