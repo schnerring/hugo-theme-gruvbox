@@ -223,7 +223,8 @@ Configure image processing quality in your site params:
 ![Alt text](image-url.jpg "Caption with **markdown support**")
 ```
 
-[The demo site features examples you can look at (TODO)](https://hugo-theme-gruvbox.schnerring.net/blog/prism-code-highlighting-showcase/)
+[The demo site features examples you can look at](https://hugo-theme-gruvbox.schnerring.net/blog/image-optimization/).
+[My personal website](https://schnerring.net) also uses the theme.
 
 ### Blog Post Covers
 
