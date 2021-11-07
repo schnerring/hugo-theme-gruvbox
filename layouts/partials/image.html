@@ -32,7 +32,7 @@
   {{ $image := $images.GetMatch $src }}
   {{ if eq $image.MediaType.SubType "svg" }}
     <!-- No processing for SVGs -->
-    {{ $image.Content | safeHTML }}
+    <img src="{{ $image.RelPermalink }}" alt="{{ .alt }}" />
   {{ else }}
     <!-- Calculate resize widths in increments of 100px -->
     {{ $maxWidth := 700 }}
