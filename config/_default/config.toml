@@ -14,7 +14,7 @@ enableRobotsTXT = true
 
 [params]
   # dark or light, defaults to light
-  #defaultTheme = "dark"
+  #defaultTheme = "light"
   # gray red green yellow blue purple aqua orange, defaults to blue
   #themeColor = "blue"
   # soft medium hard, defaults to medium
