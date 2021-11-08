@@ -32,8 +32,6 @@ module.exports = () => ({
               return els.tags.concat(els.classes, els.ids);
             },
             safelist: [":root", "theme"],
-            //fontFace: true, TODO
-            variables: true,
           }),
         ]
       : []),
