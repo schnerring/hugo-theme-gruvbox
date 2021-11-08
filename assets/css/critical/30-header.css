@@ -70,8 +70,8 @@ header {
 
 #search__suggestions {
   background: var(--bg);
+  border-radius: 0.2rem;
   box-shadow: 0 0.5rem 1rem var(--bg1);
-  corner-radius: 0.2rem;
   font-family: var(--font-serif);
   left: 0;
   margin-top: 2rem;
