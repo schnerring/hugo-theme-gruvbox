@@ -6,6 +6,7 @@
 .pagination__button {
   color: var(--primary-alt);
   font-family: var(--font-monospace);
+  font-size: 1.125rem;
 }
 
 .pagination__button:hover {

@@ -33,6 +33,7 @@
 
 .post-content__read-more {
   color: var(--primary-alt);
+  font-size: 1.125rem;
   margin-top: 1.3rem;
 }
 
