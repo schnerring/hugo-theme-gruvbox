@@ -2,16 +2,16 @@
   {{ if .HasPrev }}
     <span class="pagination__button pagination__button--previous">
       <a href="{{ .Prev.URL }}">
-        <span>&lt;</span>
-        <span>Previous</span>
+        <span><</span>
+        <span>Newer Posts</span>
       </a>
     </span>
   {{ end }}
   {{ if .HasNext }}
     <span class="pagination__button pagination__button--next">
       <a href="{{ .Next.URL }}">
-        <span>Next</span>
-        <span>&gt;</span>
+        <span>Older Posts</span>
+        <span>></span>
       </a>
     </span>
   {{ end }}
