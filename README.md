@@ -10,6 +10,8 @@ and [Doks](https://github.com/h-enk/doks) Hugo themes.
 
 ## DEMO [https://hugo-theme-gruvbox.schnerring.net/](https://hugo-theme-gruvbox.schnerring.net/)
 
+![Screenshot of theme in dark and light colors](images/tn.png)
+
 ## DISCLAIMER: Project Status
 
 This theme is still under heavy development and not production-ready.
@@ -223,7 +225,7 @@ Change it by adding the following to the `config.toml` file:
 ```
 
 [The demo site features examples you can look at](https://hugo-theme-gruvbox.schnerring.net/blog/image-optimization/).
-[My personal website](https://schnerring.net) also uses the theme.
+[My website](https://schnerring.net) also uses the theme.
 
 ### Blog Post Covers
 
