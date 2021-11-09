@@ -5,8 +5,9 @@ to build secure, fast, and SEO-ready websites.
 
 This theme is easily customizable with features that any coder loves.
 
-I took a lot of inspiration from the [Hello Friend](https://github.com/panr/hugo-theme-hello-friend)
-and [Doks](https://github.com/h-enk/doks) Hugo themes.
+I took a lot of inspiration from the
+[Hello Friend](https://github.com/panr/hugo-theme-hello-friend) and
+[Doks](https://github.com/h-enk/doks) Hugo themes.
 
 ## DEMO [https://hugo-theme-gruvbox.schnerring.net/](https://hugo-theme-gruvbox.schnerring.net/)
 
@@ -14,11 +15,9 @@ and [Doks](https://github.com/h-enk/doks) Hugo themes.
 
 ## DISCLAIMER: Project Status
 
-This theme is still under heavy development and not production-ready.
+This theme is still in early development.
 [Check out the issues](https://github.com/schnerring/hugo-theme-gruvbox/issues)
-to see what features are missing. As soon as the core features are implemented,
-I will publish it to the [Hugo showcase](https://themes.gohugo.io/) and release
-version v0.1.0.
+to see what's still missing.
 
 ## Highlights
 
