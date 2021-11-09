@@ -24,16 +24,18 @@ The theme optimizes images by default with a custom [Hugo's markdown render hook
 Use the [front matter](https://gohugo.io/content-management/front-matter/) of
 your posts to add cover images:
 
+<!-- markdownlint-disable MD013 -->
+
 ```markdown
 ---
 cover:
   src: alexandre-van-thuan-mr9FouttLGY-unsplash.jpg
-  <!-- markdownlint-disable MD013 -->
   alt: The interior of Stadsbiblioteket in Stockholm - Gunnar Asplunds library from 1928. The architecture is a transition between neoclassicism and functionalism.
-  <!-- markdownlint-enable MD013 -->
   caption: By [Alexandre Van Thuan](https://unsplash.com/photos/mr9FouttLGY)
 ---
 ```
+
+<!-- markdownlint-enable MD013 -->
 
 ## Captions
 
@@ -46,3 +48,20 @@ Add captions to your inline images like this:
 ```
 
 ![The main library in Vancouver is architecturally significant. The angles and levels contour together to produce a trippy scene. It's pretty from the outside but stunning from the inside.](aaron-thomas-dMqlE7lgyOU-unsplash.jpg "The main library in Vancouver is architecturally significant. The angles and levels contour together to produce a trippy scene. It's pretty from the outside but stunning from the inside. By [Aaron Thomas](https://unsplash.com/photos/dMqlE7lgyOU)")
+
+## JPEG and WebP Quality
+
+The default quality is 75/100. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
+Change it by adding the following to the `config.toml` file:
+
+```toml
+[imaging]
+  quality = 75
+```
+
+## Lazy Loading
+
+Images are by lazily loaded by default using the `loading="lazy"` attribute on
+HTML `img` tags.
+
+<!-- ![Chrome dev tools network tab showcasing lazy loading](TODO) -->

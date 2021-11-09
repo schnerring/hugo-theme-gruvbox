@@ -25,6 +25,7 @@
 {{ else }}
   {{ $src := .src }}
   {{ if strings.HasPrefix $src "./" }}
+    <!-- Strip "./" prefix from relative path -->
     {{ $src = substr $src 2 }}
   {{ end }}
   <!-- Image from page bundle -->

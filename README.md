@@ -208,12 +208,11 @@ Additionally, all images are lazily loaded to save the bandwidth of your users.
 
 ### Image Optimization Configuration
 
-[TODO](https://github.com/schnerring/hugo-theme-gruvbox/issues/17)
-
-Configure image processing quality in your site params:
+The default quality is 75/100. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
+Change it by adding the following to the `config.toml` file:
 
 ```toml
-[params.imageOptimization]
+[imaging]
   quality = 75
 ```
 

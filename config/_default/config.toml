@@ -12,6 +12,10 @@ enableRobotsTXT = true
       # if the content isn't trustworthy.
       unsafe = true
 
+[imaging]
+  # JPEG and WebP quality
+  #quality = 95
+
 [params]
   # dark or light, defaults to light
   #defaultTheme = "light"
