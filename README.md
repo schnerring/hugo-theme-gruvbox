@@ -1,4 +1,4 @@
-# hugo-theme-gruvbox
+# Gruvbox Hugo Theme
 
 A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox)
 to build secure, fast, and SEO-ready websites.
@@ -11,7 +11,7 @@ I took a lot of inspiration from the
 
 ## DEMO [https://hugo-theme-gruvbox.schnerring.net/](https://hugo-theme-gruvbox.schnerring.net/)
 
-![Screenshot of theme in dark and light colors](images/tn.png)
+![Screenshot of the theme in dark and light colors](images/tn.png)
 
 ## DISCLAIMER: Project Status
 
