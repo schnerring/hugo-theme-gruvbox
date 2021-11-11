@@ -12,12 +12,12 @@ cover:
 The theme optimizes images by default with a custom [Hugo's markdown render hook](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks):
 
 - The theme creates resized versions for each image, ranging from 100 to 700
-  pixels wide
+  pixels wide.
 - It generates [WebP](https://en.wikipedia.org/wiki/WebP) versions for each size
-  if the original image format isn't WebP
+  if the original image format isn't WebP.
 - The theme keeps the original file format as a fallback for browsers that
-  [don't support the WebP format](https://caniuse.com/webp)
-- Images in SVG format are embedded as is
+  [don't support the WebP format](https://caniuse.com/webp).
+- Images in SVG format are embedded as-is.
 
 ## Blog Post Cover Images
 
@@ -61,7 +61,7 @@ Change it by adding the following to the `config.toml` file:
 
 ## Lazy Loading
 
-Images are by lazily loaded by default using the `loading="lazy"` attribute on
+Images are lazily loaded by default using the `loading="lazy"` attribute on
 HTML `img` tags.
 
 <!-- ![Chrome dev tools network tab showcasing lazy loading](TODO) -->

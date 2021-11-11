@@ -13,6 +13,7 @@ body {
   background: var(--bg);
   color: var(--fg);
   line-height: 1.6;
+  word-wrap: break-word;
 }
 
 a {
@@ -20,13 +21,9 @@ a {
   text-decoration: none;
 }
 
-a.link--external :not(img) {
-  white-space: nowrap;
-
-  &::after {
-    /* 2009 = Thin Space */
-    content: "\2009↗";
-  }
+a.link--external::after {
+  /* 2009 = Thin Space */
+  content: "\2009↗";
 }
 
 img {
