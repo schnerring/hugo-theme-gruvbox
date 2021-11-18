@@ -36,8 +36,10 @@
     <img src="{{ $image.RelPermalink }}" alt="{{ .alt }}" />
   {{ else }}
     <!-- Calculate resize widths in increments of 100px -->
-    {{ $maxWidth := 700 }}
-    {{ $widths := seq 100 100 $maxWidth }}
+    {{ $minWidth := .params.imageResize.min | default 300 }}
+    {{ $maxWidth := .params.imageResize.max | default 700 }}
+    {{ $increment := .params.imageResize.increment | default 100 }}
+    {{ $widths := seq $minWidth $increment $maxWidth }}
     {{ if lt $image.Width $maxWidth }}
       {{ $widths = $widths | append $image.Width }}
     {{ end }}

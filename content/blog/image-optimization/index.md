@@ -51,7 +51,7 @@ Add captions to your inline images like this:
 
 ## JPEG and WebP Quality
 
-The default quality is 75/100. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
+The default quality is 75%. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
 Change it by adding the following to the `config.toml` file:
 
 ```toml

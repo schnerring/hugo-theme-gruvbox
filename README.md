@@ -195,11 +195,21 @@ Images are optimized by default without requiring [shortcodes](https://gohugo.io
 A [custom render hook](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks)
 does all the heavy lifting (see [render-image.html](./layouts/_default/_markup/render-image.html)).
 
-Every image from markdown content is processed, resulting in resized versions
-that range from 100 to 700 pixels wide (or less if the original is narrower). If
-the image format is not [WebP](https://en.wikipedia.org/wiki/WebP), the image is
-converted. The original file format will serve as a fallback for browsers that
-don't support the WebP format.
+By default, the theme creates resized versions of images ranging from 300 to 700
+pixels wide in increments of 100 pixels. Override the resize behavior by
+adding the following to the `config.toml` file:
+
+```toml
+[params]
+  [params.imageResize]
+    min = 300
+    max = 700
+    increment = 100
+```
+
+If the image format is not [WebP](https://en.wikipedia.org/wiki/WebP),
+the image is converted. The original file format will serve as a fallback for browsers
+that don't support the WebP format.
 
 Note that only images that are part of the [page bundle](https://gohugo.io/content-management/page-bundles/)
 are processed. If served from the `static/` directory or external sources, the
@@ -209,7 +219,7 @@ Additionally, all images are lazily loaded to save the bandwidth of your users.
 
 ### Image Optimization Configuration
 
-The default quality is 75/100. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
+The default quality is 75%. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
 Change it by adding the following to the `config.toml` file:
 
 ```toml

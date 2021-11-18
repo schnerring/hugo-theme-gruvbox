@@ -13,8 +13,8 @@ enableRobotsTXT = true
       unsafe = true
 
 [imaging]
-  # JPEG and WebP quality
-  #quality = 95
+  # JPEG and WebP image processing quality, defaults to 75%
+  #quality = 75
 
 [params]
   # dark or light, defaults to light
@@ -49,6 +49,13 @@ enableRobotsTXT = true
       "command-line",
       "diff-highlight"
     ]
+  
+  # By default, the theme creates resized versions of images ranging from 300 to
+  # 700 pixels wide in increments of 100 pixels
+  #[params.imageResize]
+  #  min = 300
+  #  max = 700
+  #  increment = 100
 
 [menu]
   [[menu.main]]
