@@ -2,7 +2,7 @@
 title: "Image Optimization"
 date: "2021-10-16T23:51:37+02:00"
 comments: false
-toc: false
+toc: true
 cover:
   src: ./alexandre-van-thuan-mr9FouttLGY-unsplash.jpg
   alt: The interior of Stadsbiblioteket in Stockholm - Gunnar Asplunds library from 1928. The architecture is a transition between neoclassicism and functionalism.
@@ -57,6 +57,20 @@ Change it by adding the following to the `config.toml` file:
 ```toml
 [imaging]
   quality = 75
+```
+
+## Resizing
+
+By default, the theme creates resized versions of images ranging from 300 to 700
+pixels wide in increments of 100 pixels. Override the resize behavior by
+adding the following to the `config.toml` file:
+
+```toml
+[params]
+  [params.imageResize]
+    min = 300
+    max = 700
+    increment = 100
 ```
 
 ## Lazy Loading
