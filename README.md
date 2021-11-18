@@ -258,6 +258,15 @@ robots: noindex, nofollow
 ---
 ```
 
+## Favicon
+
+The favicons and [corresponding markup](./layouts/partials/head/favicons.html)
+was generated with the free [RealFaviconGenerator.net](https://realfavicongenerator.net/).
+
+The easiest way to replace the default favicons is to also to generate them
+using RealFaviconGenerator.net and put the generated files into the `static/`
+directory.
+
 ## Extensibility
 
 You can extend the theme by overriding the following partials in the `layouts/partials`
