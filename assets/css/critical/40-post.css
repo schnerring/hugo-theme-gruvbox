@@ -9,8 +9,6 @@
 }
 
 .post-meta {
-  color: var(--fg3);
-
   & figure,
   & img:not(figure img) {
     margin: 0.5rem 0;
@@ -47,8 +45,20 @@
   }
 }
 
-.post-tag::before {
-  content: "#";
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 1rem 0;
+}
+
+.post-tag {
+  font-size: 0.9rem;
+  line-height: 1;
+
+  &::before {
+    content: "#";
+  }
 }
 
 .post-heading__anchor {
