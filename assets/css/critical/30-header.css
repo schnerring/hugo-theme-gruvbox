@@ -153,6 +153,7 @@ header {
   }
 }
 
+/* TODO: simplify deep nesting */
 nav#menu {
   align-items: center;
   display: flex;

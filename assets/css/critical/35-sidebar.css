@@ -5,13 +5,13 @@
   margin-right: auto;
   padding-left: 2.5rem;
 
-  & .sidebar__heading {
-    font-size: 1.3rem;
-  }
-
   & svg {
     fill: var(--fg);
   }
+}
+
+.sidebar__heading {
+  font-size: 1.3rem;
 }
 
 aside.toc {
