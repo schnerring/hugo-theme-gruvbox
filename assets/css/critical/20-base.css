@@ -7,13 +7,18 @@
 html {
   font-family: var(--font-serif);
   font-size: 1rem;
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--bg);
   color: var(--fg);
-  line-height: 1.6;
+  line-height: 1.675;
   word-wrap: break-word;
+}
+
+strong {
+  letter-spacing: 0.35px;
 }
 
 a {
@@ -69,6 +74,11 @@ h4,
 h5,
 h6 {
   border-bottom: 1px solid var(--bg1);
+}
+
+h1,
+h2 {
+  font-weight: 400;
 }
 
 h1 {
