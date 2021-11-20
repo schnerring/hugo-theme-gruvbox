@@ -28,6 +28,11 @@ aside.toc {
     margin: 0;
     padding: 0;
 
+    & ul {
+      font-size: 0.9rem;
+      margin-left: 0.5rem;
+    }
+
     & li {
       line-height: 1.1;
 
