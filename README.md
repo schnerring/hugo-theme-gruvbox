@@ -11,7 +11,7 @@ I took a lot of inspiration from the
 
 ## DEMO [https://hugo-theme-gruvbox.schnerring.net/](https://hugo-theme-gruvbox.schnerring.net/)
 
-![Screenshot of the theme in dark and light colors](images/tn.png)
+![Screenshot of the theme in dark and light colors](https://raw.githubusercontent.com/schnerring/hugo-theme-gruvbox/main/images/tn.png)
 
 ## DISCLAIMER: Project Status
 
