@@ -1,4 +1,5 @@
 hugo_stats.json
+.hugo_build.lock
 
 # Created by https://www.toptal.com/developers/gitignore/api/hugo,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=hugo,node
