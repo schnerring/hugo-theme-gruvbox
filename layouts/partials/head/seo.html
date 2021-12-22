@@ -17,8 +17,10 @@
     {{- with .Title }}{{ . }}{{ end -}}
   {{- else -}}
     {{- .Site.Title -}}
-    <!-- prettier-ignore -->
-    {{- with .Site.Params.Subtitle }} — {{ . }}{{ end -}}
+    {{- with .Site.Params.Subtitle }}
+      —
+      {{ . -}}
+    {{- end -}}
   {{- end -}}
 </title>
 
