@@ -14,10 +14,12 @@
 
 <title>
   {{- if not .IsHome -}}
-    {{- with .Title }}{{ . }}&nbsp;::&nbsp;{{ end -}}
+    {{- with .Title }}{{ . }}{{ end -}}
+  {{- else -}}
+    {{- .Site.Title -}}
+    <!-- prettier-ignore -->
+    {{- with .Site.Params.Subtitle }} — {{ . }}{{ end -}}
   {{- end -}}
-  {{- .Site.Title -}}
-  {{- with .Site.Params.Subtitle }}&nbsp;—&nbsp;{{ . }}{{ end -}}
 </title>
 
 <meta
