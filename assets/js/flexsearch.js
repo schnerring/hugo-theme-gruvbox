@@ -104,6 +104,14 @@ document.addEventListener("keydown", (e) => {
     suggestions.innerHTML = "";
     suggestions.classList.remove("search__suggestions--hidden");
 
+    if (searchResultsMap.size === 0 && searchText) {
+      const noResultsMessage = document.createElement("div")
+      noResultsMessage.innerHTML = `No results for "<strong>${searchText}</strong>"`
+      noResultsMessage.classList.add("search__no-results");
+      suggestions.appendChild(noResultsMessage);
+      return;
+    }
+
     for (const [href, searchResult] of searchResultsMap) {
       const suggestion = document.createElement("a");
       suggestion.href = href;
