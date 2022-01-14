@@ -235,17 +235,6 @@ blockquote.twitter-tweet {
   }
 }
 
-/* TODO */
-
-blockquote.info {
-}
-
-blockquote.warning {
-}
-
-blockquote.error {
-}
-
 pre::-webkit-scrollbar {
   height: 0.5rem;
   scrollbar-width: auto;
