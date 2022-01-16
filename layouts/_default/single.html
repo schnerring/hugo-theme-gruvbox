@@ -4,9 +4,9 @@
     <div class="post-content">
       {{ .Content }}
     </div>
+    {{ partial "social-share.html" . }}
     {{ if .Params.Comments }}
       {{ partial "comments.html" . }}
     {{ end }}
-    {{ partial "social-share.html" . }}
   </article>
 {{ end }}
