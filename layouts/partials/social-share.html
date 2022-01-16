@@ -1,0 +1,20 @@
+{{ $url := .Permalink }}
+{{ $title := .Title }}
+{{ with $.Site.Params.socialShare }}
+  <div class="social-share">
+    <strong>Share this post: </strong>
+    {{ range . }}
+      {{ $href := .formatString }}
+      {{ $href := replace $href "{url}" (urlquery .url) }}
+      {{ $href := replace $href "{title}" (urlquery .title) }}
+      {{ $href := replace $href "{text}" (urlquery .title) }}
+      <a href="{{ $href }}" target="_blank" rel="noreferrer">
+        {{ if eq .icon "Mail" }}
+          {{ partial "icons/tabler-icon.html" .icon }}
+        {{ else }}
+          {{ partial "icons/simple-icon.html" .icon }}
+        {{ end }}
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

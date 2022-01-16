@@ -85,7 +85,7 @@ enableRobotsTXT = true
     icon = "Pinterest"
     formatString = "http://pinterest.com/pin/create/button/?url={url}"
   [[params.socialShare]]
-    icon = "HackerNews"
+    icon = "YCombinator"
     formatString = "https://news.ycombinator.com/submitlink?u={url}&t={title}"
   [[params.socialShare]]
     icon = "VK"
@@ -97,7 +97,7 @@ enableRobotsTXT = true
     icon = "Telegram"
     formatString = "https://telegram.me/share/url?url={url}&text={text}"
   [[params.socialShare]]
-    icon = "Email"
+    icon = "Mail"
     formatString = "mailto:{email_address}?subject={title}&body={url} {text}"
 
 [menu]
