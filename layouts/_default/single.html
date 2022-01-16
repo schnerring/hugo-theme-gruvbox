@@ -4,7 +4,11 @@
     <div class="post-content">
       {{ .Content }}
     </div>
-    {{ partial "social-share.html" . }}
+
+    {{ if .Params.SocialShare }}
+      {{ partial "social-share.html" . }}
+    {{ end }}
+
     {{ if .Params.Comments }}
       {{ partial "comments.html" . }}
     {{ end }}

@@ -269,6 +269,10 @@ robots: noindex, nofollow
 ---
 ```
 
+## Social Share Links
+
+<!-- TODO -->
+
 ## Favicon
 
 The favicons and [corresponding markup](./layouts/partials/head/favicons.html)
