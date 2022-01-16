@@ -1,0 +1,14 @@
+pre::-webkit-scrollbar {
+  height: 0.5rem;
+  scrollbar-width: auto;
+}
+
+pre::-webkit-scrollbar-track {
+  background: var(--bg2);
+  border-radius: 0.2rem;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: var(--bg4);
+  border-radius: 0.2rem;
+}

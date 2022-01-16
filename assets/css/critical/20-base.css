@@ -192,7 +192,8 @@ pre {
 }
 
 pre {
-  background: var(--bg1) !important; /* TODO is !important really needed? */
+  /* TODO is !important really needed because of Prism? */
+  background: var(--bg1) !important;
   overflow: auto;
 
   & code {
@@ -233,19 +234,4 @@ blockquote.twitter-tweet {
     color: var(--blue1);
     text-decoration: none !important;
   }
-}
-
-pre::-webkit-scrollbar {
-  height: 0.5rem;
-  scrollbar-width: auto;
-}
-
-pre::-webkit-scrollbar-track {
-  background: var(--bg2);
-  border-radius: 0.2rem;
-}
-
-pre::-webkit-scrollbar-thumb {
-  background: var(--bg4);
-  border-radius: 0.2rem;
 }
