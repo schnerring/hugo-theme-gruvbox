@@ -271,7 +271,36 @@ robots: noindex, nofollow
 
 ## Social Share Links
 
-<!-- TODO -->
+Configure social share links in the Hugo config like this:
+
+```toml
+[params]
+  [[params.socialShare]]
+      icon = "Facebook"
+      formatString = "https://www.facebook.com/sharer.php?u={url}"
+  [[params.socialShare]]
+    icon = "Reddit"
+    formatString = "https://reddit.com/submit?url={url}&title={title}"
+  [[params.socialShare]]
+    icon = "Twitter"
+    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
+  [[params.socialShare]]
+    icon = "LinkedIn"
+    formatString = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
+```
+
+The `formatString` supports the following placeholders:
+
+- `{url}` is replaced with the `.Permalink` of the post
+- `{title}` is replaced with the `.Title` of the post
+
+To enable social share links, set the following in the post's front matter:
+
+```markdown
+---
+socialShare: true
+---
+```
 
 ## Favicon
 
