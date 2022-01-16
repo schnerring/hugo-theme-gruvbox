@@ -5,10 +5,9 @@
     <strong>Share this post: </strong>
     {{ range . }}
       {{ $href := .formatString }}
-      {{ $href := replace $href "{url}" (urlquery .url) }}
-      {{ $href := replace $href "{title}" (urlquery .title) }}
-      {{ $href := replace $href "{text}" (urlquery .title) }}
-      <a href="{{ $href }}" target="_blank" rel="noreferrer">
+      {{ $href := replace $href "{url}" (urlquery $url) }}
+      {{ $href := replace $href "{title}" (urlquery $title) }}
+      <a href="{{ $href | safeURL }}" target="_blank" rel="noreferrer">
         {{ if eq .icon "Mail" }}
           {{ partial "icons/tabler-icon.html" .icon }}
         {{ else }}

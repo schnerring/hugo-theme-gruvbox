@@ -61,7 +61,6 @@ enableRobotsTXT = true
   #   - icon from the Simple Icons suite except "Email" from Tabler Icons
   #   - {url} is replaced with .Permalink
   #   - {title} is replaced with .Title
-  #   - {text} is replaced with .Title
   # See also: https://github.com/bradvin/social-share-urls
   [[params.socialShare]]
     icon = "Facebook"
@@ -71,16 +70,16 @@ enableRobotsTXT = true
     formatString = "https://reddit.com/submit?url={url}&title={title}"
   [[params.socialShare]]
     icon = "Twitter"
-    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}&via={user_id}&hashtags={hash_tags}"
+    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
   [[params.socialShare]]
     icon = "LinkedIn"
     formatString = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
   [[params.socialShare]]
     icon = "WhatsApp"
-    formatString = "whatsapp://send/?text={text}%20{url}"
+    formatString = "whatsapp://send/?text={title}%20{url}"
   [[params.socialShare]]
     icon = "Tumblr"
-    formatString = "https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&title={title}&caption={text}&tags={hash_tags}"
+    formatString = "https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&title={title}&caption={title}"
   [[params.socialShare]]
     icon = "Pinterest"
     formatString = "http://pinterest.com/pin/create/button/?url={url}"
@@ -89,16 +88,16 @@ enableRobotsTXT = true
     formatString = "https://news.ycombinator.com/submitlink?u={url}&t={title}"
   [[params.socialShare]]
     icon = "VK"
-    formatString = "http://vk.com/share.php?url={url}&title={title}&comment={text}"
+    formatString = "http://vk.com/share.php?url={url}&title={title}&comment={title}"
   [[params.socialShare]]
     icon = "XING"
     formatString = "https://www.xing.com/spi/shares/new?url={url}"
   [[params.socialShare]]
     icon = "Telegram"
-    formatString = "https://telegram.me/share/url?url={url}&text={text}"
+    formatString = "https://telegram.me/share/url?url={url}&text={title}"
   [[params.socialShare]]
     icon = "Mail"
-    formatString = "mailto:{email_address}?subject={title}&body={url} {text}"
+    formatString = "mailto:?subject={title}&body={url}"
 
 [menu]
   [[menu.main]]
