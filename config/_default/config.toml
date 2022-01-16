@@ -57,6 +57,49 @@ enableRobotsTXT = true
   #  max = 700
   #  increment = 100
 
+  # Social share links for posts:
+  #   - icon from the Simple Icons suite except "Email" from Tabler Icons
+  #   - {url} is replaced with .Permalink
+  #   - {title} is replaced with .Title
+  #   - {text} is replaced with .Title
+  # See also: https://github.com/bradvin/social-share-urls
+  [[params.socialShare]]
+    icon = "Facebook"
+    formatString = "https://www.facebook.com/sharer.php?u={url}"
+  [[params.socialShare]]
+    icon = "Reddit"
+    formatString = "https://reddit.com/submit?url={url}&title={title}"
+  [[params.socialShare]]
+    icon = "Twitter"
+    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}&via={user_id}&hashtags={hash_tags}"
+  [[params.socialShare]]
+    icon = "LinkedIn"
+    formatString = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
+  [[params.socialShare]]
+    icon = "WhatsApp"
+    formatString = "whatsapp://send/?text={text}%20{url}"
+  [[params.socialShare]]
+    icon = "Tumblr"
+    formatString = "https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&title={title}&caption={text}&tags={hash_tags}"
+  [[params.socialShare]]
+    icon = "Pinterest"
+    formatString = "http://pinterest.com/pin/create/button/?url={url}"
+  [[params.socialShare]]
+    icon = "HackerNews"
+    formatString = "https://news.ycombinator.com/submitlink?u={url}&t={title}"
+  [[params.socialShare]]
+    icon = "VK"
+    formatString = "http://vk.com/share.php?url={url}&title={title}&comment={text}"
+  [[params.socialShare]]
+    icon = "XING"
+    formatString = "https://www.xing.com/spi/shares/new?url={url}"
+  [[params.socialShare]]
+    icon = "Telegram"
+    formatString = "https://telegram.me/share/url?url={url}&text={text}"
+  [[params.socialShare]]
+    icon = "Email"
+    formatString = "mailto:{email_address}?subject={title}&body={url} {text}"
+
 [menu]
   [[menu.main]]
     identifier = "blog"
