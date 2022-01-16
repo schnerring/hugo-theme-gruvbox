@@ -284,9 +284,6 @@ Configure social share links in the Hugo config like this:
   [[params.socialShare]]
     icon = "Twitter"
     formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
-  [[params.socialShare]]
-    icon = "LinkedIn"
-    formatString = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
 ```
 
 The `formatString` supports the following placeholders:
@@ -301,6 +298,9 @@ To enable social share links, set the following in the post's front matter:
 socialShare: true
 ---
 ```
+
+Check out the [Social Share URLs repo on GitHub](https://github.com/bradvin/social-share-urls)
+for more format strings.
 
 ## Favicon
 
