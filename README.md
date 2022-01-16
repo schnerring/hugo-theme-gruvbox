@@ -276,15 +276,22 @@ Configure social share links in the Hugo config like this:
 ```toml
 [params]
   [[params.socialShare]]
-      icon = "Facebook"
-      formatString = "https://www.facebook.com/sharer.php?u={url}"
+    iconSuite = "simple-icon"
+    iconName = "facebook"
+    formatString = "https://www.facebook.com/sharer.php?u={url}"
   [[params.socialShare]]
-    icon = "Reddit"
+    iconSuite = "simple-icon"
+    iconName = "reddit"
     formatString = "https://reddit.com/submit?url={url}&title={title}"
   [[params.socialShare]]
-    icon = "Twitter"
-    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
+    iconSuite = "tabler-icon"
+    iconName = "mail"
+    formatString = "mailto:?subject={title}&body={url}"
 ```
+
+Use the `iconSuite` option to specify the icon suite used for the social share
+link: `simple-icon` or `tabler-icon`. Select an icon from the suite with the
+`iconName` option.
 
 The `formatString` supports the following placeholders:
 

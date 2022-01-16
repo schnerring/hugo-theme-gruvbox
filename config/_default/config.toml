@@ -58,45 +58,58 @@ enableRobotsTXT = true
   #  increment = 100
 
   # Social share links for posts:
-  #   - icon from the Simple Icons suite except "Email" from Tabler Icons
-  #   - {url} is replaced with .Permalink
-  #   - {title} is replaced with .Title
-  # See also: https://github.com/bradvin/social-share-urls
+  #   - iconSuite: "simple-icon" or "tabler-icon"
+  #   - iconName: name of the icon from the "iconSuite"
+  #   - {url} placeholder for post .Permalink
+  #   - {title} placeholder for post .Title
+  # See  https://github.com/bradvin/social-share-urls for more format strings
   [[params.socialShare]]
-    icon = "Facebook"
+    iconSuite = "simple-icon"
+    iconName = "facebook"
     formatString = "https://www.facebook.com/sharer.php?u={url}"
   [[params.socialShare]]
-    icon = "Reddit"
+    iconSuite = "simple-icon"
+    iconName = "reddit"
     formatString = "https://reddit.com/submit?url={url}&title={title}"
   [[params.socialShare]]
-    icon = "Twitter"
+    iconSuite = "simple-icon"
+    iconName = "twitter"
     formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
   [[params.socialShare]]
-    icon = "LinkedIn"
+    iconSuite = "simple-icon"
+    iconName = "linkedin"
     formatString = "https://www.linkedin.com/sharing/share-offsite/?url={url}"
   [[params.socialShare]]
-    icon = "WhatsApp"
+    iconSuite = "simple-icon"
+    iconName = "whatsapp"
     formatString = "whatsapp://send/?text={title}%20{url}"
   [[params.socialShare]]
-    icon = "Tumblr"
+    iconSuite = "simple-icon"
+    iconName = "tumblr"
     formatString = "https://www.tumblr.com/widgets/share/tool?canonicalUrl={url}&title={title}&caption={title}"
   [[params.socialShare]]
-    icon = "Pinterest"
+    iconSuite = "simple-icon"
+    iconName = "pinterest"
     formatString = "http://pinterest.com/pin/create/button/?url={url}"
   [[params.socialShare]]
-    icon = "YCombinator"
+    iconSuite = "simple-icon"
+    iconName = "ycombinator"
     formatString = "https://news.ycombinator.com/submitlink?u={url}&t={title}"
   [[params.socialShare]]
-    icon = "VK"
+    iconSuite = "simple-icon"
+    iconName = "vk"
     formatString = "http://vk.com/share.php?url={url}&title={title}&comment={title}"
   [[params.socialShare]]
-    icon = "XING"
+    iconSuite = "simple-icon"
+    iconName = "xing"
     formatString = "https://www.xing.com/spi/shares/new?url={url}"
   [[params.socialShare]]
-    icon = "Telegram"
+    iconSuite = "simple-icon"
+    iconName = "telegram"
     formatString = "https://telegram.me/share/url?url={url}&text={title}"
   [[params.socialShare]]
-    icon = "Mail"
+    iconSuite = "tabler-icon"
+    iconName = "mail"
     formatString = "mailto:?subject={title}&body={url}"
 
 [menu]
