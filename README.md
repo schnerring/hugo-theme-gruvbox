@@ -331,3 +331,31 @@ directory which by default are empty placeholder files:
   Custom HTML at the end of `<body>`
 - [`comments.html`](./layouts/partials/comments.html)  
   Comments at the end of posts
+
+## Remove the Sidebar
+
+If you want to get rid of the sidebar, add an empty `data/en.json` file with the
+following content:
+
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {},
+  "work": [],
+  "volunteer": [],
+  "education": [],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [],
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "projects": [],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
+    "version": "v1.0.0",
+    "lastModified": "2017-12-24T15:53:00"
+  }
+}
+```
