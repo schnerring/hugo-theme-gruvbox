@@ -49,9 +49,10 @@ aside.toc {
   border: 2px solid var(--bg2);
 }
 
-.jr-basics__description {
+.jr-basics__summary {
   color: var(--fg3);
   font-family: var(--font-serif);
+  margin: 0.75rem 0;
 }
 
 .jr-basics__profile {
