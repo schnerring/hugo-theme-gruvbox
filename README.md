@@ -359,3 +359,28 @@ following content:
   }
 }
 ```
+
+## Extend CSS
+
+The theme uses PostCSS the following plugins:
+
+- [postcss-import](https://github.com/postcss/postcss-import)
+- [postcss-url](https://github.com/postcss/postcss-url)
+- [postcss-nesting](https://github.com/csstools/postcss-plugins/tree/main/plugins/postcss-nesting)
+- [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
+
+Additionally the following plugins are used if building the site with
+`hugo -e production`:
+
+- [postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
+- [cssnano](https://github.com/cssnano/cssnano) for minification
+- [@fullhuman/postcss-purgecss](https://github.com/FullHuman/purgecss)
+
+Inside the `assets/css` two folders exist. Files inside the `critical` are
+concatenated during build time and inlined into the `<head>` element. The styles
+target mostly [above the fold content](https://en.wikipedia.org/wiki/Above_the_fold#In_web_design).
+Try to keep inline CSS to a minimum because it can't be cached and will be
+inlined into every single page.
+
+Files inside `non-critical` are concatenated into a single file. You should put
+most of the styles here.
