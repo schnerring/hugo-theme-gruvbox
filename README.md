@@ -362,7 +362,7 @@ following content:
 
 ## Extend CSS
 
-The theme uses PostCSS the following plugins:
+The theme uses PostCSS with following plugins:
 
 - [postcss-import](https://github.com/postcss/postcss-import)
 - [postcss-url](https://github.com/postcss/postcss-url)
@@ -376,12 +376,12 @@ Additionally the following plugins are used if building the site with
 - [cssnano](https://github.com/cssnano/cssnano) for minification
 - [@fullhuman/postcss-purgecss](https://github.com/FullHuman/purgecss)
 
-Inside the `assets/css` two folders exist. Files inside the `critical` are
-concatenated during build time and inlined into the `<head>` element. The styles
-target mostly [above the fold content](https://en.wikipedia.org/wiki/Above_the_fold#In_web_design).
+Inside the `assets/css` two folders exist, `critical` and `non-critical`.
+Files inside `critical` are concatenated during build time and inlined into the
+`<head>` element. The styles target mostly [above the fold content](https://en.wikipedia.org/wiki/Above_the_fold#In_web_design).
 Try to keep inline CSS to a minimum because it can't be cached and will be
 inlined into every single page. Files inside `non-critical` are concatenated
-into a single file. You should put most of the styles here.
+into a single file and included as `<style>`. Most of the styles are in there.
 
 Files are concatenated in lexicographic order of their file names. File
 names start with two digits and a hyphen: `NN-`. The order of files might differ
