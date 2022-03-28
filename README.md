@@ -380,7 +380,16 @@ Inside the `assets/css` two folders exist. Files inside the `critical` are
 concatenated during build time and inlined into the `<head>` element. The styles
 target mostly [above the fold content](https://en.wikipedia.org/wiki/Above_the_fold#In_web_design).
 Try to keep inline CSS to a minimum because it can't be cached and will be
-inlined into every single page.
+inlined into every single page. Files inside `non-critical` are concatenated
+into a single file. You should put most of the styles here.
 
-Files inside `non-critical` are concatenated into a single file. You should put
-most of the styles here.
+Files are concatenated in lexicographic order of their file names. File
+names start with two digits and a hyphen: `NN-`. The order of files might differ
+between Linux and Windows, so using this convention improves cross-platform
+compatibility. [You might know this approach if you're familiar with Xorg](https://wiki.archlinux.org/title/Xorg#Using_.conf_files).
+
+You can add new CSS files to the PostCSS pipeline like this:
+
+- `critical/50-foo.css`
+- `non-critical/05-bar.css`
+- `non-critical/99-last.css`
