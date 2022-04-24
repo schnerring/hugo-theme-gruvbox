@@ -54,7 +54,7 @@
   "description": "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes.",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
-    "cssnano": "^5.0.12",
+    "cssnano": "^5.1.7",
     "eslint": "^8.14.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
