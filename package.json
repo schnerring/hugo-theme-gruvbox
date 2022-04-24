@@ -42,12 +42,12 @@
     }
   },
   "dependencies": {
-    "@tabler/icons": "^1.46.0",
+    "@tabler/icons": "^1.67.0",
     "flexsearch": "^0.7.21",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0",
     "prismjs": "^1.25.0",
-    "simple-icons": "^6.0.0",
+    "simple-icons": "^6.19.0",
     "typeface-fira-code": "^1.1.13",
     "typeface-roboto-slab": "^1.1.13"
   },
