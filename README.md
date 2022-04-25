@@ -132,6 +132,22 @@ Run Hugo:
 hugo server
 ```
 
+## Update The Theme
+
+Update the Hugo modules:
+
+```shell
+hugo mod get -u
+hugo mod tidy
+```
+
+Update the NPM dependencies:
+
+```shell
+hugo mod npm pack
+npm install
+```
+
 ## Colors
 
 Two options are available to configure the theme colors:
