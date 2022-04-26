@@ -1,18 +1,18 @@
 .post {
   border-bottom: 2px dotted var(--bg1);
   padding: 2rem 0;
+
+  & figure,
+  & img:not(figure img),
+  & video:not(figure video) {
+    margin: 0.5rem 0;
+    box-sizing: border-box;
+  }
 }
 
 .post-header,
 .post-content__read-more {
   font-family: var(--font-monospace);
-}
-
-.post-meta {
-  & figure,
-  & img:not(figure img) {
-    margin: 0.5rem 0;
-  }
 }
 
 .post-meta__author {
@@ -21,12 +21,6 @@
 
 .post-content {
   margin: 1.3rem 0;
-
-  & figure,
-  & img:not(figure img) {
-    margin: 0.5rem 0;
-    max-width: calc(100% - 2rem);
-  }
 }
 
 .post-content__read-more {
