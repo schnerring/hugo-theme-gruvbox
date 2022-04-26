@@ -1,5 +1,5 @@
 ---
-title: "Image Optimization"
+title: "Embed Video Files"
 date: "2021-10-16T23:51:37+02:00"
 comments: false
 socialShare: true
@@ -79,4 +79,4 @@ adding the following to the `config.toml` file:
 Images are lazily loaded by default using the `loading="lazy"` attribute on
 HTML `img` tags.
 
-<!-- ![Chrome dev tools network tab showcasing lazy loading](TODO) -->
+{{< video src="lazy-loading" autoplay="true" controls="false" loop="true" >}}
