@@ -305,6 +305,23 @@ type file is used as `poster` (thumbnail). It will render the following HTML:
 </video>
 ```
 
+You can set a Markdown `caption`, wrapping the `<video>` inside a `<figure`>.
+
+Additionally, the shortcode allows you to set the following attributes:
+
+| Attribute   | Default |
+| ----------- | ------- |
+| autoplay    | `false` |
+| controls    | `true`  |
+| height      |         |
+| loop        | `false` |
+| muted       | `true`  |
+| preload     |         |
+| width       | `100%`  |
+| playsinline | `true`  |
+
+[Learn more about the `<video>` attributes here.](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video#attributes)
+
 ## SEO
 
 Due to the [European Copyright Directive](https://wayback.archive-it.org/12090/20210304045117/https://ec.europa.eu/digital-single-market/en/modernisation-eu-copyright-rules)

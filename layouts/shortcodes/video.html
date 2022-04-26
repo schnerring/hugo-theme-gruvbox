@@ -25,6 +25,12 @@
 {{ $poster := ((.Page.Resources.ByType "image").GetMatch (printf "%s*" $src)) }}
 {{ $videos := (.Page.Resources.ByType "video").Match (printf "%s*" $src) }}
 
+
+<!--prettier-ignore-->
+{{ if .Get "caption" }}
+  <figure>
+{{ end }}
+
 {{ if $videos }}
   <video
     {{ if eq (.Get "autoplay") "true" }}autoplay{{ end }}
@@ -41,4 +47,11 @@
       <source src="{{ .RelPermalink }}" type="{{ .MediaType }}" />
     {{ end }}
   </video>
+{{ end }}
+
+
+<!--prettier-ignore-->
+{{ if .Get "caption" }}
+    <figcaption>{{ .Page.RenderString (.Get "caption") }}</figcaption>
+  </figure>
 {{ end }}

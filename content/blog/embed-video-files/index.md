@@ -47,7 +47,9 @@ type file is used as `poster` (thumbnail). It will render the following HTML:
 </video>
 ```
 
-The shortcode allows you to set the following attributes:
+You can set a Markdown `caption`, wrapping the `<video>` inside a `<figure`>.
+
+Additionally, the shortcode allows you to set the following attributes:
 
 | Attribute   | Default |
 | ----------- | ------- |
