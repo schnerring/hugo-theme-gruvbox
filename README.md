@@ -267,6 +267,44 @@ cover:
 ---
 ```
 
+## Embed Videos
+
+Use the [video shortcode](https://github.com/schnerring/hugo-theme-gruvbox/blob/main/layouts/shortcodes/video.html)
+to embed your video files from [Page Resources](https://gohugo.io/content-management/page-resources/).
+
+With a page bundle looking like the following:
+
+```text
+embed-videos/
+|-- index.md
+|-- my-video.jpg
+|-- my-video.mp4
+|-- my-video.webm
+```
+
+You can embed `my-video` like this:
+
+```markdown
+{{< video src="my-video" autoplay="true" controls="false" loop="true" >}}
+```
+
+The shortcode looks for media files matching the filename `my-video*`. For each
+`video` MIME type file, a `<source>` element is added. The first `image` MIME
+type file is used as `poster` (thumbnail). It will render the following HTML:
+
+```html
+<video
+  autoplay
+  loop
+  poster="/blog/embed-videos/my-video.jpg"
+  width="100%"
+  playsinline
+>
+  <source src="/blog/embed-videos/my-video.mp4" type="video/mp4" />
+  <source src="/blog/embed-videos/my-video.webm" type="video/webm" />
+</video>
+```
+
 ## SEO
 
 Due to the [European Copyright Directive](https://wayback.archive-it.org/12090/20210304045117/https://ec.europa.eu/digital-single-market/en/modernisation-eu-copyright-rules)
