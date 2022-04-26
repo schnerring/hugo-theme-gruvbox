@@ -1,0 +1,44 @@
+<!--
+  Embed videos from Hugo Page Resources.
+
+  Setting src="my-video" with the Page Bundle containing...
+
+    - my-video.png
+    - my-video.mp4
+    - my-video.webm
+
+  ...will render the following:
+
+    <video poster="my-video.png">
+      <source src="my-video.mp4" type="video/mp4" />
+      <source src="my-video.webm" type="video/webm" />
+    </video>
+-->
+
+{{ $src := .Get "src" }}
+
+{{ if strings.HasPrefix $src "./" }}
+  <!-- Strip "./" prefix from relative path -->
+  {{ $src = substr $src 2 }}
+{{ end }}
+
+{{ $poster := ((.Page.Resources.ByType "image").GetMatch (printf "%s*" $src)) }}
+{{ $videos := (.Page.Resources.ByType "video").Match (printf "%s*" $src) }}
+
+{{ if $videos }}
+  <video
+    {{ if eq (.Get "autoplay") "true" }}autoplay{{ end }}
+    {{ if eq (.Get "controls" | default "true") "true" }}controls{{ end }}
+    {{ with .Get "height" }}height="{{ . }}"{{ end }}
+    {{ if eq (.Get "loop") "true" }}loop{{ end }}
+    {{ if eq (.Get "muted") "true" }}muted{{ end }}
+    {{ with $poster }}poster="{{ .RelPermalink }}"{{ end }}
+    {{ with .Get "preload" }}preload="{{ . }}"{{ end }}
+    {{ with .Get "width" | default "100%" }}width="{{ . }}"{{ end }}
+    {{ if eq (.Get "playsinline" | default "true") "true" }}playsinline{{ end }}
+  >
+    {{ range $videos }}
+      <source src="{{ .RelPermalink }}" type="{{ .MediaType }}" />
+    {{ end }}
+  </video>
+{{ end }}
