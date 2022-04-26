@@ -1,5 +1,5 @@
 ---
-title: "Video Shortcode"
+title: "Embed Video Files"
 date: "2022-04-26T01:16:18+02:00"
 draft: false
 comments: false
@@ -8,11 +8,11 @@ toc: false
 ---
 
 Use the [video shortcode](https://github.com/schnerring/hugo-theme-gruvbox/blob/main/layouts/shortcodes/video.html)
-to embed your video files from [Page Resources](https://gohugo.io/content-management/page-resources/).
-
-<!--more-->
+to embed your video files from [Hugo Page Resources](https://gohugo.io/content-management/page-resources/).
 
 {{< video src="my-video" autoplay="true" controls="false" loop="true" >}}
+
+<!--more-->
 
 With a page bundle looking like the following:
 

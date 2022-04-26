@@ -267,7 +267,7 @@ cover:
 ---
 ```
 
-## Embed Videos
+## Embed Video Files
 
 Use the [video shortcode](https://github.com/schnerring/hugo-theme-gruvbox/blob/main/layouts/shortcodes/video.html)
 to embed your video files from [Page Resources](https://gohugo.io/content-management/page-resources/).
