@@ -45,8 +45,7 @@
   }
 }
 
-.post-tags,
-.social-share {
+.post-tags {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -60,36 +59,6 @@
 
   &::before {
     content: "#";
-  }
-}
-
-.social-share {
-  border-top: 2px dotted var(--bg1);
-  display: flex;
-  margin: 3rem 0;
-  padding-top: 3rem;
-
-  & a {
-    display: flex;
-  }
-
-  & svg {
-    width: 24px;
-    height: 24px;
-    fill: var(--primary-alt);
-
-    &:hover {
-      fill: var(--primary);
-    }
-
-    &.icon-tabler {
-      fill: none;
-      stroke: var(--primary-alt);
-
-      &:hover {
-        stroke: var(--primary);
-      }
-    }
   }
 }
 

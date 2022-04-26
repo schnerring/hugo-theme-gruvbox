@@ -1,0 +1,68 @@
+.social-share {
+  align-items: center;
+  border-top: 2px dotted var(--bg1);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin: 3rem 0;
+  padding-top: 3rem;
+
+  & svg {
+    fill: var(--fg);
+    width: 24px;
+    height: 24px;
+
+    &.icon-tabler {
+      fill: none;
+      stroke: var(--fg);
+    }
+  }
+}
+
+.social-share__item {
+  background: var(--bg1);
+  padding: 0.5rem;
+  display: flex;
+}
+
+/* Sticky social bar left
+
+@media (--xl) {
+  .social-share {
+    align-items: flex-start;
+    border-top: none;
+    flex-direction: column;
+
+    position: fixed;
+    top: 15%;
+    left: 0;
+  }
+
+  .social-share__heading {
+    display: none;
+  }
+
+  .social-share__item {
+    transition: padding 0.2s ease-in;
+
+    &:hover {
+      padding: 0.5rem 1rem;
+    }
+
+    & svg {
+      &:hover {
+        fill: var(--fg);
+      }
+
+      &.icon-tabler {
+        fill: none;
+
+        &:hover {
+          stroke: var(--fg);
+        }
+      }
+    }
+  }
+}
+
+*/
