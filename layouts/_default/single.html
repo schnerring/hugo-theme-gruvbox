@@ -1,6 +1,6 @@
 {{ define "main" }}
   <article class="post">
-    {{ partial "post-header.html" . }}
+    {{ partial "post-header.html" (dict "page" . "pageIndex" 0) }}
     <div class="post-content">
       {{ .Content }}
     </div>

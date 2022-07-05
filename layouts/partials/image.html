@@ -9,7 +9,7 @@
     src="{{ .src }}"
     alt="{{ .alt }}"
     {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
-    loading="lazy"
+    {{ if .lazy }}loading="lazy"{{ end }}
   />
 {{ else if (strings.HasPrefix .src "/") }}
   <!-- Image from static/ -->
@@ -18,7 +18,7 @@
     src="{{ .src }}"
     alt="{{ .alt }}"
     {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
-    loading="lazy"
+    {{ if .lazy }}loading="lazy"{{ end }}
     width="{{ $imageConfig.Width }}"
     height="{{ $imageConfig.Height }}"
   />
@@ -68,7 +68,7 @@
         {{ with $srcSet }}srcset="{{ delimit . "," }}"{{ end }}
         alt="{{ .alt }}"
         {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
-        loading="lazy"
+        {{ if .lazy }}loading="lazy"{{ end }}
         width="{{ $image.Width }}"
         height="{{ $image.Height }}"
       />

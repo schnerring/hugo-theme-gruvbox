@@ -1,6 +1,6 @@
-{{ range .Pages }}
+{{ range $pageIndex, $page := .Pages }}
   <article class="post">
-    {{ partial "post-header.html" . }}
+    {{ partial "post-header.html" (dict "page" . "pageIndex" $pageIndex) }}
     <div class="post-content">
       <span>
         {{ with .Description }}
