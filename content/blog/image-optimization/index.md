@@ -1,5 +1,5 @@
 ---
-title: "Embed Video Files"
+title: "Image Optimization"
 date: "2021-10-16T23:51:37+02:00"
 comments: false
 socialShare: true

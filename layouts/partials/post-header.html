@@ -32,7 +32,7 @@
     {{ end }}
 
     {{ if .Params.cover }}
-      {{ partial "image.html" (dict "src" .Params.cover.src "alt" .Params.cover.alt "caption" .Params.cover.caption "page" . "params" $.Site.Params) }}
+      {{ partial "image.html" (dict "src" .Params.cover.src "alt" .Params.cover.alt "caption" .Params.cover.caption "page" .) }}
     {{ end }}
   </div>
 </div>
