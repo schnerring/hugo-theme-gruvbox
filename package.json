@@ -42,7 +42,7 @@
     }
   },
   "dependencies": {
-    "@tabler/icons": "^1.72.0",
+    "@tabler/icons": "^1.74.0",
     "flexsearch": "^0.7.21",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0",
