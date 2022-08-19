@@ -36,6 +36,9 @@ A big thank you to the authors of the software that make this theme possible! ‚ù
 
 ## Quickstart
 
+The theme requires _extended_ Hugo because it uses Sass/SCSS. You'll also have
+to install Go because the theme uses Go modules.
+
 1. `git clone` the repository and `cd` into it
 2. Run `npm install` to install the dependencies
 3. Run `hugo server`
