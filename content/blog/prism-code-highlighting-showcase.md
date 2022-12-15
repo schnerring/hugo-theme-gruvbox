@@ -4,6 +4,7 @@ date: "2021-07-28T04:25:37+02:00"
 comments: false
 socialShare: true
 toc: true
+draft: true
 ---
 
 This theme uses [Prism](https://prismjs.com/) for code highlighting. Other Hugo

@@ -1,50 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Richard Hendricks",
-    "label": "Programmer",
-    "image": "https://hugo-theme-gruvbox.schnerring.net/richard-hendricks.webp",
-    "email": "richard.hendricks@piedpiper.com",
-    "phone": "(912) 555-4321",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory.",
+    "name": "Jack",
+    "label": "Software Engineer",
+    "image": "https://avatars.githubusercontent.com/u/22063816?s=400&u=ba670d0eac2b5b144ad6744663d635522ae1a2b6&v=4",
+    "email": "zardchang0527@gmail.com",
+    "phone": "",
+    "summary": "Learning Database & Distributed systems. Rust",
     "location": {
-      "city": "San Francisco"
+      "city": ""
     },
     "profiles": [
       {
         "network": "GitHub",
-        "username": "hugo-theme-gruvbox",
-        "url": "https://github.com/schnerring/hugo-theme-gruvbox"
-      },
-      {
-        "network": "GitHub",
-        "username": "hugo-mod-github-readme-stats",
-        "url": "https://github.com/schnerring/hugo-mod-github-readme-stats"
-      },
-      {
-        "network": "GitHub",
-        "username": "hugo-mod-json-resume",
-        "url": "https://github.com/schnerring/hugo-mod-json-resume"
-      },
-      {
-        "network": "Twitter",
-        "url": "https://twitter.com/SiliconHBO"
-      },
-      {
-        "network": "fandom",
-        "url": "https://silicon-valley.fandom.com/wiki/Richard_Hendricks"
-      },
-      {
-        "network": "HBO",
-        "url": "https://www.hbo.com/silicon-valley"
-      },
-      {
-        "network": "IMDB",
-        "url": "https://www.imdb.com/title/tt2575988/"
-      },
-      {
-        "network": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/List_of_Silicon_Valley_characters#Richard_Hendricks"
+        "username": "gruvbox-hotpot",
+        "url": "https://github.com/liuchang0920/gruvbox-hotpot"
       }
     ]
   },
@@ -107,34 +77,66 @@
   ],
   "skills": [
     {
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": ["HTML", "CSS", "Javascript"]
+      "name": "Distributed System",
+      "level": "Learning",
+      "keywords": ["Raft"]
     },
     {
-      "name": "Compression",
-      "level": "Master",
-      "keywords": ["Mpeg", "MP4", "GIF"]
+      "name": "Java",
+      "level": "Experience",
+      "keywords": ["Async programming"]
+    },
+    {
+      "name": "Golang",
+      "level": "Learning & Experience",
+      "keywords": ["Async programming"]
+    },
+    {
+      "name": "Rust",
+      "level": "Learning",
+      "keywords": ["ownership", "lifecycle"]
+    },
+    {
+      "name": "Typescript",
+      "level": "Experience",
+      "keywords": ["Angular", "React"]
+    },
+    {
+      "name": "C#",
+      "level": "playground",
+      "keywords": ["Unity3D"]
+    },
+    {
+      "name": "Database",
+      "level": "Learning",
+      "keywords": ["Internal", "Query planner", "Executor"]
     }
   ],
   "languages": [
     {
       "language": "English",
+      "fluency": "Well.."
+    },
+    {
+      "language": "Chinese",
       "fluency": "Native speaker"
     }
   ],
   "interests": [
     {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
+      "name": "Basketball",
+      "keywords": ["TMac", "DRose"]
+    },
     {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+      "name": "Tech stuff",
+      "keywords": ["Gaming handheld", "Customized keyboard"]
+    },
+    {
+      "name": "Music",
+      "keywords": ["Jazz"]
     }
   ],
+  "references": [],
   "projects": [
     {
       "name": "Miss Direction",

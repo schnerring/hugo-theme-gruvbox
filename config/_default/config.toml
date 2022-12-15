@@ -1,6 +1,6 @@
 baseURL = "http://localhost"
-copyright = "Copyright © 2021"
-title = "hugo-theme-gruvbox"
+copyright = "Copyright © 2022"
+title = "Gruvbox-hotpot"
 #paginate = 10
 enableRobotsTXT = true
 
@@ -23,9 +23,9 @@ enableRobotsTXT = true
   #themeColor = "blue"
   # soft medium hard, defaults to medium
   #themeContrast = "medium"
-  author = "Michael Schnerring"
-  subtitle = "Theme Demo"
-  description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
+  author = "Jack Liu"
+  subtitle = "Gruvbox hotpot"
+  description = "Notes collecting for personal use."
 
   [params.logo]
     text = "gruvbox"

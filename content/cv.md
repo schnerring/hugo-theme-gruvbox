@@ -4,6 +4,9 @@ draft: false
 type: "cv"
 ---
 
+TODO: Add CV here.
+
+<!--
 ## Experience
 
 {{< json-resume "work" >}}
@@ -26,7 +29,7 @@ type: "cv"
 
 ## Publications
 
-{{< json-resume "publications" >}}
+{{< json-resume "publications" >}} -->
 
 ## Skills
 
@@ -40,10 +43,10 @@ type: "cv"
 
 {{< json-resume "interests" >}}
 
-## References
+<!-- ## References
 
-{{< json-resume "references" >}}
-
+{{< json-resume "references" >}} -->
+<!--
 ## Projects
 
-{{< json-resume "projects" >}}
+{{< json-resume "projects" >}} -->
