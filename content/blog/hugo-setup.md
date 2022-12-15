@@ -2,7 +2,7 @@
 title = "Hugo Static page setup"
 date = "2022-12-14T21:18:20-08:00"
 draft = false
-comments = false
+comments = true
 socialShare = true
 tag = [
   "firebase",

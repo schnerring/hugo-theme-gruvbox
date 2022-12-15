@@ -3,6 +3,9 @@ copyright = "Copyright © 2022"
 title = "Gruvbox-hotpot"
 #paginate = 10
 enableRobotsTXT = true
+disqusShortname = 'gruvbox-hotpot'
+
+
 
 [markup]
   [markup.goldmark]
