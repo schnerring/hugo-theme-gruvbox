@@ -7,7 +7,7 @@ enableRobotsTXT = true
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
-      # This settings allows inlining <script> and <style> tags in markdown, 
+      # This setting allows inlining <script> and <style> tags in markdown, 
       # which is useful and required to use Prism plugins, but may be dangerous 
       # if the content isn't trustworthy.
       unsafe = true
@@ -17,7 +17,8 @@ enableRobotsTXT = true
   #quality = 75
 
 [params]
-  # dark or light, defaults to light
+  # dark or light, defaults to light. Local storage and OS preference override this param. For more details see: 
+  # https://github.com/schnerring/hugo-theme-gruvbox/issues/34#issuecomment-1235870375
   #defaultTheme = "light"
   # gray red green yellow blue purple aqua orange, defaults to blue
   #themeColor = "blue"
