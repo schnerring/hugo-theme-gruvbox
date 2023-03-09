@@ -32,24 +32,24 @@
   },
   "dependencies": {
     "@tabler/icons": "^1.74.0",
-    "flexsearch": "^0.7.21",
+    "flexsearch": "^0.7.31",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0",
-    "prismjs": "^1.28.0",
+    "prismjs": "^1.29.0",
     "typeface-fira-code": "^1.1.13",
     "typeface-roboto-slab": "^1.1.13"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.1.3",
-    "cssnano": "^5.1.12",
-    "eslint": "^8.19.0",
-    "eslint-config-prettier": "^8.5.0",
+    "cssnano": "^5.1.15",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.7.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "markdownlint-cli": "^0.33.0",
-    "postcss": "^8.4.14",
-    "postcss-cli": "^10.0.0",
+    "postcss": "^8.4.21",
+    "postcss-cli": "^10.1.0",
     "postcss-custom-media": "^8.0.2",
     "postcss-import": "^14.1.0",
     "postcss-nesting": "^10.1.10",
@@ -58,7 +58,7 @@
     "prettier": "^2.8.4",
     "prettier-plugin-go-template": "^0.0.13",
     "stylelint": "^14.9.1",
-    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-prettier": "^9.0.5",
     "stylelint-prettier": "^2.0.0"
   }
 }
