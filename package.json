@@ -63,7 +63,7 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
     "postcss-custom-media": "^8.0.2",
-    "postcss-import": "^14.1.0",
+    "postcss-import": "^15.1.0",
     "postcss-nesting": "^10.1.10",
     "postcss-preset-env": "^7.7.2",
     "postcss-url": "^10.1.3",
