@@ -2,6 +2,18 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:base"],
   "npm": {
-    "fileMatch": ["(^|/)package\\.hugo\\.json$"]
+    "fileMatch": ["(^|/)package\\.hugo\\.json$"],
+    "ignorePaths": [
+      "(^|/)package\\.json$",
+
+      "**/node_modules/**",
+      "**/bower_components/**",
+      "**/vendor/**",
+      "**/examples/**",
+      "**/__tests__/**",
+      "**/test/**",
+      "**/tests/**",
+      "**/__fixtures__/**"
+    ]
   }
 }
