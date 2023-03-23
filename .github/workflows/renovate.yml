@@ -1,0 +1,23 @@
+on: pull_request
+jobs:
+  upgrade_hugo_dependencies:
+    if: startsWith(github.head_ref, 'renovate/')
+    name: Upgrade Hugo Dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Pull Request HEAD Commit
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.111.2"
+          extended: true
+
+      - name: Upgrade Hugo Modules
+        run: |
+          hugo mod get -u && \
+          hugo mod tidy && \
+          hugo mod npm pack
