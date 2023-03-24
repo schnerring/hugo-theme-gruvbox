@@ -3,6 +3,7 @@
   "extends": ["config:base"],
   "npm": {
     "fileMatch": ["(^|/)package\\.hugo\\.json$"],
+    "bumpVersion": "minor",
     "ignorePaths": [
       "(^|/)package\\.json$",
 
