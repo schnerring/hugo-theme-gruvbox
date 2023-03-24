@@ -28,9 +28,6 @@ jobs:
           hugo-version: "0.111.3"
           extended: true
 
-      - name: Install Hugo Modules
-        run: hugo mod get
-
       - name: Write composite package.json
         run: hugo mod npm pack
 
