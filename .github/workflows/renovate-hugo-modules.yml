@@ -1,8 +1,8 @@
 on: pull_request
 
 jobs:
-  update_hugo_module_dependencies:
-    name: Update Hugo Module Dependencies
+  renovate_hugo_modules:
+    name: Renovate Hugo Modules
     if: startsWith(github.head_ref, 'renovate/hugo-modules')
     runs-on: ubuntu-latest
     steps:
@@ -29,4 +29,4 @@ jobs:
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update Hugo Module Dependencies
+          commit_message: Renovate Hugo Modules
