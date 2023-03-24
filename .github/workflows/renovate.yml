@@ -1,0 +1,46 @@
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - closed
+
+jobs:
+  update_package_json:
+    name: Update package.json
+    if: startsWith(github.head_ref, 'renovate/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Pull Request HEAD Commit
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.111.3"
+          extended: true
+
+      - name: Install Hugo Modules
+        run: hugo mod get
+
+      - name: Write composite package.json
+        run: hugo mod npm pack
+
+      - name: Install npm Packages
+        run: npm install
+
+      - name: Display Changes
+        if: github.event.pull_request.merged == false
+        run: git status
+
+      - name: Commit Changes
+        if: github.event.pull_request.merged == true
+        uses: stefanzweifel/git-auto-commit-action@v4
