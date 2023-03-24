@@ -47,7 +47,7 @@ jobs:
       deployments: write
     steps:
       - name: Checkout repository and update Hugo themes
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
