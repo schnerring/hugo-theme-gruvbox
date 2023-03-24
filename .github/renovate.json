@@ -18,5 +18,12 @@
       "**/tests/**",
       "**/__fixtures__/**"
     ]
-  }
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["gomod"],
+      "matchDepTypes": ["indirect"],
+      "enabled": true
+    }
+  ]
 }
