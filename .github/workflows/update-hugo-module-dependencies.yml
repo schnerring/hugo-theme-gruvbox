@@ -1,0 +1,32 @@
+on: pull_request
+
+jobs:
+  update_hugo_module_dependencies:
+    name: Update Hugo Module Dependencies
+    if: startsWith(github.head_ref, 'renovate/hugo-modules')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Pull Request HEAD Commit
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.111.3"
+          extended: true
+
+      - name: Update All Hugo Modules
+        run: hugo mod get -u
+
+      - name: Tidy Hugo Modules
+        run: hugo mod tidy
+
+      - name: Display Changes
+        run: git status
+
+      - name: Commit Changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Hugo Module Dependencies
