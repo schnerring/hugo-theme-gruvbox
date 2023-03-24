@@ -5,8 +5,9 @@
     "fileMatch": ["(^|/)package\\.hugo\\.json$"],
     "bumpVersion": "minor",
     "rangeStrategy": "bump",
+    "updateLockFiles": false,
     "ignorePaths": [
-      "(^|/)package\\.json$",
+      "package.json",
 
       "**/node_modules/**",
       "**/bower_components/**",
