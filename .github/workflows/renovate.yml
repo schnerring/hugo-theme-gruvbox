@@ -38,7 +38,6 @@ jobs:
         run: npm install
 
       - name: Display Changes
-        if: github.event.pull_request.merged == false
         run: git status
 
       - name: Commit Changes
