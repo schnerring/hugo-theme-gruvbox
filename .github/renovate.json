@@ -4,6 +4,7 @@
   "npm": {
     "fileMatch": ["(^|/)package\\.hugo\\.json$"],
     "bumpVersion": "minor",
+    "rangeStrategy": "bump",
     "ignorePaths": [
       "(^|/)package\\.json$",
 
