@@ -19,6 +19,10 @@
       "**/__fixtures__/**"
     ]
   },
+  "gomod": {
+    "fileMatch": ["(^|/)go\\.mod$"],
+    "rangeStrategy": "bump"
+  },
   "packageRules": [
     {
       "matchManagers": ["gomod"],
