@@ -4,8 +4,8 @@ on:
       - main
 
 jobs:
-  update_package_json:
-    name: Update package.json and package-lock.json
+  update_hugo_dependencies:
+    name: Update Hugo Dependencies
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -22,6 +22,9 @@ jobs:
           hugo-version: "0.111.3"
           extended: true
 
+      - name: Tidy Hugo Modules
+        run: hugo mod tidy
+
       - name: Write composite package.json
         run: hugo mod npm pack
 
@@ -34,4 +37,4 @@ jobs:
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update package.json and package-lock.json
+          commit_message: Update Hugo Dependencies
