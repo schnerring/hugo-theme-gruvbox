@@ -23,7 +23,8 @@
     {
       "matchManagers": ["gomod"],
       "matchDepTypes": ["indirect"],
-      "enabled": true
+      "enabled": true,
+      "groupName": "Hugo Modules"
     },
     {
       "extends": "packages:linters",
