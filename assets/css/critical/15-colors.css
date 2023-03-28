@@ -6,7 +6,7 @@
   {{ $backgroundColor = "bg0_h" }}
 {{ end }}
 
-:root[theme="light"] {
+:root[data-theme="light"] {
   --bg: var(--{{ $backgroundColor }});
   --bg0: #fbf1c7;
   --bg0_h: #f9f5d7;
@@ -43,7 +43,7 @@
   }
 }
 
-:root[theme="dark"] {
+:root[data-theme="dark"] {
   --bg: var(--{{ $backgroundColor }});
   --bg0: #282828;
   --bg0_h: #1d2021;
