@@ -13,3 +13,16 @@
 @import "normalize.css/normalize.css";
 
 /*! purgecss end ignore */
+
+/*! Source: https://stackoverflow.com/a/36118384/1154965 */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Default license header for non-vendor CSS source code that follows */
+/*! MIT License | github.com/schnerring/hugo-theme-gruvbox */

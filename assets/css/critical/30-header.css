@@ -283,13 +283,3 @@ nav#menu {
     }
   }
 }
-
-/*! Source: https://stackoverflow.com/a/36118384/1154965 */
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
