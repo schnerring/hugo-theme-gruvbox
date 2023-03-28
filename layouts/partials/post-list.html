@@ -2,18 +2,16 @@
   <article class="post">
     {{ partial "post-header.html" (dict "page" . "pageIndex" $pageIndex) }}
     <div class="post-content">
-      <span>
-        {{ with .Description }}
-          {{ . }}
-        {{ else }}
-          {{ .Summary }}
-          {{ if .Truncated }}
-            <div class="post-content__read-more">
-              <a href="{{ .RelPermalink }}">Read more &gt;</a>
-            </div>
-          {{ end }}
+      {{ with .Description }}
+        {{ . }}
+      {{ else }}
+        {{ .Summary }}
+        {{ if .Truncated }}
+          <div class="post-content__read-more">
+            <a href="{{ .RelPermalink }}">Read more &gt;</a>
+          </div>
         {{ end }}
-      </span>
+      {{ end }}
     </div>
   </article>
 {{ end }}
