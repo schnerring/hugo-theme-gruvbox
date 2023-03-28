@@ -19,7 +19,7 @@
     {{ end }}
     {{ with .page.Params.tags }}
       <div class="post-tags">
-        {{ range . }}
+        {{ range . -}}
           <a
             class="post-tag"
             href="{{ urlize (printf "tags/%s" . ) | absURL }}"
@@ -27,7 +27,7 @@
             {{- /* Replace hyphen with non-breaking hyphen */ -}}
             {{- replace (urlize .) "-" "&#8209;" | safeHTML -}}
           </a>
-        {{ end }}
+        {{- end }}
       </div>
     {{ end }}
 
