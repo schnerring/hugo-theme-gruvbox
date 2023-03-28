@@ -43,9 +43,9 @@
     {{ with .Get "width" | default "100%" }}width="{{ . }}"{{ end }}
     {{ if eq (.Get "playsinline" | default "true") "true" }}playsinline{{ end }}
   >
-    {{ range $videos }}
+    {{- range $videos -}}
       <source src="{{ .RelPermalink }}" type="{{ .MediaType }}" />
-    {{ end }}
+    {{- end -}}
   </video>
 {{ end }}
 
