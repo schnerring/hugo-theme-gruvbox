@@ -4,19 +4,17 @@
   </h1>
 
   <div class="post-meta">
-    {{ with .page.Date }}
+    {{- with .page.Date -}}
       <span>{{ .Format "2006-01-02" }}</span>
-    {{ end }}
-    {{ with .page.Params.Author }}
-      <span>by</span>
-      <span class="post-meta__author">{{ . }}</span>
-    {{ end }}
-    <!-- Only display edit date if (.Lastmod - .Date) greater or equal to $diffDays -->
-    {{ $diffDays := 1 }}
-    {{ if and .page.Date .page.Lastmod (ge (sub .page.Lastmod.YearDay .page.Date.YearDay) $diffDays) }}
-      <span>|</span>
-      <span>edit: {{ .page.Lastmod.Format "2006-01-02" }}</span>
-    {{ end }}
+    {{- end -}}
+    {{- with .page.Params.Author -}}
+      <span> by </span><span class="post-meta__author">{{ . }}</span>
+    {{- end -}}
+    <!-- Don't show modified date when changed within the first 72 hours  -->
+    {{- $hours := (.page.Lastmod.Sub .page.Date).Hours -}}
+    {{- if and .page.Date .page.Lastmod (ge $hours 72) -}}
+      <span> (updated: {{ .page.Lastmod.Format "2006-01-02" }})</span>
+    {{- end -}}
     {{ with .page.Params.tags }}
       <div class="post-tags">
         {{ range . -}}
