@@ -49,7 +49,7 @@ jobs:
       contents: read
       deployments: write
     steps:
-      - name: Checkout repository and update Hugo themes
+      - name: Checkout Repository
         uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
