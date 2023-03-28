@@ -11,18 +11,14 @@
   {{ end }}
 {{ end }}
 
-
-<title>
-  {{- if not .IsHome -}}
-    {{- with .Title }}{{ . }}{{ end -}}
-  {{- else -}}
-    {{- .Site.Title -}}
-    {{- with .Site.Params.Subtitle }}
-      —
-      {{ . -}}
-    {{- end -}}
-  {{- end -}}
-</title>
+{{ $title := .Title }}
+{{ if .IsHome }}
+  {{ $title = .Site.Title }}
+  {{ with .Site.Params.Subtitle }}
+    {{ $title = printf "%s — %s" $title . }}
+  {{ end }}
+{{ end }}
+<title>{{ $title }}</title>
 
 <meta
   name="description"
