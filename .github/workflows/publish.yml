@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+    outputs:
+      commit_hash: ${{ steps.commit_changes.outputs.commit_hash }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -34,6 +36,7 @@ jobs:
         run: git status
 
       - name: Commit Changes
+        id: commit_changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Hugo npm Dependencies
@@ -50,6 +53,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+          ref: ${{needs.update_hugo_npm_dependencies.outputs.commit_hash}}
 
       - name: Install Node
         uses: actions/setup-node@v3
