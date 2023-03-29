@@ -20,17 +20,10 @@
   {{ $flexsearch = $flexsearch | fingerprint "sha512" }}
 {{ end }}
 
-<script
-  type="text/javascript"
-  src="{{ $bundle.RelPermalink }}"
-  {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}>
-</script>
-
-<script
-  type="text/javascript"
-  src="{{ $flexsearch.RelPermalink }}"
-  {{ if hugo.IsProduction }}integrity="{{ $flexsearch.Data.Integrity }}"{{ end }}>
-</script>
+{{/* prettier-ignore-start */}}
+<script src="{{ $bundle.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }}></script>
+<script src="{{ $flexsearch.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $flexsearch.Data.Integrity }}"{{ end }}></script>
+{{/* prettier-ignore-end */}}
 
 <!-- Extensibility -->
 {{ partial "footer_end.html" . }}
