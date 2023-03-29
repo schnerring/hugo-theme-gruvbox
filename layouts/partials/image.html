@@ -61,7 +61,7 @@
 
     <picture>
       {{ with $webpSrcSet }}
-        <source srcset="{{ delimit . "," }}" />
+        <source type="image/webp" srcset="{{ delimit . "," }}" />
       {{ end }}
       <img
         src="{{ $image.RelPermalink }}"
