@@ -40,7 +40,7 @@
     {{ if eq (.Get "muted") "true" }}muted{{ end }}
     {{ with $poster }}poster="{{ .RelPermalink }}"{{ end }}
     {{ with .Get "preload" }}preload="{{ . }}"{{ end }}
-    {{ with .Get "width" | default "100%" }}width="{{ . }}"{{ end }}
+    {{ with .Get "width" }}width="{{ . }}"{{ end }}
     {{ if eq (.Get "playsinline" | default "true") "true" }}playsinline{{ end }}
   >
     {{- range $videos -}}
