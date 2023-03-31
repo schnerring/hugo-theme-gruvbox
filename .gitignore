@@ -1,6 +1,3 @@
-hugo_stats.json
-.hugo_build.lock
-
 # Created by https://www.toptal.com/developers/gitignore/api/hugo,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=hugo,node
 
@@ -8,11 +5,16 @@ hugo_stats.json
 # Generated files by hugo
 /public/
 /resources/_gen/
+/assets/jsconfig.json
+hugo_stats.json
 
 # Executable may be added to repository
 hugo.exe
 hugo.darwin
 hugo.linux
+
+# Temporary lock file while building
+/.hugo_build.lock
 
 ### Node ###
 # Logs
@@ -71,6 +73,9 @@ web_modules/
 # Optional eslint cache
 .eslintcache
 
+# Optional stylelint cache
+.stylelintcache
+
 # Microbundle cache
 .rpt2_cache/
 .rts2_cache_cjs/
@@ -86,10 +91,12 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
+# dotenv environment variable files
 .env
-.env.test
-.env.production
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache
@@ -112,6 +119,12 @@ dist
 # vuepress build output
 .vuepress/dist
 
+# vuepress v2.x temp and cache directory
+.temp
+
+# Docusaurus cache and generated files
+.docusaurus
+
 # Serverless directories
 .serverless/
 
@@ -133,5 +146,14 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+### Node Patch ###
+# Serverless Webpack directories
+.webpack/
+
+# Optional stylelint cache
+
+# SvelteKit build / generate output
+.svelte-kit
 
 # End of https://www.toptal.com/developers/gitignore/api/hugo,node
