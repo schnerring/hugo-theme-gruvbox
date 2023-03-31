@@ -1,3 +1,5 @@
+name: Renovate Hugo Modules
+
 on: pull_request
 
 jobs:
