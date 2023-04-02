@@ -1,7 +1,9 @@
 {{ define "main" }}
-  <h1>{{ .Title | markdownify }}</h1>
-  {{ with .Content }}
-    <div class="list-content">{{ . }}</div>
-  {{ end }}
+  <div class="content-section">
+    <h1>{{ .Title | markdownify }}</h1>
+    {{ with .Content }}
+      <div>{{ . }}</div>
+    {{ end }}
+  </div>
   {{ partial "post-list.html" .Paginator }}
 {{ end }}

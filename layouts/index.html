@@ -1,8 +1,10 @@
 {{ define "main" }}
-  <h1>{{ .Title | markdownify }}</h1>
-  {{ with .Content }}
-    <div class="homepage-content">{{ . }}</div>
-  {{ end }}
+  <div class="content-section">
+    <h1>{{ .Title | markdownify }}</h1>
+    {{ with .Content }}
+      <div>{{ . }}</div>
+    {{ end }}
+  </div>
   <!-- See https://gohugo.io/functions/where/#mainsections -->
   {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
   {{ $paginator := .Paginate $pages }}
