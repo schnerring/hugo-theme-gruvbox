@@ -1,0 +1,32 @@
+<div class="post-meta">
+  {{- with .page.Date -}}
+    <span>{{ .Format "2006-01-02" }}</span>
+  {{- end -}}
+  {{- with .page.Params.Author -}}
+    <span> by </span><span class="post-meta__author">{{ . }}</span>
+  {{- end -}}
+  <!-- Don't show modified date when changed within the first 72 hours  -->
+  {{- $hours := (.page.Lastmod.Sub .page.Date).Hours -}}
+  {{- if and .page.Date .page.Lastmod (ge $hours 72) -}}
+    <span> (updated: {{ .page.Lastmod.Format "2006-01-02" }})</span>
+  {{- end -}}
+  {{ with .page.Params.tags }}
+    <div class="post-tags">
+      {{ range . -}}
+        <a class="post-tag" href="{{ urlize (printf "tags/%s" . ) | absURL }}">
+          {{- /* Replace hyphen with non-breaking hyphen */ -}}
+          {{- replace (urlize .) "-" "&#8209;" | safeHTML -}}
+        </a>
+      {{- end }}
+    </div>
+  {{ end }}
+
+  {{ if .page.Params.cover }}
+    <!-- 
+        Only lazy-load images below-the-fold. For post lists, start loading 
+        covers from the third post and onwards.
+      -->
+    {{ $lazy := ge .pageIndex 2 }}
+    {{ partial "image.html" (dict "src" .page.Params.cover.src "alt" .page.Params.cover.alt "caption" .page.Params.cover.caption "page" .page "lazy" $lazy) }}
+  {{ end }}
+</div>

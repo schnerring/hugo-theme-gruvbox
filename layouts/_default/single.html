@@ -1,6 +1,10 @@
 {{ define "main" }}
   <article class="post">
-    {{ partial "post-header.html" (dict "page" . "pageIndex" 0) }}
+    <div class="post-header">
+      <h1>{{ .Title | markdownify }}</h1>
+      {{ partial "post-meta.html" (dict "page" . "pageIndex" 0) }}
+    </div>
+
     <div class="post-content">
       {{ .Content }}
     </div>
