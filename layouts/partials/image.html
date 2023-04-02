@@ -38,21 +38,29 @@
     <!-- Calculate resize widths in increments of 100px -->
     {{ $minWidth := .page.Site.Params.imageResize.min | default 300 }}
     {{ $maxWidth := .page.Site.Params.imageResize.max | default 700 }}
-    {{ $increment := .page.Site.Params.imageResize.increment | default 100 }}
+    {{ $increment := .page.Site.Params.imageResize.increment | default 200 }}
     {{ $widths := seq $minWidth $increment $maxWidth }}
     {{ if lt $image.Width $maxWidth }}
       {{ $widths = $widths | append $image.Width }}
     {{ end }}
+    {{ $widthsCount := len $widths }}
 
+    {{ $sizes := slice }}
     {{ $srcSet := slice }}
     {{ $webpSrcSet := slice }}
-    {{ range $widths }}
-      {{ if ge $image.Width . }}
-        {{ $resized := $image.Resize (printf "%dx" .) }}
+    {{ range $i, $width := $widths }}
+      {{ if ge $image.Width $width }}
+        {{ if eq $i (sub $widthsCount 1) }}
+          {{ $sizes = $sizes | append (printf "%dpx" $width) }}
+        {{ else }}
+          {{ $maxWidth := (add $width (sub $increment 1)) }}
+          {{ $sizes = $sizes | append (printf "(max-width: %dpx) %dpx" $maxWidth $width) }}
+        {{ end }}
+        {{ $resized := $image.Resize (printf "%dx" $width) }}
         {{ $srcSet = $srcSet | append (printf "%s %dw" $resized.RelPermalink $resized.Width) }}
         {{ if not (eq "webp" $image.MediaType.SubType) }}
           <!-- If image format is not WebP, add conversions -->
-          {{ $webp := $image.Resize (printf "%dx webp" .) }}
+          {{ $webp := $image.Resize (printf "%dx webp" $width) }}
           {{ $webpSrcSet = $webpSrcSet | append (printf "%s %dw" $webp.RelPermalink $webp.Width) }}
         {{ end }}
       {{ end }}
@@ -60,12 +68,15 @@
 
 
     <picture>
-      {{ with $webpSrcSet }}
-        <source type="image/webp" srcset="{{ delimit . "," }}" />
-      {{ end }}
+      <source
+        type="image/webp"
+        {{ with $webpSrcSet }}srcset="{{ delimit . "," }}"{{ end }}
+        {{ with $sizes }}sizes="{{ delimit . "," }}"{{ end }}
+      />
       <img
         src="{{ $image.RelPermalink }}"
         {{ with $srcSet }}srcset="{{ delimit . "," }}"{{ end }}
+        {{ with $sizes }}sizes="{{ delimit . "," }}"{{ end }}
         alt="{{ .alt }}"
         {{ with .caption }}title="{{ . | markdownify | plainify }}"{{ end }}
         {{ if .lazy }}loading="lazy"{{ end }}
