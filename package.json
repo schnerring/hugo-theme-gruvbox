@@ -41,7 +41,7 @@
     }
   },
   "dependencies": {
-    "@tabler/icons": "^2.15.0",
+    "@tabler/icons": "^2.16.0",
     "flexsearch": "^0.7.31",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0",
