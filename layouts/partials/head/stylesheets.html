@@ -24,12 +24,15 @@
   href="{{ $nonCritical.RelPermalink }}"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  {{ if hugo.IsProduction }}integrity="{{ $nonCritical.Data.Integrity }}"{{ end }}
+  {{ if hugo.IsProduction }}
+    integrity="{{ $nonCritical.Data.Integrity }}"
+  {{ end }}
 />
 
+<!-- TODO Use prefetch when more widely supported -->
 <link
   id="prism-dark"
-  rel="prefetch"
+  rel="preload"
   href="{{ $prismDark.RelPermalink }}"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
@@ -37,13 +40,16 @@
   {{ if eq $defaultTheme "light" }}disabled{{ end }}
 />
 
+<!-- TODO Use prefetch when more widely supported -->
 <link
   id="prism-light"
-  rel="prefetch"
+  rel="preload"
   href="{{ $prismLight.RelPermalink }}"
   as="style"
   onload="this.onload=null;this.rel='stylesheet'"
-  {{ if hugo.IsProduction }}integrity="{{ $prismLight.Data.Integrity }}"{{ end }}
+  {{ if hugo.IsProduction }}
+    integrity="{{ $prismLight.Data.Integrity }}"
+  {{ end }}
   {{ if eq $defaultTheme "dark" }}disabled{{ end }}
 />
 
@@ -52,19 +58,26 @@
     <link
       rel="stylesheet"
       href="{{ $prismLight.RelPermalink }}"
-      {{ if hugo.IsProduction }}integrity="{{ $prismLight.Data.Integrity }}"{{ end }}
+      {{ if hugo.IsProduction }}
+        integrity="{{ $prismLight.Data.Integrity }}"
+      {{ end }}
     />
   {{ else }}
     <link
       rel="stylesheet"
       href="{{ $prismDark.RelPermalink }}"
-      {{ if hugo.IsProduction }}integrity="{{ $prismDark.Data.Integrity }}"{{ end }}
+      {{ if hugo.IsProduction }}
+        integrity="{{ $prismDark.Data.Integrity }}"
+      {{ end }}
     />
   {{ end }}
+
 
   <link
     rel="stylesheet"
     href="{{ $nonCritical.RelPermalink }}"
-    {{ if hugo.IsProduction }}integrity="{{ $nonCritical.Data.Integrity }}"{{ end }}
+    {{ if hugo.IsProduction }}
+      integrity="{{ $nonCritical.Data.Integrity }}"
+    {{ end }}
   />
 </noscript>
