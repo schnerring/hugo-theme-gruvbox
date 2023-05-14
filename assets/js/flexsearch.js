@@ -87,6 +87,9 @@ document.addEventListener("keydown", (e) => {
         .add(
       {{ end }}
     {{ end }}
+    {{ if eq 0 $len }}
+      )
+    {{ end }}
   ;
 
   search.addEventListener("input", function () {
