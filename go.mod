@@ -3,6 +3,6 @@ module github.com/schnerring/hugo-theme-gruvbox
 go 1.20
 
 require (
-	github.com/schnerring/hugo-mod-github-readme-stats v0.0.0-20230502154340-f58c3c7c1e58 // indirect
-	github.com/schnerring/hugo-mod-json-resume v0.0.0-20230528022237-b18671441bcd // indirect
+	github.com/schnerring/hugo-mod-github-readme-stats v0.0.0-20230606005730-aa81cfa01027 // indirect
+	github.com/schnerring/hugo-mod-json-resume v0.0.0-20230606005848-896cf7b4b5ca // indirect
 )
