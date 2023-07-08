@@ -1,6 +1,6 @@
 baseURL = "http://localhost"
-copyright = "Copyright © 2021"
-title = "hugo-theme-gruvbox"
+copyright = "Copyright © 2023"
+title = "Qifan Zhang"
 #paginate = 10
 enableRobotsTXT = true
 # Enable to calculate the last modified date from Git history and show it in the post header
@@ -26,12 +26,12 @@ enableRobotsTXT = true
   #themeColor = "blue"
   # soft medium hard, defaults to medium
   #themeContrast = "medium"
-  author = "Michael Schnerring"
-  subtitle = "Theme Demo"
+  author = "Qifan Zhang"
+  subtitle = "Qifan Zhang's personal website"
   description = "A retro-looking Hugo theme inspired by gruvbox. The pastel colors are high contrast, easily distinguishable, pleasing to the eye, and feature light and dark color palettes."
 
   [params.logo]
-    text = "gruvbox"
+    text = "Qifan"
     url = "/"
 
   [params.prism]
@@ -122,20 +122,10 @@ enableRobotsTXT = true
     url = "/blog"
     weight = 10
   [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects"
-    weight = 20
-  [[menu.main]]
     identifier = "cv"
     name = "CV"
     url = "/cv"
-    weight = 30
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 40
+    weight = 20
 
 [languages]
   [languages.en]

@@ -12,21 +12,21 @@ type: "cv"
 
 {{< json-resume "education" >}}
 
-## Volunteering
+<!-- ## Volunteering
 
-{{< json-resume "volunteer" >}}
+{{< json-resume "volunteer" >}} -->
 
-## Awards
+## Awards & Scholarships
 
 {{< json-resume "awards" >}}
 
-## Certificates
+<!-- ## Certificates
 
-{{< json-resume "certificates" >}}
+{{< json-resume "certificates" >}} -->
 
-## Publications
+<!-- ## Publications
 
-{{< json-resume "publications" >}}
+{{< json-resume "publications" >}} -->
 
 ## Skills
 
@@ -40,9 +40,9 @@ type: "cv"
 
 {{< json-resume "interests" >}}
 
-## References
+<!-- ## References
 
-{{< json-resume "references" >}}
+{{< json-resume "references" >}} -->
 
 ## Projects
 

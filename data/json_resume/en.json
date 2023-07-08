@@ -1,160 +1,208 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
-    "name": "Richard Hendricks",
-    "label": "Programmer",
-    "image": "https://hugo-theme-gruvbox.schnerring.net/richard-hendricks.webp",
-    "email": "richard.hendricks@piedpiper.com",
-    "phone": "(912) 555-4321",
-    "summary": "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory.",
+    "name": "Qifan Zhang",
+    "label": "Incoming MS in Stat & DS @ Yale <- BS in Stat @ Nanjing University  ",
+    "image": "http://localhost:1313/qifan-zhang.png",
+    "email": "qifansz1008@gmail.com",
+    "summary": "Qifan earned Bachelor degree from Nanjing University this summer and he will continue his study at Yale University. While his major is statistics and data science, he also has great interest in financial mathematics. This personal website depends on the hugo theme gruvbox. A big thanks to the creators!",
     "location": {
-      "city": "San Francisco"
+      "city": "New Haven, CT"
     },
     "profiles": [
       {
-        "network": "GitHub",
-        "username": "hugo-theme-gruvbox",
-        "url": "https://github.com/schnerring/hugo-theme-gruvbox"
-      },
-      {
-        "network": "GitHub",
-        "username": "hugo-mod-github-readme-stats",
-        "url": "https://github.com/schnerring/hugo-mod-github-readme-stats"
-      },
-      {
-        "network": "GitHub",
-        "username": "hugo-mod-json-resume",
-        "url": "https://github.com/schnerring/hugo-mod-json-resume"
-      },
-      {
-        "network": "Twitter",
-        "url": "https://twitter.com/SiliconHBO"
-      },
-      {
-        "network": "fandom",
-        "url": "https://silicon-valley.fandom.com/wiki/Richard_Hendricks"
-      },
-      {
-        "network": "HBO",
-        "url": "https://www.hbo.com/silicon-valley"
-      },
-      {
-        "network": "IMDB",
-        "url": "https://www.imdb.com/title/tt2575988/"
-      },
-      {
-        "network": "Wikipedia",
-        "url": "https://en.wikipedia.org/wiki/List_of_Silicon_Valley_characters#Richard_Hendricks"
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/qifan-zhang-07ba091a9/"
       }
     ]
   },
   "work": [
     {
-      "name": "Pied Piper",
-      "location": "Palo Alto, CA",
-      "description": "Awesome compression company",
-      "position": "CEO/President",
-      "url": "http://piedpiper.com",
-      "startDate": "2013-12-01",
-      "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
+      "name": "Lingjun Investment, LLP",
+      "location": "Shanghai, China",
+      "description": "A Quantitative PE firm in China",
+      "position": "Quantitative Researcher Intern",
+      "url": "https://www.lingjuninvest.com/",
+      "startDate": "2023-02-28",
+      "endDate": "2023-05-26",
+      "summary": "My main responsibility was to extract signals or features from high-frequency stock data e.g. limit order book data and tick data and implement them in both Python and C++ (time complexity of the C++ implementations is of great importance). Our team used these features to train machine learning models (ensembles of LGBM/DL/RL) and generate high-frequency trading signals (from 100ms to 3s).",
       "highlights": [
-        "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
-        "Successfully won Techcrunch Disrupt",
-        "Optimized an algorithm that holds the current world record for Weisman Scores"
+        "Implemented ~50 high-frequency features in both Python and C++ and improved over 0.05 IC (a popular metrics in factor models) of the final model.",
+        "Developed time-series and cross-sectional operator classes in C++ on the company's new high-frequency trading platfrom to support our models' deployment."
       ]
-    }
-  ],
-  "volunteer": [
+    },
     {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "url": "http://coderdojo.example.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
-      "highlights": ["Awarded 'Teacher of the Month'"]
+      "name": "Singapore Management University",
+      "location": "Singapore (Remote)",
+      "description": "",
+      "position": "Research Assistant",
+      "url": "https://www.smu.edu.sg/",
+      "startDate": "2021-11-01",
+      "endDate": "2023-06-15",
+      "summary": "I worked with Prof. Changcheng Song (https://sites.google.com/site/songchch02/) on house price prediction in Singapore using machine learning-based AVM model.",
+      "highlights": [
+        "Our models can achieved <2.5% MAPE on test set (2023 Jan and Feb house transactions in Singapore)."
+      ]
+    },
+    {
+      "name": "Huawei",
+      "location": "Shenzhen, China",
+      "description": "",
+      "position": "Product Data Engineer Summer Intern",
+      "url": "https://www.huawei.com/",
+      "startDate": "2022-06-22",
+      "endDate": "2022-08-26",
+      "summary": "I worked in the data team of Customer Business Group and my main responsibility was to design and develop persona tags to support the company's advertisement business.",
+      "highlights": [
+        "Contributed 20+ accurate features to feature stores in the company's MLOps platform.",
+        "Designed and developed 5 persona tags related to interest in the Huawei Card and other financial products, improving the click rate for Huawei Card advertisements about 5 times."
+      ]
+    },
+    {
+      "name": "Xishi Technologies",
+      "location": "Shenzhen, China (Remote)",
+      "description": "A Quantitative PE Startup in China",
+      "position": "Quantitative Researcher Intern",
+      "url": "",
+      "startDate": "2022-08-23",
+      "endDate": "2022-10-30",
+      "summary": "To be added.",
+      "highlights": [
+        "To be added."
+      ]
     }
   ],
   "education": [
     {
-      "institution": "University of Oklahoma",
-      "url": "https://www.ou.edu/",
-      "area": "Information Technology",
+      "institution": "Department of Statistics and Data Science, Yale University",
+      "url": "https://statistics.yale.edu/",
+      "area": "Statistics and Data Science",
+      "studyType": "Master",
+      "startDate": "2023-08-15",
+      "endDate": "",
+      "score": "",
+      "courses": []
+    },
+    {
+      "institution": "Department of Mathematics, Nanjing University",
+      "url": "https://math.nju.edu.cn/",
+      "area": "Statistics",
       "studyType": "Bachelor",
-      "startDate": "2011-06-01",
-      "endDate": "2014-01-01",
-      "score": "4.0",
-      "courses": ["DB1101 - Basic SQL", "CS2011 - Java Introduction"]
+      "startDate": "2019-09-01",
+      "endDate": "2023-06-25",
+      "score": "GPA: 93.4/100",
+      "courses": ["Mathematical Analysis/Higher Algebra/Abstract Algebra/ODE/Complex Analysis/Functional Analysis/PDE", "Probability Theory/Mathematical Statistics/Time Series/Machine Learning/Stochastic Processes/Advanced Mathematical Statistics/Advanced Probability Theory", "C++/Databases/Numerical Methods/Data Mining"]
+    },
+    {
+      "institution": "Department of Statistics and Data Science, National University of Singapore",
+      "url": "https://www.stat.nus.edu.sg/",
+      "area": "Statistics",
+      "studyType": "Student Exchange Program",
+      "startDate": "2021-08-01",
+      "endDate": "2021-12-19",
+      "score": "",
+      "courses": ["CS2040C - Data Structures and Algorithms ", "ST3131 - Regression Analysis", "MA3269 - Mathematical Finance", "MA4262 - Measure and Integration"]
     }
   ],
   "awards": [
     {
-      "title": "Digital Compression Pioneer Award",
-      "date": "2014-11-01",
-      "awarder": "Techcrunch",
-      "summary": "There is no spoon."
-    }
-  ],
-  "publications": [
+      "title": "Suzhou Scholarship",
+      "date": "2023-04-09",
+      "awarder": "Nanjing University",
+      "summary": ""
+    },
     {
-      "name": "Video compression for 3d media",
-      "publisher": "Hooli",
-      "releaseDate": "2014-10-01",
-      "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
-      "summary": "Innovative middle-out compression algorithm that changes the way we store data."
+      "title": "Meritorious Winner in MCM",
+      "date": "2022-04-20",
+      "awarder": "COMAP",
+      "summary": ""
+    },
+    {
+      "title": "Cheung Kong Graduate School of Business Scholarship",
+      "date": "2021-12-01",
+      "awarder": "Nanjing University",
+      "summary": ""
+    },
+    {
+      "title": "China National Scholarship",
+      "date": "2020-12-01",
+      "awarder": "Ministry of Education, China",
+      "summary": ""
     }
   ],
   "skills": [
     {
-      "name": "Web Development",
+      "name": "Machine Learning Algorithms",
       "level": "Master",
-      "keywords": ["HTML", "CSS", "Javascript"]
+      "keywords": ["Transformer", "RNN/LSTM/GRU", "CNN", "XGBoost/LGBM/CatBoost/Random Forests", "SVM", "LR"]
     },
     {
-      "name": "Compression",
+      "name": "Machine Learning Implementations",
       "level": "Master",
-      "keywords": ["Mpeg", "MP4", "GIF"]
+      "keywords": ["PyTorch", "sklearn", "xgboost/lightgbm/catboost", "optuna"]
+    },
+    {
+      "name": "Data Processing",
+      "level": "Master",
+      "keywords": ["SQL", "pandas/numpy", "seaborn/matplotlib"]
+    },
+    {
+      "name": "Mathematical/Statistical Modelling",
+      "level": "Master",
+      "keywords": ["SDE/PDE", "Markov Processes", "Gurobi/MindOpt"]
     }
   ],
   "languages": [
     {
-      "language": "English",
+      "language": "Chinese (Mandarin)",
       "fluency": "Native speaker"
+    },
+    {
+      "language": "Chinese (Hakka)",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "Chinese (Cantonese)",
+      "fluency": "Fluent"
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent"
     }
   ],
   "interests": [
     {
-      "name": "Wildlife",
-      "keywords": ["Ferrets", "Unicorns"]
-    }
-  ],
-  "references": [
+      "name": "Football",
+      "keywords": ["LW", "Neymar JR", "PSG"]
+    },
     {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+      "name": "Swimming",
+      "keywords": ["freestyle"]
+    },
+    {
+      "name": "Exploring",
+      "keywords": ["Hugo"]
     }
   ],
   "projects": [
     {
-      "name": "Miss Direction",
-      "description": "A mapping engine that misguides you",
+      "name": "Cost-sensitive Set-valued Classifiers with Size Control",
+      "description": "Bacher's Thesis",
       "highlights": [
-        "Won award at AIHacks 2016",
-        "Built by all women team of newbie programmers",
-        "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
+        "Proposed an optimal cost-sensitive set-valued classifiers model under size control and analyzed its large-sample properties.",
+        "Only Chinese version is available for now. (not published)"
       ],
-      "keywords": ["GoogleMaps", "Chrome Extension", "Javascript"],
-      "startDate": "2016-08-24",
-      "endDate": "2016-08-24",
-      "roles": ["Team lead", "Designer"],
-      "entity": "Smoogle",
-      "type": "application"
+      "keywords": ["Set-valued Classifiers", "Angle-based Learning", "Consistecy"],
+      "startDate": "2022-12-01",
+      "endDate": "2023-06-16",
+      "roles": ["Author" ],
+      "entity": "",
+      "type": ""
     }
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
     "version": "v1.0.0",
-    "lastModified": "2017-12-24T15:53:00"
+    "lastModified": "2023-06-18T15:53:00"
   }
 }
