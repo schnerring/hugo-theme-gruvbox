@@ -16,5 +16,9 @@
     {{ if .Params.Comments }}
       {{ partial "comments.html" . }}
     {{ end }}
+
+    {{ if .Params.math }}
+      {{ partial "math.html" . }}
+    {{ end }}
   </article>
 {{ end }}

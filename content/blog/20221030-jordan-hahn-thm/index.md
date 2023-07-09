@@ -1,7 +1,7 @@
 ---
 author: Qifan
 title: An intuitive understanding of the proof for Jordan-Hahn decomposition
-date: 2022-10-30
+date: "2022-10-30"
 comments: true
 socialShare: true
 description: In this article, I will introduce the proof for Jordan-Hahn decomposition from an intuitive perspective.

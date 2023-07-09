@@ -1,7 +1,7 @@
 ---
 author: Qifan
 title: Think Again - Odd Coin (Defective Ball) Problem
-date: 2023-06-26
+date: "2023-06-26"
 description: "Given a set of 12 balls , one of which is defective (it weighs either less or more) . You are allow to weigh 3 times to find the defective and also tell which weighs less or more."   
 math: true
 tags: 

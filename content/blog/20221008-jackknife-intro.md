@@ -1,7 +1,7 @@
 ---
 author: Qifan
 title: Why does Jackknife method works?
-date: 2022-10-08
+date: "2022-10-08"
 description: In this article, I will introduce why jackknife can be used to do debiasing and variance estimation and why it works well. Specifically, I will focus on its statistical properties e.g. consistency and biasedness.   
 math: true
 tags: 
