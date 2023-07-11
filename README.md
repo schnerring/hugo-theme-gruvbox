@@ -21,10 +21,9 @@ to see what's still missing.
 
 ## Highlights
 
-- [Code highlighting with Prism](#Prism)
+- [Code highlighting with Prism](#prism)
 - Full-text search with [Flex Search](https://github.com/nextapps-de/flexsearch)
 - Display your CV using structured [JSON Resume](https://jsonresume.org/) data
-- Show off your GitHub with integrated [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats)
 - [Integrated image optimization with next-gen image formats and lazy loading](#image-optimization)
 - Dark mode that also changes Prism themes
 - [Dynamic color choices from the Gruvbox color palette](#colors)
@@ -73,8 +72,6 @@ Add the following to the `config.toml` file:
 # This hopefully will be simpler in the future.
 # See: https://github.com/schnerring/hugo-theme-gruvbox/issues/16
 [module]
-  [[module.imports]]
-    path = "github.com/schnerring/hugo-mod-github-readme-stats"
   [[module.imports]]
     path = "github.com/schnerring/hugo-mod-json-resume"
     [[module.imports.mounts]]
