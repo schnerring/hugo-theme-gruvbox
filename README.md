@@ -419,6 +419,16 @@ You can extend the theme by overriding the following partials in the
 - [`comments.html`](./layouts/partials/comments.html)  
   Comments at the end of posts
 
+## Enable the Tag Cloud
+
+The theme comes with a tag cloud partial. It is included in the sidebar, but it is disabled by default. If you wish to enable it, create a new file `data/tag_cloud.json` and add this to it:
+
+```json
+{
+  "tagCloud": true
+}
+```
+
 ## Remove the Sidebar
 
 If you want to get rid of the sidebar, add an empty `data/en.json` file with the
