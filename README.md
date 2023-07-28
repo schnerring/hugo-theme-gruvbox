@@ -39,7 +39,7 @@ The theme requires _extended_ Hugo because it uses Sass/SCSS. You'll also have
 to install Go because the theme uses Go modules.
 
 1. `git clone` the repository and `cd` into it
-2. Run `npm install` to install the dependencies
+2. Run `npm ci` to install the dependencies
 3. Run `hugo server`
 
 ## Install The Theme
@@ -153,7 +153,8 @@ npm install
 Two options are available to configure the theme colors:
 
 - `defaultTheme`: `dark` or `light` (defaults to `light`)  
-  Default theme color for when a user visits the site for the first time.
+  Default theme color for when a user visits the site for the first time. OS or
+  user preference override this setting. [See this comment for more details.](https://github.com/schnerring/hugo-theme-gruvbox/issues/34#issuecomment-1235870375)
 - `themeColor`: `gray`, `red`, `green`, `yellow`, `blue`, `purple`, `aqua`, or
   `orange` (defaults to `blue`)  
   Theme color for things such as links, headings etc.
@@ -251,7 +252,7 @@ Change the resize behavior:
 ```
 
 [The demo site features examples you can look at](https://hugo-theme-gruvbox.schnerring.net/blog/image-optimization/).
-[My website](https://schnerring.net) also uses the theme.
+I also use the theme for [my website](https://schnerring.net).
 
 ### Blog Post Covers
 
