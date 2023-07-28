@@ -1,7 +1,8 @@
 # Gruvbox Hugo Theme
 
-A retro-looking [Hugo](https://gohugo.io/) theme inspired by [gruvbox](https://github.com/morhetz/gruvbox)
-to build secure, fast, and SEO-ready websites.
+A retro-looking [Hugo](https://gohugo.io/) theme inspired by
+[gruvbox](https://github.com/morhetz/gruvbox) to build secure, fast, and
+SEO-ready websites.
 
 This theme is easily customizable with features that any coder loves.
 
@@ -154,7 +155,8 @@ Two options are available to configure the theme colors:
 
 - `defaultTheme`: `dark` or `light` (defaults to `light`)  
   Default theme color for when a user visits the site for the first time. OS or
-  user preference override this setting. [See this comment for more details.](https://github.com/schnerring/hugo-theme-gruvbox/issues/34#issuecomment-1235870375)
+  user preference override this setting.
+  [See this comment for more details.](https://github.com/schnerring/hugo-theme-gruvbox/issues/34#issuecomment-1235870375)
 - `themeColor`: `gray`, `red`, `green`, `yellow`, `blue`, `purple`, `aqua`, or
   `orange` (defaults to `blue`)  
   Theme color for things such as links, headings etc.
@@ -189,10 +191,12 @@ change tracking, and clutters the theme's code base with third-party JavaScript.
 The Prism theme is not configurable because of the integration with the dark
 mode functionality. Toggling between color modes swaps the Prism theme between
 [`gruvbox-dark`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-dark.css)
-and [`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css)
+and
+[`gruvbox-light`](https://github.com/PrismJS/prism-themes/blob/master/themes/prism-gruvbox-light.css)
 from [github.com/PrismJS/prism-themes](https://github.com/PrismJS/prism-themes).
 
-Check out the [Prism showcase on the Demo site for examples](https://hugo-theme-gruvbox.schnerring.net/blog/prism-code-highlighting-showcase/)
+Check out the
+[Prism showcase on the Demo site for examples](https://hugo-theme-gruvbox.schnerring.net/blog/prism-code-highlighting-showcase/)
 
 ### Explore Prism Features
 
@@ -208,26 +212,30 @@ ls node_modules/prismjs/plugins
 
 ## Image Optimization
 
-Images are optimized by default without requiring [shortcodes](https://gohugo.io/content-management/shortcodes/).
-A [custom render hook](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks)
-does all the heavy lifting (see [render-image.html](./layouts/_default/_markup/render-image.html)).
+Images are optimized by default without requiring
+[shortcodes](https://gohugo.io/content-management/shortcodes/). A
+[custom render hook](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks)
+does all the heavy lifting (see
+[render-image.html](./layouts/_default/_markup/render-image.html)).
 
 By default, the theme creates resized versions of images ranging from 300 to 700
 pixels wide in increments of 100 pixels.
 
-If the image format is not [WebP](https://en.wikipedia.org/wiki/WebP),
-the image is converted. The original file format will serve as a fallback for browsers
+If the image format is not [WebP](https://en.wikipedia.org/wiki/WebP), the image
+is converted. The original file format will serve as a fallback for browsers
 that don't support the WebP format.
 
-Note that only images that are part of the [page bundle](https://gohugo.io/content-management/page-bundles/)
-are processed. If served from the `static/` directory or external sources, the
-image will be displayed but not be processed.
+Note that only images that are part of the
+[page bundle](https://gohugo.io/content-management/page-bundles/) are processed.
+If served from the `static/` directory or external sources, the image will be
+displayed but not be processed.
 
 Additionally, all images are lazily loaded to save the bandwidth of your users.
 
 ### Configuration
 
-The default quality is 75%. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
+The default quality is 75%. See the
+[official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
 Change it by adding the following to the `config.toml` file:
 
 ```toml
@@ -256,8 +264,9 @@ I also use the theme for [my website](https://schnerring.net).
 
 ### Blog Post Covers
 
-Add blog post covers by defining them in the [front matter](https://gohugo.io/content-management/front-matter/)
-of your posts:
+Add blog post covers by defining them in the
+[front matter](https://gohugo.io/content-management/front-matter/) of your
+posts:
 
 ```markdown
 ---
@@ -270,8 +279,10 @@ cover:
 
 ## Embed Video Files
 
-Use the [video shortcode](https://github.com/schnerring/hugo-theme-gruvbox/blob/main/layouts/shortcodes/video.html)
-to embed your video files from [Page Resources](https://gohugo.io/content-management/page-resources/).
+Use the
+[video shortcode](https://github.com/schnerring/hugo-theme-gruvbox/blob/main/layouts/shortcodes/video.html)
+to embed your video files from
+[Page Resources](https://gohugo.io/content-management/page-resources/).
 
 With a page bundle looking like the following:
 
@@ -325,8 +336,10 @@ Additionally, the shortcode allows you to set the following attributes:
 
 ## SEO
 
-Due to the [European Copyright Directive](https://wayback.archive-it.org/12090/20210304045117/https://ec.europa.eu/digital-single-market/en/modernisation-eu-copyright-rules)
-it is required to opt into displaying [snippets](https://developers.google.com/search/docs/advanced/appearance/title-link?hl=en)
+Due to the
+[European Copyright Directive](https://wayback.archive-it.org/12090/20210304045117/https://ec.europa.eu/digital-single-market/en/modernisation-eu-copyright-rules)
+it is required to opt into displaying
+[snippets](https://developers.google.com/search/docs/advanced/appearance/title-link?hl=en)
 in search engine results.
 
 By default, every page (except 404) includes the
@@ -378,13 +391,15 @@ socialShare: true
 ---
 ```
 
-Check out the [Social Share URLs repo on GitHub](https://github.com/bradvin/social-share-urls)
+Check out the
+[Social Share URLs repo on GitHub](https://github.com/bradvin/social-share-urls)
 for more format strings.
 
 ## Favicon
 
 The favicons and [corresponding markup](./layouts/partials/head/favicons.html)
-were generated with the free [RealFaviconGenerator.net](https://realfavicongenerator.net/).
+were generated with the free
+[RealFaviconGenerator.net](https://realfavicongenerator.net/).
 
 The easiest way to replace the default favicons is to generate them using
 RealFaviconGenerator.net and put the generated files into the `static/`
@@ -392,8 +407,8 @@ directory.
 
 ## Extensibility
 
-You can extend the theme by overriding the following partials in the `layouts/partials`
-directory which by default are empty placeholder files:
+You can extend the theme by overriding the following partials in the
+`layouts/partials` directory which by default are empty placeholder files:
 
 - [`head/head_start.html`](./layouts/partials/head_start.html)  
   Custom HTML at the start of `<head>`
@@ -448,17 +463,19 @@ Additionally the following plugins are used if building the site with
 - [cssnano](https://github.com/cssnano/cssnano) for minification
 - [@fullhuman/postcss-purgecss](https://github.com/FullHuman/purgecss)
 
-Inside the `assets/css` two folders exist, `critical` and `non-critical`.
-Files inside `critical` are concatenated during build time and inlined into the
-`<head>` element. The styles target mostly [above the fold content](https://en.wikipedia.org/wiki/Above_the_fold#In_web_design).
+Inside the `assets/css` two folders exist, `critical` and `non-critical`. Files
+inside `critical` are concatenated during build time and inlined into the
+`<head>` element. The styles target mostly
+[above the fold content](https://en.wikipedia.org/wiki/Above_the_fold#In_web_design).
 Try to keep inline CSS to a minimum because it can't be cached and will be
 inlined into every single page. Files inside `non-critical` are concatenated
 into a single file and included as `<style>`. Most of the styles are in there.
 
-Files are concatenated in lexicographic order of their file names. File
-names start with two digits and a hyphen: `NN-`. The order of files might differ
+Files are concatenated in lexicographic order of their file names. File names
+start with two digits and a hyphen: `NN-`. The order of files might differ
 between Linux and Windows, so using this convention improves cross-platform
-compatibility. [You might know this approach if you're familiar with Xorg](https://wiki.archlinux.org/title/Xorg#Using_.conf_files).
+compatibility.
+[You might know this approach if you're familiar with Xorg](https://wiki.archlinux.org/title/Xorg#Using_.conf_files).
 
 You can add new CSS files to the PostCSS pipeline like this:
 
