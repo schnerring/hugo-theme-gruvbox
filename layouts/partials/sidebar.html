@@ -18,8 +18,7 @@
     </aside>
   {{ end }}
 
-  {{ $tc := index $.Site.Data.tag_cloud }}
-  {{ if $tc.tagCloud }}
+  {{ if .Site.Params.enableTagCloud }}
     <aside class="tag__cloud">
       {{ partial "tag-cloud.html" . }}
     </aside>
