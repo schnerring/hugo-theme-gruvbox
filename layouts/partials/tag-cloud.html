@@ -15,7 +15,7 @@
   {{ $fontStep := div $fontSpread $spread }}
 
 
-  <div id="tag-cloud" style="padding: 5px 15px">
+  <div class="tag-cloud" style="padding: 5px 15px">
     {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
       {{ $currentTagCount := len $taxonomy.Pages }}
       {{ $currentFontSize := (add $smallestFontSize (mul (sub $currentTagCount $min) $fontStep) ) }}
@@ -26,7 +26,7 @@
         href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}"
         style="font-size:{{ $currentFontSize }}{{ $fontUnit }}"
         {{ if eq $.Page.Params.title $name -}}
-          class="tag__active"
+          class="tag-cloud__tag--active"
         {{ end -}}
         >{{ $name }}</a
       >
