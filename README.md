@@ -421,7 +421,9 @@ You can extend the theme by overriding the following partials in the
 
 ## Enable the Tag Cloud
 
-The theme comes with a tag cloud partial. It is included in the sidebar, but it is disabled by default. If you wish to enable it, add `enableTagCloud = true` to `[params]` in `config.toml` or `hugo.toml`.
+The theme comes with a tag cloud partial. It is included in the sidebar, but it
+is disabled by default. If you wish to enable it, add `enableTagCloud = true` to
+`[params]` in `config.toml` or `hugo.toml`.
 
 ```toml
 [params]
