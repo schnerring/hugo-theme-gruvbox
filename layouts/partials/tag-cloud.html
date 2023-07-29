@@ -6,7 +6,7 @@
 {{ with $.Site.Taxonomies.tags }}
   {{ $fontUnit := "rem" }}
   {{ $minFontSize := $.Site.Params.tagCloud.minFontSizeRem | default 0.8 }}
-  {{ $maxFontSize := $.Site.Params.tagCloud.maxFontSizeRem | default 1.8 }}
+  {{ $maxFontSize := $.Site.Params.tagCloud.maxFontSizeRem | default 2.0 }}
   {{ $fontSizeSpread := sub $maxFontSize $minFontSize }}
   {{ $min :=      len (index .ByCount.Reverse 0).Pages }}
   {{ $max := add (len (index .ByCount         0).Pages) 1 }}

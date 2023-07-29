@@ -429,7 +429,7 @@ is disabled by default. If you wish to configure it, add the following to the
 [params.tagCloud]
   enable = true
   minFontSizeRem = 0.8
-  maxFontSizeRem = 1.8
+  maxFontSizeRem = 2.0
 ```
 
 ## Remove the Sidebar
