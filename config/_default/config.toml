@@ -59,6 +59,11 @@ enableRobotsTXT = true
   #  min = 300
   #  max = 700
   #  increment = 200
+  
+  [params.tagCloud]
+    enable = false
+    minFontSizeRem = 0.8
+    maxFontSizeRem = 1.8
 
   # Social share links for posts:
   #   - iconSuite: "simple-icon" or "tabler-icon"

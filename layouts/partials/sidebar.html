@@ -15,10 +15,14 @@
   {{ if $cv.basics }}
     <aside class="bio">
       {{ partial "json-resume/basics.html" . }}
+
+      {{ if $.Site.Params.tagCloud.enable }}
+        <hr />
+      {{ end }}
     </aside>
   {{ end }}
 
-  {{ if $.Site.Params.enableTagCloud }}
+  {{ if $.Site.Params.tagCloud.enable }}
     <aside>
       {{ partial "tag-cloud.html" . }}
     </aside>
