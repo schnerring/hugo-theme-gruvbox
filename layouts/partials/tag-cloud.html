@@ -1,0 +1,32 @@
+<!-- 
+  Original work by Artem Sidorenko: https://www.sidorenko.io/post/2017/07/nice-tagcloud-with-hugo/
+  Creative Commons Attribution 4.0 International License (https://creativecommons.org/licenses/by/4.0/)
+-->
+
+{{ with $.Site.Taxonomies.tags }}
+  {{ $fontUnit := "rem" }}
+  {{ $minFontSize := $.Site.Params.tagCloud.minFontSizeRem | default 0.8 }}
+  {{ $maxFontSize := $.Site.Params.tagCloud.maxFontSizeRem | default 2.0 }}
+  {{ $fontSizeSpread := sub $maxFontSize $minFontSize }}
+  {{ $min :=      len (index .ByCount.Reverse 0).Pages }}
+  {{ $max := add (len (index .ByCount         0).Pages) 1 }}
+
+
+  <div class="tag-cloud">
+    {{ range $tagName, $weightedPages := . }}
+      {{ $count := len $weightedPages.Pages }}
+      {{ $weight := div (sub (math.Log $count) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+      {{ $fontSize := (add $minFontSize (mul $fontSizeSpread $weight) ) }}
+      <a
+        href="{{ "/tags/" | relLangURL }}{{ $tagName | urlize }}"
+        style="font-size:{{ $fontSize }}{{ $fontUnit }}"
+        {{ if eq $.Page.Params.title $tagName -}}
+          class="tag-cloud__tag tag-cloud__tag--active"
+        {{ else -}}
+          class="tag-cloud__tag"
+        {{ end -}}
+        >{{ $tagName }}</a
+      >
+    {{ end }}
+  </div>
+{{ end }}

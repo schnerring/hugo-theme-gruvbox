@@ -5,6 +5,10 @@
   margin-right: auto;
   padding-left: 2.5rem;
 
+  & hr {
+    margin: 1.5rem auto;
+  }
+
   & svg {
     fill: var(--fg);
   }
@@ -63,4 +67,17 @@ aside.toc {
       fill: var(--fg3);
     }
   }
+}
+
+.tag-cloud {
+  line-height: 1.1;
+  text-align: justify;
+}
+
+.tag-cloud__tag:hover {
+  color: var(--fg3);
+}
+
+.tag-cloud__tag--active {
+  text-decoration: underline;
 }
