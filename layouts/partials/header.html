@@ -59,4 +59,9 @@
   <button class="theme__toggle dark--hidden" aria-label="Toggle dark mode">
     {{ partial "icons/tabler-icon.html" "moon" }}
   </button>
+
+  {{ if or .Params.math .Site.Params.math }}
+  {{ partial "math.html" . }}
+  {{ end }}
+
 </header>
