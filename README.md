@@ -74,6 +74,8 @@ Add the following to the `config.toml` file:
 # See: https://github.com/schnerring/hugo-theme-gruvbox/issues/16
 [module]
   [[module.imports]]
+    path = "github.com/schnerring/hugo-theme-gruvbox"
+  [[module.imports]]
     path = "github.com/schnerring/hugo-mod-json-resume"
     [[module.imports.mounts]]
       source = "data"
