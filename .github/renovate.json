@@ -6,6 +6,7 @@
     "fileMatch": ["(^|/)package\\.hugo\\.json$"],
     "rangeStrategy": "bump",
     "updateLockFiles": false,
+    "ignoreTests": true,
     "ignorePaths": [
       "package.json",
 
