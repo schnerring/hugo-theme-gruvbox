@@ -47,7 +47,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
-    "markdownlint-cli": "^0.35.0",
+    "markdownlint-cli": "^0.36.0",
     "postcss": "^8.4.29",
     "postcss-cli": "^10.1.0",
     "postcss-custom-media": "^10.0.0",
