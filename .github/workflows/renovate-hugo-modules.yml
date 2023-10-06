@@ -29,7 +29,7 @@ jobs:
         run: git status
 
       - name: Commit Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Renovate Hugo Modules
           commit_author: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
