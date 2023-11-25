@@ -70,7 +70,7 @@
     "prettier": "^3.1.0",
     "prettier-plugin-go-template": "^0.0.15",
     "stylelint": "^15.11.0",
-    "stylelint-prettier": "^4.0.2"
+    "stylelint-prettier": "^4.1.0"
   },
   "homepage": "https://github.com/schnerring/hugo-theme-gruvbox#readme",
   "keywords": [
