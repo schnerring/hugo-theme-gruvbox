@@ -514,7 +514,7 @@ is disabled by default. If you wish to configure it, add the following to the
 
 ## Remove the Sidebar
 
-If you want to get rid of the sidebar, add an empty `data/en.json` file with the
+If you want to get rid of the sidebar, add an empty `data/json_resume/en.json` file with the
 following content:
 
 ```json
