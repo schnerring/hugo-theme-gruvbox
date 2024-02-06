@@ -20,12 +20,12 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
 
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.111.3"
+          hugo-version: "0.122.0"
           extended: true
 
       - name: Write composite package.json
@@ -62,12 +62,12 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
 
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.111.3"
+          hugo-version: "0.122.0"
           extended: true
 
       - name: Install npm Packages
