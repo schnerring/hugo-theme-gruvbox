@@ -16,7 +16,7 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: "0.111.3"
+          hugo-version: "0.122.0"
           extended: true
 
       - name: Update All Hugo Modules
@@ -32,4 +32,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Renovate Hugo Modules
-          commit_author: renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
+          commit_author:
+            renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
