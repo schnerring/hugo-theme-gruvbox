@@ -42,6 +42,8 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Update Hugo npm Dependencies
+          commit_author:
+            renovate[bot] <29139614+renovate[bot]@users.noreply.github.com>
 
   publish:
     name: Publish Hugo Site
