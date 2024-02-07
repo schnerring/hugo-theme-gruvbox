@@ -6,6 +6,15 @@ enableRobotsTXT = true
 # Enable to calculate the last modified date from Git history and show it in the post header
 #enableGitInfo = true
 
+[build]
+  noJSConfigInAssets = true
+  [build.buildStats]
+    # With each build, Hugo writes a hugo_stats.json file that contains arrays
+    # of the class attributes, id attributes, and tags of each HTML element 
+    # within the published site. For production builds, this file is required 
+    # by PurgeCSS to prune unused CSS.
+    enable = true
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]

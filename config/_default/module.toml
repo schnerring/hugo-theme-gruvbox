@@ -2,7 +2,7 @@
 #replacements = "github.com/schnerring/hugo-mod-json-resume -> ../../hugo-mod-json-resume"
 [hugoVersion]
   extended = true
-  min = "0.84.0"
+  min = "0.115.1"
 [[imports]]
   path = "github.com/schnerring/hugo-mod-json-resume"
   [[imports.mounts]]
@@ -42,3 +42,8 @@
 [[mounts]]
   source = "node_modules/@tabler/icons/icons"
   target = "assets/tabler-icons"
+[[mounts]]
+  # Add hugo_stats.json to Hugo's server watcher
+  # See https://gohugo.io/getting-started/configuration/#configure-cache-busters
+  source = "hugo_stats.json"
+  target = "assets/watching/hugo_stats.json"

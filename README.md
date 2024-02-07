@@ -67,7 +67,7 @@ Add the following to the `config.toml` file:
   #_merge = "deep"
 
 [build]
-  # The theme enables writeStats which is required for PurgeCSS
+  # Merge build config of the theme
   _merge = "deep"
 
 # This hopefully will be simpler in the future.
@@ -114,6 +114,10 @@ Add the following to the `config.toml` file:
   [[module.mounts]]
     source = "node_modules/@tabler/icons/icons"
     target = "assets/tabler-icons"
+  [[module.mounts]]
+    # Add hugo_stats.json to Hugo's server watcher
+    source = "hugo_stats.json"
+    target = "assets/watching/hugo_stats.json"
 ```
 
 Install the theme:
@@ -514,8 +518,8 @@ is disabled by default. If you wish to configure it, add the following to the
 
 ## Remove the Sidebar
 
-If you want to get rid of the sidebar, add an empty `data/json_resume/en.json` file with the
-following content:
+If you want to get rid of the sidebar, add an empty `data/json_resume/en.json`
+file with the following content:
 
 ```json
 {
