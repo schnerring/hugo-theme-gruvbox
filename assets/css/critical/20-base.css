@@ -28,7 +28,7 @@ a {
 
 a.link--external::after {
   /* 2009 = Thin Space */
-  content: "\2009↗";
+  /* content: "\2009↗"; */
 }
 
 img,
@@ -49,8 +49,7 @@ figcaption {
 }
 
 *::selection {
-  color: var(--fg0);
-  background: var(--bg4);
+  background: color-mix(in srgb, var(--gray3) 20%, transparent);
 }
 
 h1,
@@ -59,7 +58,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--fg0);
   font-family: var(--font-monospace);
   font-weight: 300;
   line-height: 1.4;
@@ -67,6 +65,18 @@ h6 {
   & code {
     font-size: 1em;
   }
+}
+
+h1 {
+  color: var(--fg0);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--fg2);
 }
 
 h2,
@@ -143,7 +153,7 @@ hr {
 }
 
 mark {
-  background: var(--yellow1);
+  background: var(--yellow);
   color: var(--bg0);
 }
 
@@ -193,7 +203,6 @@ pre {
 }
 
 pre {
-  /* TODO is !important really needed because of Prism? */
   background: var(--bg1) !important;
   overflow: auto;
 
@@ -204,7 +213,7 @@ pre {
 
 blockquote,
 blockquote.twitter-tweet {
-  border-left: var(--primary-alt) 5px solid;
+  border-left: var(--lavender) 5px solid;
   margin: 0.5rem 0;
 
   & code {
@@ -221,18 +230,18 @@ blockquote.twitter-tweet {
 }
 
 blockquote.twitter-tweet {
-  border-color: var(--blue2);
+  border-color: var(--lavender);
   color: inherit;
   font: inherit;
   font-size: inherit;
   line-height: inherit;
 
   & a {
-    color: var(--blue2);
+    color: var(--blue);
   }
 
   & a:hover {
-    color: var(--blue1);
+    color: var(--lavender);
     text-decoration: none !important;
   }
 }

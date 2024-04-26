@@ -4,13 +4,13 @@
 }
 
 .pagination__button {
-  color: var(--primary-alt);
+  color: var(--blue);
   font-family: var(--font-monospace);
   font-size: 1.125rem;
 }
 
 .pagination__button:hover {
-  color: var(--primary);
+  color: var(--lavender);
 }
 
 .pagination__button--next {

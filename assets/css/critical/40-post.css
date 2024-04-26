@@ -27,18 +27,18 @@
 }
 
 .post-content__read-more {
-  color: var(--primary-alt);
+  color: var(--blue);
   margin-top: 1.3rem;
 }
 
 .post-header,
 .post-content {
   & a {
-    color: var(--primary-alt);
+    color: var(--blue);
   }
 
   & a:hover {
-    color: var(--primary);
+    color: var(--lavender);
   }
 }
 

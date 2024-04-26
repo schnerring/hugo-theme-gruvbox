@@ -141,14 +141,14 @@ header {
   align-items: center;
   background: none;
   border: none;
-  color: var(--yellow1);
+  color: var(--yellow);
   cursor: pointer;
   display: flex;
   grid-area: theme-toggle;
   margin: 0 1rem;
 
   &:hover {
-    color: var(--yellow2);
+    color: var(--peach);
   }
 
   & svg {

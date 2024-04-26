@@ -20,11 +20,11 @@
 
 aside.toc {
   & a {
-    color: var(--primary-alt);
+    color: var(--blue);
   }
 
   & a:hover {
-    color: var(--primary);
+    color: var(--lavender);
   }
 
   & ul {
