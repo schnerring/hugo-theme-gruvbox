@@ -91,7 +91,7 @@ enableRobotsTXT = true
   [[params.socialShare]]
     iconSuite = "simple-icon"
     iconName = "x"
-    formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
+    formatString = "https://x.com/intent/post?url={url}&text={title}"
   [[params.socialShare]]
     iconSuite = "simple-icon"
     iconName = "linkedin"
