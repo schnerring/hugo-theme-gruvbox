@@ -90,7 +90,7 @@ enableRobotsTXT = true
     formatString = "https://reddit.com/submit?url={url}&title={title}"
   [[params.socialShare]]
     iconSuite = "simple-icon"
-    iconName = "twitter"
+    iconName = "x"
     formatString = "https://twitter.com/intent/tweet?url={url}&text={title}"
   [[params.socialShare]]
     iconSuite = "simple-icon"
