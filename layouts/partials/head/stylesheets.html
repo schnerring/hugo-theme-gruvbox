@@ -1,8 +1,8 @@
 <!-- Styles -->
 {{ $defaultTheme := .Param "defaultTheme" | default "light" }}
 
-{{ $critical := sort (resources.Match "css/critical/*.css") "Name" | resources.Concat nil | resources.ExecuteAsTemplate nil . | resources.PostCSS }}
-{{ $nonCritical := sort (resources.Match "css/non-critical/*.css") "Name" | resources.Concat "css/non-critical.css" | resources.ExecuteAsTemplate "css/non-critical.css" . | resources.PostCSS }}
+{{ $critical := sort (resources.Match "css/critical/*.css") "Name" | resources.Concat nil | resources.ExecuteAsTemplate nil . | css.PostCSS }}
+{{ $nonCritical := sort (resources.Match "css/non-critical/*.css") "Name" | resources.Concat "css/non-critical.css" | resources.ExecuteAsTemplate "css/non-critical.css" . | css.PostCSS }}
 {{ $prismDark := resources.Get "prism-themes/prism-gruvbox-dark.css" }}
 {{ $prismLight := resources.Get "prism-themes/prism-gruvbox-light.css" }}
 

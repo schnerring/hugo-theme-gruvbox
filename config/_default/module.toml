@@ -2,7 +2,7 @@
 #replacements = "github.com/schnerring/hugo-mod-json-resume -> ../../hugo-mod-json-resume"
 [hugoVersion]
   extended = true
-  min = "0.115.1"
+  min = "0.128.0"
 [[imports]]
   path = "github.com/schnerring/hugo-mod-json-resume"
   [[imports.mounts]]

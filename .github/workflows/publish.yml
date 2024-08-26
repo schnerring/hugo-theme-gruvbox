@@ -25,7 +25,7 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.127.0"
+          hugo-version: "0.133.0"
           extended: true
 
       - name: Write composite package.json
@@ -67,7 +67,7 @@ jobs:
       - name: Install Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "0.127.0"
+          hugo-version: "0.133.0"
           extended: true
 
       - name: Install npm Packages
