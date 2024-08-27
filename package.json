@@ -54,7 +54,7 @@
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
     "cssnano": "^7.0.5",
-    "eslint": "^8.57.0",
+    "eslint": "^9.9.1",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.5",
@@ -93,7 +93,7 @@
   "scripts": {
     "lint": "npm run lint:css && npm run lint:js && npm run lint:md",
     "lint:css": "stylelint --fix **/*.css",
-    "lint:js": "eslint --fix --ext js .",
+    "lint:js": "eslint --fix .",
     "lint:md": "markdownlint --fix **/*.md",
     "prepare": "husky"
   },
