@@ -30,7 +30,7 @@ document.addEventListener("click", (e) => {
 /*! Source: https://dev.to/shubhamprakash/trap-focus-using-javascript-6a3 */
 document.addEventListener("keydown", (e) => {
   const suggestionsHidden = suggestions.classList.contains(
-    "search__suggestions--hidden"
+    "search__suggestions--hidden",
   );
   if (suggestionsHidden) return;
 
@@ -50,7 +50,7 @@ document.addEventListener("keydown", (e) => {
   } else if (e.key === "ArrowUp") {
     // Focus previous suggestion
     e.preventDefault();
-    nextIndex = currentIndex > 0 ? currentIndex - 1 : 0;
+    const nextIndex = currentIndex > 0 ? currentIndex - 1 : 0;
     focusableSuggestions[nextIndex].focus();
   }
 });
@@ -108,8 +108,8 @@ document.addEventListener("keydown", (e) => {
     suggestions.classList.remove("search__suggestions--hidden");
 
     if (searchResultsMap.size === 0 && searchText) {
-      const noResultsMessage = document.createElement("div")
-      noResultsMessage.innerHTML = `No results for "<strong>${searchText}</strong>"`
+      const noResultsMessage = document.createElement("div");
+      noResultsMessage.innerHTML = `No results for "<strong>${searchText}</strong>"`;
       noResultsMessage.classList.add("search__no-results");
       suggestions.appendChild(noResultsMessage);
       return;
