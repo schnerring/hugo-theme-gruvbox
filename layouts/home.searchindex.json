@@ -9,7 +9,7 @@
       "permalink" .RelPermalink
       "tags" (.Params.tags | default slice)
       "content" .Plain
-      "summary" .Summary
+      "summary" (.Summary | plainify)
     )
   -}}
 {{- end -}}

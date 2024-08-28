@@ -1,6 +1,4 @@
-//! Source: https://github.com/h-enk/doks/blob/master/assets/js/index.js
-
-import { Document } from "flexsearch";
+import FlexSearch from "flexsearch";
 
 const search = document.getElementById("search__text");
 const suggestions = document.getElementById("search__suggestions");
@@ -55,55 +53,56 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
+/*! The FlexSearch implementation is inspired by the Doks theme | MIT license | https://github.com/thuliteio/doks-core/blob/eb9f50cee0eeae5d72f3751951f30cf914144bc0/assets/js/flexsearch.js */
 (function () {
-  const index = new Document({
+  const index = FlexSearch.Document({
     tokenize: "forward",
-    cache: 100,
     document: {
       id: "id",
-      store: ["href", "title", "description"],
-      index: ["title", "description", "content"],
+      index: [
+        { field: "title" },
+        { field: "tags" },
+        { field: "content" },
+        {
+          field: "date",
+          tokenize: "strict",
+          encode: false,
+        },
+      ],
+      store: ["title", "summary", "date", "permalink"],
     },
   });
 
-  //! Source: https://discourse.gohugo.io/t/range-length-or-last-element/3803/2
-  {{ $list := (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
-  {{ $len := (len $list) }}
-
-  index.add(
-    {{ range $index, $element := $list }}
-      {
-        id: {{ $index }},
-        href: "{{ .RelPermalink }}",
-        title: {{ .Title | jsonify }},
-        {{ with .Description }}
-          description: {{ . | jsonify }},
-        {{ else }}
-          description: {{ .Summary | plainify | jsonify }},
-        {{ end }}
-        content: {{ .Plain | jsonify }}
-      })
-      {{ if ne (add $index 1) $len }}
-        .add(
-      {{ end }}
-    {{ end }}
-    {{ if eq 0 $len }}
-      )
-    {{ end }}
-  ;
+  // build index
+  fetch("/search-index.json")
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      data.forEach(function (item) {
+        index.add(item);
+      });
+    });
 
   search.addEventListener("input", function () {
+    // Run search
     const maxResultsCount = {{ $.Site.Params.flexsearch.maxResultsCount | default 5 }};
     const searchText = this.value;
-    const searchResults = index.search(searchText, maxResultsCount, { enrich: true });
+    const searchResults = index.search({
+      query: searchText,
+      limit: maxResultsCount,
+      enrich: true,
+    });
+
     const searchResultsMap = new Map();
 
-    // Deduplicate search results by href
+    // Deduplicate search results by permalink
     for (const searchResult of searchResults.flatMap((r) => r.result)) {
-      if (searchResultsMap.has(searchResult.href)) continue;
-      searchResultsMap.set(searchResult.doc.href, searchResult.doc);
+      if (searchResultsMap.has(searchResult.permalink)) continue;
+      searchResultsMap.set(searchResult.doc.permalink, searchResult.doc);
     }
 
+    // Display results
     suggestions.innerHTML = "";
     suggestions.classList.remove("search__suggestions--hidden");
 
@@ -115,9 +114,9 @@ document.addEventListener("keydown", (e) => {
       return;
     }
 
-    for (const [href, searchResult] of searchResultsMap) {
+    for (const [permalink, searchResult] of searchResultsMap) {
       const suggestion = document.createElement("a");
-      suggestion.href = href;
+      suggestion.href = permalink;
       suggestion.classList.add("search__suggestion-item");
       suggestions.appendChild(suggestion);
 
@@ -126,10 +125,10 @@ document.addEventListener("keydown", (e) => {
       title.classList.add("search__suggestion-title");
       suggestion.appendChild(title);
 
-      const description = document.createElement("div");
-      description.textContent = searchResult.description;
-      description.classList.add("search__suggestion-description");
-      suggestion.appendChild(description);
+      const summary = document.createElement("div");
+      summary.textContent = searchResult.summary;
+      summary.classList.add("search__suggestion-summary");
+      suggestion.appendChild(summary);
 
       if (suggestions.childElementCount === maxResultsCount) break;
     }
