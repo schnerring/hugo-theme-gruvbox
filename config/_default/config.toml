@@ -136,7 +136,7 @@ enableRobotsTXT = true
     formatString = "https://telegram.me/share/url?url={url}&text={title}"
   [[params.socialShare]]
     iconSuite = "tabler-icon"
-    iconName = "mail"
+    iconName = "outline/mail"
     formatString = "mailto:?subject={title}&body={url}"
 
 [menu]

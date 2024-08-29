@@ -376,13 +376,15 @@ Configure social share links in the Hugo config like this:
     formatString = "https://reddit.com/submit?url={url}&title={title}"
   [[params.socialShare]]
     iconSuite = "tabler-icon"
-    iconName = "mail"
+    iconName = "outline/mail"
     formatString = "mailto:?subject={title}&body={url}"
 ```
 
-Use the `iconSuite` option to specify the icon suite used for the social share
+Use the `iconSuite` setting to specify the icon suite used for the social share
 link: `simple-icon` or `tabler-icon`. Select an icon from the suite with the
-`iconName` option.
+`iconName` setting. Tabler icons come in two distinct styles, `filled` and
+`outline`. You'll have to the prefix the `iconName` accordingly, e.g.
+`iconName = "outline/sun"`.
 
 The `formatString` supports the following placeholders:
 
