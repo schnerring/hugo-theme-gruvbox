@@ -58,7 +58,7 @@ Initialize the site as Hugo module
 hugo mod init example.com
 ```
 
-Add the following to the `config.toml` file:
+Add the following to the `hugo.toml` file:
 
 ```toml
 [markup]
@@ -171,8 +171,8 @@ Two options are available to configure the theme colors:
 
 ## Prism
 
-The theme allows customization of [Prism](https://prismjs.com/) via
-`config.toml` parameters:
+The theme allows customization of [Prism](https://prismjs.com/) via `hugo.toml`
+parameters:
 
 ```toml
 [params]
@@ -242,7 +242,7 @@ Additionally, all images are lazily loaded to save the bandwidth of your users.
 
 The default quality is 75%. See the
 [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
-Change it by adding the following to the `config.toml` file:
+Change it by adding the following to the `hugo.toml` file:
 
 ```toml
 [imaging]
@@ -509,7 +509,7 @@ I'm a .NET developer by trade, so let's say hello in C#!
 
 The theme comes with a tag cloud partial. It is included in the sidebar, but it
 is disabled by default. If you wish to configure it, add the following to the
-`[params]` section in the `config.toml` file:
+`[params]` section in the `hugo.toml` file:
 
 ```toml
 [params.tagCloud]

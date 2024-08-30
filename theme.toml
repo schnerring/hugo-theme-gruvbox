@@ -12,7 +12,6 @@ tags = [
   "responsive"
 ]
 features = ["dark mode"]
-min_version = "0.41.0"
 
 [author]
   name = "Michael Schnerring"

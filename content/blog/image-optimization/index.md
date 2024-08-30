@@ -6,11 +6,15 @@ socialShare: true
 toc: true
 cover:
   src: ./alexandre-van-thuan-mr9FouttLGY-unsplash.jpg
-  alt: The interior of Stadsbiblioteket in Stockholm - Gunnar Asplunds library from 1928. The architecture is a transition between neoclassicism and functionalism.
+  alt:
+    The interior of Stadsbiblioteket in Stockholm - Gunnar Asplunds library from
+    1928. The architecture is a transition between neoclassicism and
+    functionalism.
   caption: By [Alexandre Van Thuan](https://unsplash.com/photos/mr9FouttLGY)
 ---
 
-The theme optimizes images by default with a custom [Hugo's markdown render hook](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks):
+The theme optimizes images by default with a custom
+[Hugo's markdown render hook](https://gohugo.io/getting-started/configuration-markup#markdown-render-hooks):
 
 - The theme creates resized versions for each image, ranging from 100 to 700
   pixels wide.
@@ -31,7 +35,10 @@ your posts to add cover images:
 ---
 cover:
   src: alexandre-van-thuan-mr9FouttLGY-unsplash.jpg
-  alt: The interior of Stadsbiblioteket in Stockholm - Gunnar Asplunds library from 1928. The architecture is a transition between neoclassicism and functionalism.
+  alt:
+    The interior of Stadsbiblioteket in Stockholm - Gunnar Asplunds library from
+    1928. The architecture is a transition between neoclassicism and
+    functionalism.
   caption: By [Alexandre Van Thuan](https://unsplash.com/photos/mr9FouttLGY)
 ---
 ```
@@ -52,8 +59,9 @@ Add captions to your inline images like this:
 
 ## JPEG and WebP Quality
 
-The default quality is 75%. See the [official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
-Change it by adding the following to the `config.toml` file:
+The default quality is 75%. See the
+[official Image Processing Config Hugo docs](https://gohugo.io/content-management/image-processing/#image-processing-config).
+Change it by adding the following to the `hugo.toml` file:
 
 ```toml
 [imaging]
@@ -63,8 +71,8 @@ Change it by adding the following to the `config.toml` file:
 ## Resizing
 
 By default, the theme creates resized versions of images ranging from 300 to 700
-pixels wide in increments of 100 pixels. Override the resize behavior by
-adding the following to the `config.toml` file:
+pixels wide in increments of 100 pixels. Override the resize behavior by adding
+the following to the `hugo.toml` file:
 
 ```toml
 [params]
@@ -76,7 +84,7 @@ adding the following to the `config.toml` file:
 
 ## Lazy Loading
 
-Images are lazily loaded by default using the `loading="lazy"` attribute on
-HTML `img` tags.
+Images are lazily loaded by default using the `loading="lazy"` attribute on HTML
+`img` tags.
 
 {{< video src="lazy-loading" autoplay="true" controls="false" loop="true" >}}
