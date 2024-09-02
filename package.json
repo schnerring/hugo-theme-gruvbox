@@ -60,7 +60,7 @@
     "husky": "^9.1.5",
     "lint-staged": "^15.2.10",
     "markdownlint-cli": "^0.41.0",
-    "postcss": "^8.4.43",
+    "postcss": "^8.4.44",
     "postcss-cli": "^11.0.0",
     "postcss-custom-media": "^11.0.1",
     "postcss-import": "^16.1.0",
