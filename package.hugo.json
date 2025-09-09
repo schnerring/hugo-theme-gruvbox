@@ -19,10 +19,6 @@
   },
   "keywords": ["hugo", "gruvbox", "theme"],
   "scripts": {
-    "lint:css": "stylelint --fix **/*.css",
-    "lint:js": "eslint --fix .",
-    "lint:md": "markdownlint --fix **/*.md",
-    "lint": "npm run lint:css && npm run lint:js && npm run lint:md",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -46,8 +42,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "markdownlint-cli": "^0.44.0",
+    "lint-staged": "^16.1.6",
+    "markdownlint-cli": "^0.45.0",
     "postcss": "^8.4.49",
     "postcss-cli": "^11.0.0",
     "postcss-custom-media": "^11.0.5",
