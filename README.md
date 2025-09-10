@@ -31,6 +31,7 @@ to see what's still missing.
 - [Extensible to make it suit your needs](#extensibility)
 - Responsive, mobile-first design
 - Beautiful SVG icons with [Tabler Icons](https://tabler-icons.io/)
+- [Math typesetting](#math-typesetting) via Hugo's [embedded KaTeX engine](https://gohugo.io/functions/transform/tomath/)
 
 A big thank you to the authors of the software that make this theme possible! ❤️
 
@@ -418,6 +419,40 @@ The easiest way to replace the default favicons is to generate them using
 RealFaviconGenerator.net and put the generated files into the `static/`
 directory.
 
+## Math Typesetting
+
+For math typesetting in a Hugo project, you can leverage hugo's internal
+[KaTeX](https://katex.org/) rendering engine.
+
+If you want to use mathematical or chemical equations in site, enable the
+[Goldmark passthrough extension](https://gohugo.io/render-hooks/passthrough/)
+and define delimiters for block and inline formulae in your config file:
+
+**`hugo.toml`**
+
+```toml
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+```
+
+Afterwards you can author formulae using the standard $\LaTeX$ syntax:
+
+### Examples
+
+Inline math: $\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $
+
+Block math:
+
+$$
+\tag*{(1)} \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$
+
 ## Extensibility
 
 You can extend the theme by overriding the following partials in the
@@ -431,84 +466,6 @@ You can extend the theme by overriding the following partials in the
   Custom HTML at the end of `<body>`
 - [`comments.html`](./layouts/partials/comments.html)  
   Comments at the end of posts
-
-### Example: Adding KaTeX Support to the Theme
-
-[KaTeX](https://katex.org/) is a fast, easy-to-use JavaScript library for TeX
-math rendering on the web. Let's add it to the theme via `npm`. First, add the
-following to the `package.hugo.json` file:
-
-```json
-"dependencies": {
-  "katex": "^0.16.8"
-}
-```
-
-Then run `hugo mod npm pack` to sync the `package.hugo.json` dependencies with
-`package.json`. Run `npm install` after. We then need to mount the
-`node_modules/katex` folder into Hugo's virtual filesystem by adding the
-following to the `config/_default/module.toml` file:
-
-```toml
-[[mounts]]
-  source = "node_modules/katex"
-  target = "assets/katex"
-```
-
-We can then add the following to `layouts/partials/head/head_end.html`:
-
-<!-- prettier-ignore-start -->
-
-```html
-{{ if .Params.katex }}
-  {{ $katexCSS := resources.Get "katex/dist/katex.min.css" }}
-  <link
-    rel="stylesheet"
-    href="{{ $katexCSS }}"
-    {{ if hugo.IsProduction }}
-      integrity="{{ $katexCSS.Data.Integrity }}"
-    {{ end }}
-    crossorigin="anonymous"
-  />
-
-  {{ $katexJS := resources.Get "katex/dist/katex.min.js" }}
-  <script
-    defer
-    src="{{ $katexJS.RelPermalink }}"
-    {{ if hugo.IsProduction }}
-      integrity="{{ $katexJS.Data.Integrity }}"
-    {{ end }}
-    crossorigin="anonymous"
-  ></script>
-
-  {{ $autoRender := resources.Get "katex/dist/contrib/auto-render.min.js" }}
-  <script
-    defer
-    src="{{ $autoRender.RelPermalink }}"
-    {{ if hugo.IsProduction }}
-      integrity="{{ $autoRender.Data.Integrity }}"
-    {{ end }}
-    crossorigin="anonymous"
-    onload="renderMathInElement(document.body);"
-  ></script>
-{{ end }}
-```
-
-<!-- prettier-ignore-end -->
-
-The only thing left is enabling KaTeX in the front matter of our content:
-
-```markdown
----
-title: "Hello World"
-description: "The first post of this blog"
-date: 2021-03-14T15:00:21+01:00
-draft: false
-katex: true
----
-
-I'm a .NET developer by trade, so let's say hello in C#!
-```
 
 ## Configure the Tag Cloud
 
