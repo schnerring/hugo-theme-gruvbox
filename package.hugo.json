@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^6.0.0",
-    "cssnano": "^7.0.6",
+    "cssnano": "^7.1.1",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
