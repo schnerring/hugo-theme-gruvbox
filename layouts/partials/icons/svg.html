@@ -1,2 +1,7 @@
 {{ $path := lower . }}
-{{ (resources.Get $path).Content | safeHTML }}
+{{ $resource := resources.Get $path }}
+{{ if not $resource }}
+  {{ errorf "File '%s' does not exist" $path }}
+{{ else }}
+  {{ $resource.Content | safeHTML }}
+{{ end }}
