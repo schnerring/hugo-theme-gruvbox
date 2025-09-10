@@ -70,6 +70,10 @@ Add the following to the `hugo.toml` file:
   # Merge build config of the theme
   _merge = "deep"
 
+[outputs]
+  # The search requires rendering the theme's `searchIndex` output format
+  home = ["html", "searchIndex"]
+
 # This hopefully will be simpler in the future.
 # See: https://github.com/schnerring/hugo-theme-gruvbox/issues/16
 [module]
