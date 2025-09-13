@@ -133,4 +133,6 @@ document.addEventListener("keydown", (e) => {
       if (suggestions.childElementCount === maxResultsCount) break;
     }
   });
+
+  search.style.visibility = "visible";
 })();

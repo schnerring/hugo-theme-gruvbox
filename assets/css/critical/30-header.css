@@ -54,6 +54,7 @@ header {
   color: var(--fg);
   outline: none;
   padding: 0 0.5rem;
+  visibility: hidden; /* Hide until flexsearch index is initialized */
   width: 100%;
 
   &:hover {
