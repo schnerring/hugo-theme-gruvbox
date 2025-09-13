@@ -126,7 +126,7 @@ document.addEventListener("keydown", (e) => {
       suggestion.appendChild(title);
 
       const summary = document.createElement("div");
-      summary.textContent = searchResult.summary;
+      summary.innerHTML = searchResult.summary;
       summary.classList.add("search__suggestion-summary");
       suggestion.appendChild(summary);
 
