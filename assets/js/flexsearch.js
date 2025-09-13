@@ -1,4 +1,4 @@
-import FlexSearch from "flexsearch";
+import { Document } from "flexsearch";
 
 const search = document.getElementById("search__text");
 const suggestions = document.getElementById("search__suggestions");
@@ -54,8 +54,8 @@ document.addEventListener("keydown", (e) => {
 });
 
 /*! The FlexSearch implementation is inspired by the Doks theme | MIT license | https://github.com/thuliteio/doks-core/blob/eb9f50cee0eeae5d72f3751951f30cf914144bc0/assets/js/flexsearch.js */
-(function () {
-  const index = FlexSearch.Document({
+(async function () {
+  const index = Document({
     tokenize: "forward",
     document: {
       id: "id",
@@ -74,21 +74,17 @@ document.addEventListener("keydown", (e) => {
   });
 
   // build index
-  fetch("/search-index.json")
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      data.forEach(function (item) {
-        index.add(item);
-      });
-    });
+  const response = await fetch("/search-index.json");
+  const data = await response.json();
+  for (const item of data) {
+    await index.addAsync(item);
+  }
 
-  search.addEventListener("input", function () {
+  search.addEventListener("input", async function () {
     // Run search
     const maxResultsCount = {{ $.Site.Params.flexsearch.maxResultsCount | default 5 }};
     const searchText = this.value;
-    const searchResults = index.search({
+    const searchResults = await index.searchAsync({
       query: searchText,
       limit: maxResultsCount,
       enrich: true,
