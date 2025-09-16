@@ -27,7 +27,7 @@
     "*.md": "markdownlint --fix"
   },
   "dependencies": {
-    "@tabler/icons": "^3.34.1",
+    "@tabler/icons": "^3.35.0",
     "flexsearch": "0.8.212",
     "normalize.css": "^8.0.1",
     "prism-themes": "^1.9.0",
